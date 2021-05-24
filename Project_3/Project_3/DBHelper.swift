@@ -123,4 +123,27 @@ class DBHelper
         }
         
     }
+    
+    func updateCart(name : String, item : Item){
+        
+        var st = User()
+        print("st made")
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+        print("Fetched")
+        fetchReq.predicate = NSPredicate(format: "username == %@", name)
+        print("Predicated")
+        
+        do{
+            let stu = try context?.fetch(fetchReq)
+            st = stu?.first as! User
+            print("It shall try to make relationship")
+            st.addToToitem(item)
+            try context?.save()
+            print("Updated Questions For Quiz")
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
 }
