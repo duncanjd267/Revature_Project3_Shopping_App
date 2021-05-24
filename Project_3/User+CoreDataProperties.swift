@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  Project_3
 //
-//  Created by admin on 5/22/21.
+//  Created by admin on 5/24/21.
 //
 //
 
@@ -16,12 +16,12 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var username: String?
-    @NSManaged public var password: String?
     @NSManaged public var balance: Double
     @NSManaged public var cartamount: Double
-    @NSManaged public var recentview: String?
+    @NSManaged public var password: String?
     @NSManaged public var phone: String?
+    @NSManaged public var recentview: String?
+    @NSManaged public var username: String?
     @NSManaged public var toitem: NSSet?
 
 }
