@@ -15,8 +15,8 @@ class LoginCtrl: UIViewController
 	
 	@IBAction func LogButton(_ sender: UIButton)
 	{
-		var usrN = UserField.text
-		var passW = PassField.text
+		let usrN = UserField.text
+		let passW = PassField.text
 		
 		if let emp = UserField.text, emp.isEmpty
 		{ // no point in continuing without a username
