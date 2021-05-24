@@ -137,9 +137,85 @@ class DBHelper
             let stu = try context?.fetch(fetchReq)
             st = stu?.first as! User
             print("It shall try to make relationship")
+            st.recentview = item.name
+            st.balance = st.balance + item.price
             st.addToToitem(item)
             try context?.save()
             print("Updated Questions For Quiz")
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
+    
+    func getUsers()-> [User]{
+        var stu = [User]()
+        var fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do{
+            stu = try context?.fetch(fetchReq) as!
+     [User]
+        }
+        catch{
+            print("cannot fetch the data")
+        }
+        return stu
+    }
+    
+    func getItems()-> [Item]{
+        var stu = [Item]()
+        var fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+        do{
+            stu = try context?.fetch(fetchReq) as!
+     [Item]
+        }
+        catch{
+            print("cannot fetch the data")
+        }
+        return stu
+    }
+    
+    func updateCartPurchased(name : String){
+        
+        var st = User()
+        print("st made")
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+        print("Fetched")
+        fetchReq.predicate = NSPredicate(format: "username == %@", name)
+        print("Predicated")
+        
+        do{
+            let stu = try context?.fetch(fetchReq)
+            st = stu?.first as! User
+            for items in st.toitem!{
+                st.removeFromToitem(Item(context: items as! NSManagedObjectContext))
+            }
+            st.cartamount = 0.0
+            try context?.save()
+            
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
+    
+    func updateCartRemove(name : String, item: Item){
+        
+        var st = User()
+        print("st made")
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+        print("Fetched")
+        fetchReq.predicate = NSPredicate(format: "username == %@", name)
+        print("Predicated")
+        
+        do{
+            let stu = try context?.fetch(fetchReq)
+            st = stu?.first as! User
+            st.removeFromToitem(item)
+            st.cartamount = st.cartamount - item.price
+            try context?.save()
+            
         }
         catch{
             print("Error")
