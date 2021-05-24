@@ -20,6 +20,7 @@ extension Item {
     @NSManaged public var descript: String?
     @NSManaged public var name: String?
     @NSManaged public var price: Double
+    @NSManaged public var image: String?
 
 }
 
