@@ -12,6 +12,8 @@ import UIKit
 class DBHelper
 {
 	static var inst = DBHelper()
+    var currentUser = ""
+    var currentItem = ""
 	
     let context = (UIApplication.shared.delegate as? AppDelegate)? .persistentContainer.viewContext
     
@@ -222,4 +224,20 @@ class DBHelper
         }
         
     }
+    
+    func holdCurrentUser(name : String){
+        currentUser = name
+    }
+    func getCurrentUser() -> String {
+        return currentUser;
+    }
+    
+    func holdCurrentItem(name : String){
+        currentItem = name
+    }
+    func getCurrentItem() -> String {
+        return currentItem;
+    }
+    
+
 }

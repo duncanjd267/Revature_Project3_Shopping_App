@@ -139,7 +139,7 @@
         <!--Item-->
         <scene sceneID="yZ4-r8-JYo">
             <objects>
-                <viewController id="NzK-L5-PmY" sceneMemberID="viewController">
+                <viewController id="NzK-L5-PmY" customClass="ItemCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIp-HT-YCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,6 +292,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="MxO-jg-R2J"/>
                     <size key="freeformSize" width="414" height="1800"/>
+                    <connections>
+                        <outlet property="descr" destination="czc-HG-DRd" id="fH3-VL-9F4"/>
+                        <outlet property="name" destination="o7E-Qr-fOp" id="rWc-Wg-AUO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynB-XD-MA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
