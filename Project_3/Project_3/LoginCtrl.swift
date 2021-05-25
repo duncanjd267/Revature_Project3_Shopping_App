@@ -40,6 +40,8 @@ class LoginCtrl: UIViewController
 		else
 		{
 			// Failure
+			print("User verification failed")
+			print("password entered: ",String(passW!))
 			return
 		}
 	}
