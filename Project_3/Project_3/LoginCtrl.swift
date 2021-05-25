@@ -36,10 +36,14 @@ class LoginCtrl: UIViewController
 		if passW == passAct
 		{
 			// Verification succeeds
+			let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
+			present(Bienvenue, animated: true, completion: nil)
 		}
 		else
 		{
 			// Failure
+			print("User verification failed")
+			print("password entered: ",String(passW!))
 			return
 		}
 	}
