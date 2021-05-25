@@ -532,7 +532,7 @@
         <!--Shop-->
         <scene sceneID="fow-ZU-3SP">
             <objects>
-                <viewController id="pNm-A8-VqI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeLI" id="pNm-A8-VqI" customClass="WelcomeView" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IcM-Gu-qD4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
