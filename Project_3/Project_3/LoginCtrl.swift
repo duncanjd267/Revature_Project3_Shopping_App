@@ -23,6 +23,7 @@ class LoginCtrl: UIViewController
 			return
 		}
 		
+		
 		let Usr = DBHelper.inst.getOneUser(user: usrN!)
 		
 		if let emp = PassField.text, emp.isEmpty
@@ -43,6 +44,7 @@ class LoginCtrl: UIViewController
 		}
 	}
 	
+	
 	override func viewDidLoad()
 	{
         super.viewDidLoad()
@@ -50,4 +52,5 @@ class LoginCtrl: UIViewController
         // Do any additional setup after loading the view.
     }
 
+	
 }
