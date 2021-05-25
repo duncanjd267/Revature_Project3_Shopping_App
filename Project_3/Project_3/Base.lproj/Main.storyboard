@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="1541" y="74"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Ctrl-->
         <scene sceneID="cOr-hC-2H8">
             <objects>
-                <viewController id="gw2-bV-FwY" sceneMemberID="viewController">
+                <viewController id="gw2-bV-FwY" customClass="LoginCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DLZ-PI-DxL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,12 +90,15 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="LogButton:" destination="gw2-bV-FwY" eventType="touchUpInside" id="6q9-Bh-vXz"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCc-lb-sHF">
                                 <rect key="frame" x="294" y="234" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remembet Me?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQF-tO-K9Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Me?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQF-tO-K9Q">
                                 <rect key="frame" x="219" y="273" width="124" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -106,6 +109,10 @@
                         <viewLayoutGuide key="safeArea" id="I3c-ff-n9V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="PassField" destination="w7C-uq-Imm" id="o4z-n6-ytL"/>
+                        <outlet property="UserField" destination="8pE-Dz-652" id="B87-HN-Rb0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvB-nD-Pj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -725,7 +732,6 @@
         <!--Item-->
         <scene sceneID="M73-s1-JGs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BUa-8c-0is" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="9PW-Al-EkU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c1s-NM-JNy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
@@ -837,6 +843,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="0hz-W0-WIP"/>
                     <size key="freeformSize" width="414" height="1300"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUa-8c-0is" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3715.9420289855075" y="942.85714285714278"/>
         </scene>
@@ -854,6 +861,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4Ll-XZ-pKk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QaM-ov-0xT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -873,6 +881,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rM3-yB-JHn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="70g-Vx-GA0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
