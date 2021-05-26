@@ -38,12 +38,13 @@ class DBHelper
         }
     }
     
-    func addItem(object : [String:String]){
+    func addItem(object : [String:String], price: Double){
         let item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: context!) as! Item
         item.name = object["name"]
-        item.price = 0.0
+        item.price = price
         item.descript = object["description"]
         item.category = object["category"]
+        item.image = object["image"]
        
         do{
             try context?.save()
