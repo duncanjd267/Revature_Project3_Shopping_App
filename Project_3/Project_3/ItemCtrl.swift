@@ -19,8 +19,8 @@ class ItemCtrl: UIViewController
 	{
         super.viewDidLoad()
         name.text = DBHelper.inst.getCurrentItem()
-        item = DBHelper.inst.getOneItem(item: name.text!)
-        descr.text = item?.descript
+        //item = DBHelper.inst.getOneItem(item: name.text!)
+        //descr.text = item?.descript
         // Do any additional setup after loading the view.
     }
     

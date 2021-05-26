@@ -48,6 +48,22 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        if collectionView == self.Recommandations{
+            DBHelper.inst.holdCurrentItem(name: ItemName[indexPath.row])
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
+            present(Bienvenue, animated: true, completion: nil)
+            
+        }
+        else {
+            DBHelper.inst.holdCurrentItem(name: ItemName2[indexPath.row])
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
+            present(Bienvenue, animated: true, completion: nil)
+            
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == self.Recommandations{

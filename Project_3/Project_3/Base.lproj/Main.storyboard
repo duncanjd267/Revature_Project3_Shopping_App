@@ -139,7 +139,7 @@
         <!--Item-->
         <scene sceneID="yZ4-r8-JYo">
             <objects>
-                <viewController id="NzK-L5-PmY" customClass="ItemCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NzK-L5-PmY" customClass="ItemCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIp-HT-YCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
