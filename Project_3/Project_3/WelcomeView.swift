@@ -48,16 +48,17 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == self.Recommandations{
-            DBHelper.inst.holdCurrentItem(name: ItemName[indexPath.row])
+            DBHelper.inst.holdCurrentItem(name: ItemName[indexPath.item])
             let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
             present(Bienvenue, animated: true, completion: nil)
             
         }
         else {
-            DBHelper.inst.holdCurrentItem(name: ItemName2[indexPath.row])
+            DBHelper.inst.holdCurrentItem(name: ItemName2[indexPath.item])
             let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
             present(Bienvenue, animated: true, completion: nil)
             
@@ -69,15 +70,15 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         if collectionView == self.Recommandations{
             
             let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! WelcomeViewCell
-            cell1.ReImage.image = UIImage(named: RecommandedImage[indexPath.row])
-            cell1.ReText.text = ItemName[indexPath.row]
+            cell1.ReImage.image = UIImage(named: RecommandedImage[indexPath.item])
+            cell1.ReText.text = ItemName[indexPath.item]
             return cell1
             
         }
         else {
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! WelcomeViewCell
-            cell2.DealsImg.image = UIImage(named: DealsImage[indexPath.row])
-            cell2.DealsText.text = ItemName2[indexPath.row]
+            cell2.DealsImg.image = UIImage(named: DealsImage[indexPath.item])
+            cell2.DealsText.text = ItemName2[indexPath.item]
             return cell2
         }
         
