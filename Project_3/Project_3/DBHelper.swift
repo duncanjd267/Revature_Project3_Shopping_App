@@ -45,6 +45,8 @@ class DBHelper
         item.descript = object["description"]
         item.category = object["category"]
         item.image = object["image"]
+        item.image2 = object["image2"]
+        item.image3 = object["image3"]
        
         do{
             try context?.save()
