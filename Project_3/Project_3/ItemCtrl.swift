@@ -16,22 +16,33 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var ItemPageCell: UICollectionView!
     @IBOutlet weak var pageView: UIPageControl!
     
-    var contentImg = ["SAMSUNG", "HOMPOW", "NETGEAR"]
+    
+    var contentImg : [String]?
+    
+    var item : Item?
+    
+    var simBrand : [Item]?
     
     override func viewDidLoad()
     {
         
-        
+        var cur = DBHelper.inst.getOneItem(item: DBHelper.inst.getCurrentItem())
+        item = cur
+        simBrand = DBHelper.inst.getItemsBrand(name: cur.category!)
+        var temp = [cur.image!, cur.image2!, cur.image3!]
+        contentImg = temp
         super.viewDidLoad()
         name.text = DBHelper.inst.getCurrentItem()
-        pageView.numberOfPages = contentImg.count
+        descr.text = cur.descript!
+        pageView.numberOfPages = contentImg!.count
         pageView.currentPage = 0
-        
 
     }
     
-    var item : Item?
     
+    @IBAction func AddCart(_ sender: Any) {
+        DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentItem(), item: item!)
+    }
     //var counter = 0
     
     //    @objc private func pageViewChanged(_ sender: UIPageControl){
@@ -56,13 +67,13 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return contentImg.count
+        return contentImg!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let ItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCtrlCell
-        ItemCell.ItemImg.image = UIImage(named: contentImg[indexPath.row])
+        ItemCell.ItemImg.image = UIImage(named: contentImg![indexPath.row])
         
         return ItemCell
         
