@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource
 {
+
+    
     
     
     @IBOutlet weak var name: UILabel!
@@ -99,6 +101,31 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         pageView.currentPage = indexPath.row
+    }
+    
+ //Mark:- Review Tableviews Implementation
+    
+    
+    var reviewsEx = ["good", "bad", "poor"]
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reviewsEx.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! ItemCtrlTableCell
+        cell.ReviewLB.text = reviewsEx[indexPath.row]
+            return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
         
 }

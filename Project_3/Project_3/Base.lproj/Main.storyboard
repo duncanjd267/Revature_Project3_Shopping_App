@@ -265,15 +265,40 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="9VQ-iI-a6g">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="160" id="9VQ-iI-a6g" customClass="ItemCtrlTableCell" customModule="Project_3" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="398" height="160"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VQ-iI-a6g" id="HiU-4t-fyZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="398" height="160"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDJ-o3-kMt">
+                                                                    <rect key="frame" x="148" y="70" width="101" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="101" id="Bch-Nx-Mdr"/>
+                                                                        <constraint firstAttribute="height" constant="21" id="ua3-Ba-ReX"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="BDJ-o3-kMt" secondAttribute="trailing" constant="129" id="9zQ-q3-glo"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="BDJ-o3-kMt" secondAttribute="bottom" constant="58" id="Ibd-MZ-ask"/>
+                                                                <constraint firstItem="BDJ-o3-kMt" firstAttribute="top" secondItem="HiU-4t-fyZ" secondAttribute="topMargin" constant="59" id="TgC-vN-ny1"/>
+                                                                <constraint firstItem="BDJ-o3-kMt" firstAttribute="leading" secondItem="HiU-4t-fyZ" secondAttribute="leadingMargin" constant="128" id="t4C-3d-N1V"/>
+                                                            </constraints>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="ReviewLB" destination="BDJ-o3-kMt" id="lbu-zU-WWm"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="NzK-L5-PmY" id="pa4-xJ-jCp"/>
+                                                    <outlet property="delegate" destination="NzK-L5-PmY" id="52z-JS-fH3"/>
+                                                </connections>
                                             </tableView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="isI-ox-LUg">
                                                 <rect key="frame" x="0.0" y="69" width="414" height="357"/>
