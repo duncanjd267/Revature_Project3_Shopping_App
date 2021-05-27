@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  Project_3
 //
-//  Created by admin on 5/24/21.
+//  Created by admin on 5/26/21.
 //
 //
 
@@ -21,6 +21,8 @@ extension Item {
     @NSManaged public var name: String?
     @NSManaged public var price: Double
     @NSManaged public var image: String?
+    @NSManaged public var image2: String?
+    @NSManaged public var image3: String?
 
 }
 
