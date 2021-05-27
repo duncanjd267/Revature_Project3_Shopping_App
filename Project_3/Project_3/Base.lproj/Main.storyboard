@@ -347,11 +347,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQ4-Z6-lBi">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQ4-Z6-lBi">
                                 <rect key="frame" x="72" y="467" width="271" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDB-S6-o4m">
                                 <rect key="frame" x="72" y="582" width="271" height="59"/>
@@ -384,6 +384,7 @@
                     <navigationItem key="navigationItem" id="zxA-2J-Dq3"/>
                     <connections>
                         <outlet property="PassField" destination="SFM-Di-EUN" id="5pH-6x-COM"/>
+                        <outlet property="TeleField" destination="dQ4-Z6-lBi" id="ad3-BS-NGv"/>
                         <outlet property="UsrField" destination="pMO-r0-wso" id="AXf-QQ-rsu"/>
                     </connections>
                 </viewController>
