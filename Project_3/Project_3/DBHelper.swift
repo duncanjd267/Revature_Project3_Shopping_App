@@ -180,6 +180,21 @@ class DBHelper
         return stu
     }
     
+    func getItemsBrand(name: String)-> [Item]{
+        var stu = [Item]()
+        var fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+        fetchReq.predicate = NSPredicate(format: "category == %@", name)
+        do{
+            stu = try context?.fetch(fetchReq) as!
+     [Item]
+        }
+        catch{
+            print("cannot fetch the data")
+        }
+        return stu
+    }
+    
+    
     func updateCartPurchased(name : String){
         
         var st = User()
