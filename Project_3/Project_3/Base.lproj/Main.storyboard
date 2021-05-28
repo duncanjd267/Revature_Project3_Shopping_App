@@ -456,7 +456,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="Confirm:" destination="3gR-6e-MoS" eventType="touchUpInside" id="AsF-ft-IEY"/>
+                                    <action selector="Confirm:" destination="3gR-6e-MoS" eventType="touchUpInside" id="GPq-cC-WD9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already Have An Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu8-fR-9xK">
@@ -477,9 +477,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="zxA-2J-Dq3"/>
                     <connections>
-                        <outlet property="PassField" destination="SFM-Di-EUN" id="5pH-6x-COM"/>
-                        <outlet property="TeleField" destination="dQ4-Z6-lBi" id="ad3-BS-NGv"/>
-                        <outlet property="UsrField" destination="pMO-r0-wso" id="AXf-QQ-rsu"/>
+                        <outlet property="PassField" destination="SFM-Di-EUN" id="iDf-JH-JTb"/>
+                        <outlet property="TeleField" destination="dQ4-Z6-lBi" id="Kl7-x5-QtV"/>
+                        <outlet property="UsrField" destination="pMO-r0-wso" id="YGv-QX-g0q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4q-Kb-aC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
