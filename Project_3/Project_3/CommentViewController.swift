@@ -19,7 +19,8 @@ class CommentViewController: UIViewController {
     
     @IBAction func submit(_ sender: Any) {
         var cur = DBHelper.inst.getOneItem(item: DBHelper.inst.getCurrentItem())
-        var curcom = Comments()
+        DBHelper.inst.addComment(object: comment.text!)
+        var curcom = DBHelper.inst.getOneComment(user: comment.text!)
         curcom.comment = comment.text!
         DBHelper.inst.updateComments(name: cur.name!, comment: curcom)
     }

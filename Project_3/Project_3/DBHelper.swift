@@ -97,6 +97,30 @@ class DBHelper
         
     }
     
+    func getOneComment(user : String) -> Comments{
+        
+        var st = Comments()
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Comments")
+        fetchReq.predicate = NSPredicate(format: "comment == %@", user)
+        fetchReq.fetchLimit = 1
+        do{
+            let req = try context?.fetch(fetchReq) as! [Comments]
+            
+            if(req.count != 0 ) {
+                st = req.first!
+                
+                DBHelper.found = 1
+            } else {
+                DBHelper.found = 0
+            }
+        }
+        catch{
+            print("Error")
+        }
+        return st
+        
+    }
+    
     func getOneItem(item : String) -> Item{
         
         var st = Item()

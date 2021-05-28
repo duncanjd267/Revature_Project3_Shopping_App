@@ -116,7 +116,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         if item?.numcom == 0{
             return 0
         } else {
-           reviewsEx = item?.tocomment as! [Comments]
+            reviewsEx = item?.tocomment?.allObjects as! [Comments]
             return reviewsEx!.count
             
         }
