@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  Project_3
 //
-//  Created by admin on 5/26/21.
+//  Created by admin on 5/28/21.
 //
 //
 
@@ -23,6 +23,25 @@ extension Item {
     @NSManaged public var image: String?
     @NSManaged public var image2: String?
     @NSManaged public var image3: String?
+    @NSManaged public var numcom: Double
+    @NSManaged public var tocomment: NSSet?
+
+}
+
+// MARK: Generated accessors for tocomment
+extension Item {
+
+    @objc(addTocommentObject:)
+    @NSManaged public func addToTocomment(_ value: Comments)
+
+    @objc(removeTocommentObject:)
+    @NSManaged public func removeFromTocomment(_ value: Comments)
+
+    @objc(addTocomment:)
+    @NSManaged public func addToTocomment(_ values: NSSet)
+
+    @objc(removeTocomment:)
+    @NSManaged public func removeFromTocomment(_ values: NSSet)
 
 }
 

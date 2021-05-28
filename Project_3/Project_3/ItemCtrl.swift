@@ -106,20 +106,26 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
  //Mark:- Review Tableviews Implementation
     
     
-    var reviewsEx = ["good", "bad", "poor"]
+    var reviewsEx : [Comments]?
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviewsEx.count
+        if item?.numcom == 0{
+            return 0
+        } else {
+            reviewsEx = item?.tocomment?.allObjects as! [Comments]
+            return reviewsEx!.count
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! ItemCtrlTableCell
-        cell.ReviewLB.text = reviewsEx[indexPath.row]
+        cell.ReviewLB.text = reviewsEx![indexPath.row].comment
             return cell
         
     }
