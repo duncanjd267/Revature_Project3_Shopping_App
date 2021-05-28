@@ -3,8 +3,9 @@
 ## Project Description
 Amazon has become a seemingly unavoidable capital giant and their ethical practices are highly questionable. Our app is meant to serve as a startup competitor to Amazon for ethically conscious shoppers!
 
-Users are over the moon about us:
-> I'm Commander Shepard, and this is my favourite app on Github!
+### Users are over the moon about us:
+
+![User review](/images/CommanderShepard.PNG)
 
 ## Technologies Used
 - CoreData
