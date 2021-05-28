@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
+class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     
     @IBOutlet weak var Recommandations: UICollectionView!
@@ -17,8 +17,6 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     //var RecommandedImage = ["Adorrgon", "AICOK", "Amazon", "Dewalt", "Duracell", "Fairywill", "Fosil", "Newman's", "Samsung_Laptop", "Skechers"]
@@ -44,7 +42,7 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
             return itemList.count
         }
         else{
-            return itemList.count
+            return 9
         }
         
         
@@ -86,6 +84,16 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
             return cell2
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if collectionView == self.Deals {
+            return CGSize(width: 120, height: 120)
+        }
+        else {
+            return CGSize()
+        }
     }
     
     
