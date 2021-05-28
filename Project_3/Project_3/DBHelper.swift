@@ -42,6 +42,7 @@ class DBHelper
         let item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: context!) as! Item
         item.name = object["name"]
         item.price = price
+        item.numcom = 0
         item.descript = object["description"]
         item.category = object["category"]
         item.image = object["image"]
@@ -58,6 +59,18 @@ class DBHelper
         }
     }
     
+    func addComment(object: String){
+        let item = NSEntityDescription.insertNewObject(forEntityName: "Comments", into: context!) as! Comments
+        item.comment = object
+        do{
+            try context?.save()
+            print("Data Save")
+
+        }
+        catch{
+            print("data not saved")
+        }
+    }
     static var found = 0
     
     func getOneUser(user : String) -> User{
@@ -154,6 +167,29 @@ class DBHelper
         
     }
     
+    func updateComments(name : String, comment : Comments){
+        
+        var st = Item()
+        print("st made")
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Item")
+        print("Fetched")
+        fetchReq.predicate = NSPredicate(format: "name == %@", name)
+        print("Predicated")
+        
+        do{
+            let stu = try context?.fetch(fetchReq)
+            st = stu?.first as! Item
+            print("It shall try to make relationship")
+            st.addToTocomment(comment)
+            st.numcom += 1
+            try context?.save()
+            print("Updated Questions For Quiz")
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
     func getUsers()-> [User]{
         var stu = [User]()
         var fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
