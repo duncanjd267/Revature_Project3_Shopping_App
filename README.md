@@ -1,10 +1,15 @@
 # Revature Project 3 Shopping App
 
 ## Project Description
-Amazon has become a seemingly unavoidable capital giant and their ethical practices are highly questionable. Our app is meant to serve as an startup competitor to Amazon for ethically conscious shoppers!
+Amazon has become a seemingly unavoidable capital giant and their ethical practices are highly questionable. Our app is meant to serve as a startup competitor to Amazon for ethically conscious shoppers!
+
+Users are over the moon about us:
+> I'm Commander Shepard, and this is my favourite app on Github!
 
 ## Technologies Used
 - CoreData
+- User Default
+- UIKit
 
 ## Features
 - Shopping cart
