@@ -15,12 +15,12 @@ class SignupCtrl: UIViewController
 	
 	let popBack = { }
 	
-    override func viewDidLoad()
+	override func viewDidLoad()
 	{
-        super.viewDidLoad()
+		super.viewDidLoad()
 
-    }
-    
+	}
+	
 	@IBAction func Confirm(_ sender: UIButton)
 	{
 		let existing = DBHelper.inst.getUsers()
@@ -62,4 +62,6 @@ class SignupCtrl: UIViewController
 		DBHelper.inst.addUser(object: UsrInfo)
 		
 	}
+	
+	
 }
