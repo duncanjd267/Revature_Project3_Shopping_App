@@ -1,7 +1,7 @@
 # Revature Project 3 Shopping App
 
 ## Project Description
-Amazon has become a seemingly unavoidable capital giant and their ethical practices are highly questionable. Our app is meant to serve as a startup competitor to Amazon for ethically conscious shoppers!
+Amazon has become a seemingly unavoidable capital giant and their labor practices are highly questionable. Our app is meant to serve as a startup competitor to Amazon for ethically conscious shoppers!
 
 ### Users are over the moon about us:
 
