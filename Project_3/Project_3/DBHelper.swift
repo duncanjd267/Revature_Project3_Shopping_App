@@ -42,6 +42,7 @@ class DBHelper
         let item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: context!) as! Item
         item.name = object["name"]
         item.price = price
+        item.numcom = 0
         item.descript = object["description"]
         item.category = object["category"]
         item.image = object["image"]
@@ -58,6 +59,18 @@ class DBHelper
         }
     }
     
+    func addComment(object: String){
+        let item = NSEntityDescription.insertNewObject(forEntityName: "Comments", into: context!) as! Comments
+        item.comment = object
+        do{
+            try context?.save()
+            print("Data Save")
+
+        }
+        catch{
+            print("data not saved")
+        }
+    }
     static var found = 0
     
     func getOneUser(user : String) -> User{
@@ -68,6 +81,30 @@ class DBHelper
         fetchReq.fetchLimit = 1
         do{
             let req = try context?.fetch(fetchReq) as! [User]
+            
+            if(req.count != 0 ) {
+                st = req.first!
+                
+                DBHelper.found = 1
+            } else {
+                DBHelper.found = 0
+            }
+        }
+        catch{
+            print("Error")
+        }
+        return st
+        
+    }
+    
+    func getOneComment(user : String) -> Comments{
+        
+        var st = Comments()
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Comments")
+        fetchReq.predicate = NSPredicate(format: "comment == %@", user)
+        fetchReq.fetchLimit = 1
+        do{
+            let req = try context?.fetch(fetchReq) as! [Comments]
             
             if(req.count != 0 ) {
                 st = req.first!
@@ -154,6 +191,29 @@ class DBHelper
         
     }
     
+    func updateComments(name : String, comment : Comments){
+        
+        var st = Item()
+        print("st made")
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Item")
+        print("Fetched")
+        fetchReq.predicate = NSPredicate(format: "name == %@", name)
+        print("Predicated")
+        
+        do{
+            let stu = try context?.fetch(fetchReq)
+            st = stu?.first as! Item
+            print("It shall try to make relationship")
+            st.addToTocomment(comment)
+            st.numcom += 1
+            try context?.save()
+            print("Updated Questions For Quiz")
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
     func getUsers()-> [User]{
         var stu = [User]()
         var fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
@@ -179,6 +239,21 @@ class DBHelper
         }
         return stu
     }
+    
+    func getItemsBrand(name: String)-> [Item]{
+        var stu = [Item]()
+        var fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+        fetchReq.predicate = NSPredicate(format: "category == %@", name)
+        do{
+            stu = try context?.fetch(fetchReq) as!
+     [Item]
+        }
+        catch{
+            print("cannot fetch the data")
+        }
+        return stu
+    }
+    
     
     func updateCartPurchased(name : String){
         
