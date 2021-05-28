@@ -62,4 +62,6 @@ class SignupCtrl: UIViewController
 		DBHelper.inst.addUser(object: UsrInfo)
 		
 	}
+	
+	
 }
