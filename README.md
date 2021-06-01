@@ -26,7 +26,11 @@ Click on this project if it's available, or enter the URL into the text field!
 #### Windows
 Cloning with the Windows command prompt requires [installing Git](https://git-scm.com/download/)
 
-Once installed, open Cortana and search cmd. Click to open the command prompt application.
+![Git download page](/images/GitDownloadPage.PNG)
+
+Once installed, open Cortana's search menu and search cmd. Click to open the command prompt application.
+
+[Cortana search](/images/cmdsearch.png/)
 
 Navigate to the file location where you want to store the application files and enter the following command:
 
