@@ -13,6 +13,12 @@
 		5C00964F2664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
 		5C0096502664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
 		5C0096512664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
+		5C77061E26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
+		5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
+		5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
+		5C77062826668D0D00CCE27F /* BrandPageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */; };
+		5C77062926668D0D00CCE27F /* BrandPageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */; };
+		5C77062A26668D0D00CCE27F /* BrandPageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */; };
 		5CC8A2B5265DA7410078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
 		5CC8A2B6265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
 		5CC8A2B7265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
@@ -67,6 +73,8 @@
 /* Begin PBXFileReference section */
 		5C0096472663F7D500A84A1D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		5C00964E2664AEB800A84A1D /* TextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyling.swift; sourceTree = "<group>"; };
+		5C77061D26668CE400CCE27F /* BrandPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageView.swift; sourceTree = "<group>"; };
+		5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageTableCell.swift; sourceTree = "<group>"; };
 		5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCell.swift; sourceTree = "<group>"; };
 		5CC8A362265FE8420078DAB9 /* ItemCtrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrlCell.swift; sourceTree = "<group>"; };
 		5CC8A3A3266044E50078DAB9 /* ItemCtrlTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrlTableCell.swift; sourceTree = "<group>"; };
@@ -126,6 +134,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C77061B26668C5800CCE27F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8480E8A3266155280016B62D /* SignupCtrl.swift */,
+				84DE6B0C2658145600B7E63D /* ViewController.swift */,
+				840BF1FD265BEC99006A1DED /* LoginCtrl.swift */,
+				840BF207265BEF9F006A1DED /* CartCtrl.swift */,
+				840BF20C265BF6FF006A1DED /* ItemCtrl.swift */,
+				847D3B14265D506800338AE7 /* WelcomeView.swift */,
+				84DD0D4E265EA3FE00F5CA5D /* LaunchingViewController.swift */,
+				84DD0D602660C91800F5CA5D /* CommentViewController.swift */,
+				5C0096472663F7D500A84A1D /* SideMenuView.swift */,
+				5C77061D26668CE400CCE27F /* BrandPageView.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5C77061C26668C8C00CCE27F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */,
+				5CC8A362265FE8420078DAB9 /* ItemCtrlCell.swift */,
+				5CC8A3A3266044E50078DAB9 /* ItemCtrlTableCell.swift */,
+				5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		8480E89C266153010016B62D /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,26 +199,16 @@
 		84DE6B072658145600B7E63D /* Project_3 */ = {
 			isa = PBXGroup;
 			children = (
-				8480E8A3266155280016B62D /* SignupCtrl.swift */,
+				5C77061C26668C8C00CCE27F /* TableViewCells */,
+				5C77061B26668C5800CCE27F /* ViewControllers */,
 				84DE6B082658145600B7E63D /* AppDelegate.swift */,
 				84DE6B0A2658145600B7E63D /* SceneDelegate.swift */,
-				84DE6B0C2658145600B7E63D /* ViewController.swift */,
 				84DE6B0E2658145600B7E63D /* Main.storyboard */,
 				84DE6B142658145A00B7E63D /* Assets.xcassets */,
 				84DE6B162658145A00B7E63D /* LaunchScreen.storyboard */,
 				84DE6B192658145A00B7E63D /* Info.plist */,
 				84DE6B112658145600B7E63D /* Project_3.xcdatamodeld */,
-				840BF1FD265BEC99006A1DED /* LoginCtrl.swift */,
 				840BF202265BED1F006A1DED /* DBHelper.swift */,
-				840BF207265BEF9F006A1DED /* CartCtrl.swift */,
-				840BF20C265BF6FF006A1DED /* ItemCtrl.swift */,
-				847D3B14265D506800338AE7 /* WelcomeView.swift */,
-				5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */,
-				84DD0D4E265EA3FE00F5CA5D /* LaunchingViewController.swift */,
-				5CC8A362265FE8420078DAB9 /* ItemCtrlCell.swift */,
-				5CC8A3A3266044E50078DAB9 /* ItemCtrlTableCell.swift */,
-				84DD0D602660C91800F5CA5D /* CommentViewController.swift */,
-				5C0096472663F7D500A84A1D /* SideMenuView.swift */,
 				5C00964E2664AEB800A84A1D /* TextStyling.swift */,
 			);
 			path = Project_3;
@@ -339,6 +365,7 @@
 				84DD0D612660C91800F5CA5D /* CommentViewController.swift in Sources */,
 				840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */,
 				84DE6B682659663800B7E63D /* Item+CoreDataProperties.swift in Sources */,
+				5C77062826668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
 				5CC8A363265FE8420078DAB9 /* ItemCtrlCell.swift in Sources */,
 				5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */,
 				5CC8A3A4266044E50078DAB9 /* ItemCtrlTableCell.swift in Sources */,
@@ -357,6 +384,7 @@
 				84DE6B132658145600B7E63D /* Project_3.xcdatamodeld in Sources */,
 				84DE6B692659663800B7E63D /* User+CoreDataClass.swift in Sources */,
 				8480E8A4266155280016B62D /* SignupCtrl.swift in Sources */,
+				5C77061E26668CE400CCE27F /* BrandPageView.swift in Sources */,
 				84DD0D5C2660C57700F5CA5D /* Comments+CoreDataProperties.swift in Sources */,
 				84DD0D5B2660C57700F5CA5D /* Comments+CoreDataClass.swift in Sources */,
 			);
@@ -367,11 +395,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC8A364265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
+				5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */,
 				84DE6B232658145A00B7E63D /* Project_3Tests.swift in Sources */,
 				5C0096492663F7D500A84A1D /* SideMenuView.swift in Sources */,
 				5C0096502664AEBA00A84A1D /* TextStyling.swift in Sources */,
 				5CC8A3A5266044E60078DAB9 /* ItemCtrlTableCell.swift in Sources */,
 				5CC8A2B6265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
+				5C77062926668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,11 +410,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC8A365265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
+				5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */,
 				84DE6B2E2658145A00B7E63D /* Project_3UITests.swift in Sources */,
 				5C00964A2663F7D500A84A1D /* SideMenuView.swift in Sources */,
 				5C0096512664AEBA00A84A1D /* TextStyling.swift in Sources */,
 				5CC8A3A6266044E60078DAB9 /* ItemCtrlTableCell.swift in Sources */,
 				5CC8A2B7265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
+				5C77062A26668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
