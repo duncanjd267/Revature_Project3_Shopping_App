@@ -14,17 +14,15 @@ class ItemCtrlCell: UICollectionViewCell {
     @IBOutlet weak var ItemName: UILabel!
     @IBOutlet weak var ItemPrice: UILabel!
     
-//    var itemIndex: Int = 0
-//    var imageName: String = "" {
-//
-//        didSet {
-//            if let imageView = ItemImg{
-//                imageView.image = UIImage(named: imageName)
-//            }
-//
-//        }
-//
-//    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layer.shadowRadius = 10
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 5, height: 10)
+        
+        self.clipsToBounds = false
+    }
     
     
 }

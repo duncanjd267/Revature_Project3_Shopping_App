@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0096472663F7D500A84A1D /* SideMenuView.swift */; };
+		5C0096492663F7D500A84A1D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0096472663F7D500A84A1D /* SideMenuView.swift */; };
+		5C00964A2663F7D500A84A1D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0096472663F7D500A84A1D /* SideMenuView.swift */; };
+		5C00964F2664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
+		5C0096502664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
+		5C0096512664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
 		5CC8A2B5265DA7410078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
 		5CC8A2B6265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
 		5CC8A2B7265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
@@ -59,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0096472663F7D500A84A1D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		5C00964E2664AEB800A84A1D /* TextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyling.swift; sourceTree = "<group>"; };
 		5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCell.swift; sourceTree = "<group>"; };
 		5CC8A362265FE8420078DAB9 /* ItemCtrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrlCell.swift; sourceTree = "<group>"; };
 		5CC8A3A3266044E50078DAB9 /* ItemCtrlTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrlTableCell.swift; sourceTree = "<group>"; };
@@ -174,6 +182,8 @@
 				5CC8A362265FE8420078DAB9 /* ItemCtrlCell.swift */,
 				5CC8A3A3266044E50078DAB9 /* ItemCtrlTableCell.swift */,
 				84DD0D602660C91800F5CA5D /* CommentViewController.swift */,
+				5C0096472663F7D500A84A1D /* SideMenuView.swift */,
+				5C00964E2664AEB800A84A1D /* TextStyling.swift */,
 			);
 			path = Project_3;
 			sourceTree = "<group>";
@@ -330,10 +340,12 @@
 				840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */,
 				84DE6B682659663800B7E63D /* Item+CoreDataProperties.swift in Sources */,
 				5CC8A363265FE8420078DAB9 /* ItemCtrlCell.swift in Sources */,
+				5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */,
 				5CC8A3A4266044E50078DAB9 /* ItemCtrlTableCell.swift in Sources */,
 				84DD0D4F265EA3FE00F5CA5D /* LaunchingViewController.swift in Sources */,
 				84DE6B672659663800B7E63D /* Item+CoreDataClass.swift in Sources */,
 				84DE6B6A2659663800B7E63D /* User+CoreDataProperties.swift in Sources */,
+				5C00964F2664AEBA00A84A1D /* TextStyling.swift in Sources */,
 				840BF1FE265BEC99006A1DED /* LoginCtrl.swift in Sources */,
 				840BF20D265BF6FF006A1DED /* ItemCtrl.swift in Sources */,
 				84DE6B0D2658145600B7E63D /* ViewController.swift in Sources */,
@@ -356,6 +368,8 @@
 			files = (
 				5CC8A364265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
 				84DE6B232658145A00B7E63D /* Project_3Tests.swift in Sources */,
+				5C0096492663F7D500A84A1D /* SideMenuView.swift in Sources */,
+				5C0096502664AEBA00A84A1D /* TextStyling.swift in Sources */,
 				5CC8A3A5266044E60078DAB9 /* ItemCtrlTableCell.swift in Sources */,
 				5CC8A2B6265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
 			);
@@ -367,6 +381,8 @@
 			files = (
 				5CC8A365265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
 				84DE6B2E2658145A00B7E63D /* Project_3UITests.swift in Sources */,
+				5C00964A2663F7D500A84A1D /* SideMenuView.swift in Sources */,
+				5C0096512664AEBA00A84A1D /* TextStyling.swift in Sources */,
 				5CC8A3A6266044E60078DAB9 /* ItemCtrlTableCell.swift in Sources */,
 				5CC8A2B7265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
 			);

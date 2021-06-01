@@ -49,23 +49,6 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBAction func AddCart(_ sender: Any) {
         DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentItem(), item: item!)
     }
-    //var counter = 0
-    
-    //    @objc private func pageViewChanged(_ sender: UIPageControl){
-    //
-    //        if counter < contentImg.count{
-    //            let index = IndexPath.init(item: counter, section: 0)
-    //            self.ItemPageCell.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-    //            pageView.currentPage = counter
-    //            counter += 1
-    //        }else{
-    //            counter = 0
-    //            let index = IndexPath.init(item: counter, section: 0)
-    //            self.ItemPageCell.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-    //            pageView.currentPage = counter
-    //        }
-    //
-    //    }
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -83,6 +66,8 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         
     }
+    
+    //Mark:- Recommanded and Deals of the day collection views control
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -112,15 +97,15 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == self.ItemPageCell{
             
-        let size = ItemPageCell.frame.size
-        return CGSize(width: size.width, height: size.height)
+            let size = ItemPageCell.frame.size
+            return CGSize(width: size.width, height: size.height)
             
         }
         else {
@@ -128,20 +113,30 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
             return CGSize(width: size.width, height: size.height)
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+        
+        if collectionView == self.ItemPageCell{
+            return 0.0
+        } else {
+            return 10.0
+        }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+      
+        if collectionView == self.ItemPageCell{
+            return 0.0
+        } else {
+            return 10.0
+        }
     }
-
-
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
         pageView.currentPage = indexPath.row
     }
+
     
     //Mark:- Review Tableviews Implementation
     
