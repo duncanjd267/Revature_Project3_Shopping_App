@@ -475,7 +475,7 @@
             <objects>
                 <viewController id="IgS-3T-UNf" customClass="BrandPageView" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y8M-aa-qqr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brand Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-mH-OH0">
@@ -550,6 +550,7 @@
                         <viewLayoutGuide key="safeArea" id="L8X-KG-nRe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xQh-kI-4pv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5X9-cf-n5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1020,6 +1021,10 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nike:" destination="pNm-A8-VqI" eventType="touchUpInside" id="beB-RX-JRl"/>
+                                                    <segue destination="IgS-3T-UNf" kind="show" id="xal-JM-YMI"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommanded Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBj-cO-7YU">
                                                 <rect key="frame" x="7" y="969" width="248" height="47"/>
@@ -1094,6 +1099,10 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="gucci:" destination="pNm-A8-VqI" eventType="touchUpInside" id="TZx-AV-ZuD"/>
+                                                    <segue destination="IgS-3T-UNf" kind="show" id="EOF-T9-ugD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu1-QL-q2t">
                                                 <rect key="frame" x="8" y="1113" width="192" height="81"/>
@@ -1105,6 +1114,10 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="hp:" destination="pNm-A8-VqI" eventType="touchUpInside" id="OxQ-BB-g59"/>
+                                                    <segue destination="IgS-3T-UNf" kind="show" id="X2c-pC-eLL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-Xr-DaB">
                                                 <rect key="frame" x="8" y="1202" width="192" height="81"/>
@@ -1116,6 +1129,10 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ps:" destination="pNm-A8-VqI" eventType="touchUpInside" id="xXf-Bb-9Jd"/>
+                                                    <segue destination="IgS-3T-UNf" kind="show" id="Wxv-L2-Z6i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcz-8P-W6E">
                                                 <rect key="frame" x="214" y="1202" width="192" height="81"/>
@@ -1127,6 +1144,10 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="adidas:" destination="pNm-A8-VqI" eventType="touchUpInside" id="5Q2-8t-M4Y"/>
+                                                    <segue destination="IgS-3T-UNf" kind="show" id="nW4-ds-cMz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOh-aW-RpA">
                                                 <rect key="frame" x="214" y="1113" width="192" height="81"/>
@@ -1138,6 +1159,10 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="apple:" destination="pNm-A8-VqI" eventType="touchUpInside" id="UaV-I2-sdN"/>
+                                                    <segue destination="IgS-3T-UNf" kind="show" id="pn5-TB-AQa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1658,6 +1683,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="ITv-wY-kUw"/>
         <segue reference="pc4-a1-Z9H"/>
+        <segue reference="EOF-T9-ugD"/>
         <segue reference="1Wt-fz-36i"/>
     </inferredMetricsTieBreakers>
     <resources>
