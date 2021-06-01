@@ -12,6 +12,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="numcom" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="purchased" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="tocomment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comments"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
@@ -24,8 +25,8 @@
         <relationship name="toitem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-54" positionY="36" width="128" height="178"/>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="148"/>
         <element name="Comments" positionX="-54" positionY="63" width="128" height="58"/>
+        <element name="Item" positionX="-54" positionY="36" width="128" height="193"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>
