@@ -177,14 +177,17 @@ class DBHelper
         print("Predicated")
         
         do{
-            let stu = try context?.fetch(fetchReq)
-            st = stu?.first as! User
-            print("It shall try to make relationship")
-            st.recentview = item.name
-            st.balance = st.balance + item.price
-            st.addToToitem(item)
-            try context?.save()
-            print("Updated Questions For Quiz")
+			let stu = try context?.fetch(fetchReq)
+			if stu?.count != 0
+			{
+				st = stu?.first as! User
+				print("It shall try to make relationship")
+				st.recentview = item.name
+				st.balance = st.balance + item.price
+				st.addToToitem(item)
+				try context?.save()
+				print("Updated Questions For Quiz")
+			}
         }
         catch{
             print("Error")

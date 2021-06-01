@@ -47,7 +47,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     
     @IBAction func AddCart(_ sender: Any) {
-        DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentItem(), item: item!)
+        DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentUser(), item: item!)
     }
     
     
