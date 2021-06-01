@@ -28,6 +28,10 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
 		let cell = tableView.dequeueReusableCell(withIdentifier: "thing1") as! CartTableCell
+		
+		cell.ItemName.text = items![indexPath.row].name
+		cell.ItemCost.text = String(items![indexPath.row].price)
+		
 		return cell
 	}
 	

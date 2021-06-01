@@ -750,6 +750,11 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ItemCost" destination="sCz-nk-aN1" id="Cu1-xS-zjU"/>
+                                            <outlet property="ItemName" destination="MQK-A4-6Bj" id="hVH-Ep-0pi"/>
+                                            <outlet property="ItmPic" destination="F5M-9V-4kh" id="iaa-Il-Jv2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
