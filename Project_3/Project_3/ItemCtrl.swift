@@ -62,7 +62,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         
         else {
-            return itemList.count
+            return simBrand!.count
         }
         
     }
@@ -78,9 +78,9 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         else {
             let ItemCell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell2", for: indexPath) as! ItemCtrlCell
-            ItemCell2.ItemImg2.image = UIImage(named: itemList[indexPath.row].image!)
-            ItemCell2.ItemName.text = itemList[indexPath.row].name!
-            ItemCell2.ItemPrice.text = String(itemList[indexPath.row].price)
+            ItemCell2.ItemImg2.image = UIImage(named: simBrand![indexPath.row].image!)
+            ItemCell2.ItemName.text = simBrand![indexPath.row].name!
+            ItemCell2.ItemPrice.text = String(simBrand![indexPath.row].price)
             return ItemCell2
         }
         
