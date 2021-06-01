@@ -35,6 +35,16 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+	{
+		if editingStyle == UITableViewCell.EditingStyle.delete
+		{
+			items!.remove(at: indexPath.row)
+			
+			tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+		}
+	}
+	
 	func PurchaseItems()
 	{
 		let Uname = Person!.username!

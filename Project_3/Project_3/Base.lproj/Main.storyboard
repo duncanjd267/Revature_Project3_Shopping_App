@@ -747,13 +747,16 @@
                                                     <rect key="frame" x="290" y="15" width="73" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Remove"/>
+                                                    <connections>
+                                                        <action selector="Removal:" destination="TG2-tZ-uaD" eventType="touchUpInside" id="GAt-YE-hzx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ItemCost" destination="sCz-nk-aN1" id="Cu1-xS-zjU"/>
                                             <outlet property="ItemName" destination="MQK-A4-6Bj" id="hVH-Ep-0pi"/>
-                                            <outlet property="ItmPic" destination="F5M-9V-4kh" id="iaa-Il-Jv2"/>
+                                            <outlet property="ItemPic" destination="F5M-9V-4kh" id="NmZ-zb-pSO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

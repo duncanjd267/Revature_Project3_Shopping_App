@@ -14,8 +14,12 @@ class CartTableCell: UITableViewCell
 	@IBOutlet weak var ItemCost: UILabel!
 	@IBOutlet weak var ItemName: UILabel!
 	
+	@IBAction func Removal(_ sender: UIButton)
+	{
+		//self.remove
+	}
 	
-    override func awakeFromNib()
+	override func awakeFromNib()
 	{
         super.awakeFromNib()
         // Initialization code
