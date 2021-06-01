@@ -135,6 +135,7 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! WelcomeViewCell
             cell1.ReImage.image = UIImage(named: itemList[indexPath.item].image!)
             cell1.ReText.text = itemList[indexPath.item].name!
+            print("Checking Recommendations")
             return cell1
             
         }
@@ -144,6 +145,7 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! WelcomeViewCell
             cell2.DealsImg.image = UIImage(named: itemList[indexPath.item].image!)
             cell2.DealsText.text = itemList[indexPath.item].name!
+            print("Checking Deals")
             return cell2
         }
         
