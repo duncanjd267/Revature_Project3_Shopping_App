@@ -18,9 +18,20 @@ Amazon has become a seemingly unavoidable capital giant and their labor practice
 - Account creation
 
 ## Getting Started
-### Cloning on Mac
+### Cloning to XCode
 Open Xcode and click on 'source control' on the top menu bar. Click on 'clone' at the very bottom.
 Click on this project if it's available, or enter the URL into the text field!
+
+### Using git commands
+#### Windows
+Cloning with the Windows command prompt requires installing Git
+
+#### Linux
+
+
+#### MacOS
+
+
 ## Usage
 
 ## Contributors
