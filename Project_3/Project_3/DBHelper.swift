@@ -44,6 +44,7 @@ class DBHelper
         item.name = object["name"]
         item.price = price
         item.numcom = 0
+        item.purchased = 0
         item.descript = object["description"]
         item.category = object["category"]
         item.image = object["image"]
@@ -143,6 +144,30 @@ class DBHelper
             print("Error")
         }
         return st
+        
+    }
+    
+    func updateItemPurchased(item : String){
+        
+        var st = Item()
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Item")
+        fetchReq.predicate = NSPredicate(format: "name == %@", item)
+        fetchReq.fetchLimit = 1
+        do{
+            let req = try context?.fetch(fetchReq) as! [Item]
+            
+            if(req.count != 0 ) {
+                st = req.first!
+                st.purchased = st.purchased + 1.0
+                
+                DBHelper.found = 1
+            } else {
+                DBHelper.found = 0
+            }
+        }
+        catch{
+            print("Error")
+        }
         
     }
     
@@ -272,6 +297,7 @@ class DBHelper
             let stu = try context?.fetch(fetchReq)
             st = stu?.first as! User
             for items in st.toitem!{
+                DBHelper.inst.updateItemPurchased(item: Item(context: items as! NSManagedObjectContext).name!)
                 st.removeFromToitem(Item(context: items as! NSManagedObjectContext))
             }
             st.cartamount = 0.0
