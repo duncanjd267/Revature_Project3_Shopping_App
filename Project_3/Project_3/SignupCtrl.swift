@@ -13,8 +13,6 @@ class SignupCtrl: UIViewController
 	@IBOutlet weak var PassField: UITextField!
 	@IBOutlet weak var TeleField: UITextField!
 	
-	let popBack = { }
-	
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
@@ -61,7 +59,16 @@ class SignupCtrl: UIViewController
 		print("Calling addUser.")
 		DBHelper.inst.addUser(object: UsrInfo)
 		
+		let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "LogIn") as! LoginCtrl
+		
+		present(Bienvenue, animated: true, completion: nil)
 	}
 	
+	@IBAction func SignIn(_ sender: UIButton)
+	{
+		let back = storyboard?.instantiateViewController(withIdentifier: "LogIn") as! LoginCtrl
+		
+		present(back, animated: true, completion: nil)
+	}
 	
 }

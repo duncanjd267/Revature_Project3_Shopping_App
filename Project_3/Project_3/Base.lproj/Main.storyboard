@@ -53,7 +53,7 @@
         <!--Login Ctrl-->
         <scene sceneID="cOr-hC-2H8">
             <objects>
-                <viewController id="gw2-bV-FwY" customClass="LoginCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" id="gw2-bV-FwY" customClass="LoginCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DLZ-PI-DxL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,6 +526,9 @@
                                 <rect key="frame" x="289" y="817" width="81" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="SignIn:" destination="3gR-6e-MoS" eventType="touchUpInside" id="1f9-Pg-WT7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="laE-Zz-iru"/>
