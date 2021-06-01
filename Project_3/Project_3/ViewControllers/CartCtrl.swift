@@ -7,13 +7,23 @@
 
 import UIKit
 
-class CartCtrl: UIViewController
+class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+	
 	var items: [Item]?
 	var numberInCart: Double?
 	var total: Double?
 	var Person: User?
 	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+	{
+		return items!.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+	{
+		return UITableViewCell()
+	}
 	
 	func PurchaseItems()
 	{
