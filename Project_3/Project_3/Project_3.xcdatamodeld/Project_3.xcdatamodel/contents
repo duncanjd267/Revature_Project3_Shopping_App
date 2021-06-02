@@ -22,11 +22,12 @@
         <attribute name="phone" optional="YES" attributeType="String"/>
         <attribute name="recentview" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="purchased" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
         <relationship name="toitem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
     </entity>
     <elements>
         <element name="Comments" positionX="-54" positionY="63" width="128" height="58"/>
         <element name="Item" positionX="-54" positionY="36" width="128" height="193"/>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="163"/>
     </elements>
 </model>

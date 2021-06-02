@@ -299,6 +299,7 @@ class DBHelper
             for items in st.toitem!{
                 DBHelper.inst.updateItemPurchased(item: Item(context: items as! NSManagedObjectContext).name!)
                 st.removeFromToitem(Item(context: items as! NSManagedObjectContext))
+                st.addToPurchased(Item(context: items as! NSManagedObjectContext))
             }
             st.cartamount = 0.0
             try context?.save()
