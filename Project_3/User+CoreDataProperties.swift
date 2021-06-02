@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  Project_3
 //
-//  Created by admin on 5/24/21.
+//  Created by admin on 6/2/21.
 //
 //
 
@@ -23,6 +23,7 @@ extension User {
     @NSManaged public var recentview: String?
     @NSManaged public var username: String?
     @NSManaged public var toitem: NSSet?
+    @NSManaged public var purchased: NSSet?
 
 }
 
@@ -40,6 +41,23 @@ extension User {
 
     @objc(removeToitem:)
     @NSManaged public func removeFromToitem(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for purchased
+extension User {
+
+    @objc(addPurchasedObject:)
+    @NSManaged public func addToPurchased(_ value: Item)
+
+    @objc(removePurchasedObject:)
+    @NSManaged public func removeFromPurchased(_ value: Item)
+
+    @objc(addPurchased:)
+    @NSManaged public func addToPurchased(_ values: NSSet)
+
+    @objc(removePurchased:)
+    @NSManaged public func removeFromPurchased(_ values: NSSet)
 
 }
 
