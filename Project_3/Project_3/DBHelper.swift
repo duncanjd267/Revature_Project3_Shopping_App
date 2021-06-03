@@ -188,7 +188,7 @@ class DBHelper
             if(req.count != 0 ) {
                 st = req.first!
                 ste = req2.first!
-                ste.addToPurchased(st)
+                ste.addToHistory(st)
                 try context?.save()
                 DBHelper.found = 1
             } else {

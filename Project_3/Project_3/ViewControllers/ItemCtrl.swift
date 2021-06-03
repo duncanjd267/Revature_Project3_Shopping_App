@@ -36,6 +36,11 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         item = cur
         simBrand = DBHelper.inst.getItemsBrand(name: cur.category!)
         var temp = [cur.image!, cur.image2!, cur.image3!]
+        var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
+        var history = usern.history as! [Item]
+        if(!history.contains(cur) || history.count == 0){
+            DBHelper.inst.updateItemViewed(item: cur.name!)
+        }
         contentImg = temp
         super.viewDidLoad()
         name.text = DBHelper.inst.getCurrentItem()
