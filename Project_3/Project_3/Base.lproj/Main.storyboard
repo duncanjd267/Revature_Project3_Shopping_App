@@ -759,7 +759,7 @@
         <!--Cart-->
         <scene sceneID="KRU-c5-qyC">
             <objects>
-                <viewController id="bkp-Gr-5eT" sceneMemberID="viewController">
+                <viewController id="bkp-Gr-5eT" customClass="CartCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cKL-XS-grg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -776,7 +776,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="TG2-tZ-uaD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thing1" rowHeight="139" id="TG2-tZ-uaD" customClass="CartTableCell" customModule="Project_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TG2-tZ-uaD" id="dOA-tP-MDY">
@@ -817,9 +817,17 @@
                                                     <rect key="frame" x="290" y="15" width="73" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Remove"/>
+                                                    <connections>
+                                                        <action selector="Removal:" destination="TG2-tZ-uaD" eventType="touchUpInside" id="GAt-YE-hzx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ItemCost" destination="sCz-nk-aN1" id="Cu1-xS-zjU"/>
+                                            <outlet property="ItemName" destination="MQK-A4-6Bj" id="hVH-Ep-0pi"/>
+                                            <outlet property="ItemPic" destination="F5M-9V-4kh" id="NmZ-zb-pSO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -828,6 +836,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" id="bbS-Fb-9Qx"/>
+                    <navigationItem key="navigationItem" id="Sjx-Xq-NbC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORQ-MQ-RSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1722,6 +1731,21 @@
                                             <action selector="clickOnButton:" destination="UDp-6o-x9t" eventType="touchUpInside" id="eRY-uO-iad"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeZ-od-7TO">
+                                        <rect key="frame" x="90" y="157" width="159" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                                        <state key="normal" title="Cart">
+                                            <color key="titleColor" red="0.73504179719999996" green="0.93055683369999997" blue="0.82338589429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="bkp-Gr-5eT" kind="show" id="fku-0i-abe"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShoppingCart" translatesAutoresizingMaskIntoConstraints="NO" id="oWs-q6-FpP">
+                                        <rect key="frame" x="20" y="159" width="41" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -1817,6 +1841,7 @@
         <image name="NikeLogo" width="313.5" height="187"/>
         <image name="PsLogo" width="960" height="540"/>
         <image name="Shopping Logo" width="162" height="22"/>
+        <image name="ShoppingCart" width="1835" height="1920"/>
         <image name="TodaysDealIcon" width="64" height="64"/>
         <image name="UserImg" width="100" height="100"/>
         <image name="ViewHistoryIcon" width="64" height="64"/>
