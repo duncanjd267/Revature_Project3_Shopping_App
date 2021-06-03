@@ -60,7 +60,7 @@ class DBHelper
             print("data not saved")
         }
     }
-    
+    //hushhnjh
     func addComment(object: String){
         let item = NSEntityDescription.insertNewObject(forEntityName: "Comments", into: context!) as! Comments
         item.comment = object
