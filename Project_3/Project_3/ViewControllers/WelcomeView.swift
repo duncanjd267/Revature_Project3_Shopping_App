@@ -161,6 +161,29 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         }
     }
     
+    @IBAction func nike(_ sender: Any) {
+        DBHelper.inst.holdCurrentBrand(name: "Nike")
+    }
+    
+    @IBAction func gucci(_ sender: Any) {
+        DBHelper.inst.holdCurrentBrand(name: "Gucci")
+    }
+    
+    @IBAction func hp(_ sender: Any) {
+        DBHelper.inst.holdCurrentBrand(name: "HP")
+    }
+    
+    @IBAction func ps(_ sender: Any) {
+        DBHelper.inst.holdCurrentBrand(name: "PS3")
+    }
+    
+    @IBAction func adidas(_ sender: Any) {
+        DBHelper.inst.holdCurrentBrand(name: "Addidas")
+    }
+    
+    @IBAction func apple(_ sender: Any) {
+        DBHelper.inst.holdCurrentBrand(name: "Apple")
+    }
 }
 
 
