@@ -45,7 +45,7 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 		}
 	}
 	
-	func PurchaseItems()
+	/*func PurchaseItems()
 	{
 		let Uname = Person!.username!
 		items!.removeAll()
@@ -57,7 +57,7 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 	func removeItem()
 	{
 		
-	}
+	}*/
 	
     override func viewDidLoad()
 	{
