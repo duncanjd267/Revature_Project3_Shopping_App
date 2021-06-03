@@ -11,7 +11,7 @@ class WishlistViewController: UIViewController,UITableViewDelegate, UITableViewD
     
     var prob:Bool?
     var brand:[Item]?
-    
+    //wishlist
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if DBHelper.inst.getCurrentUser() == "" {
             prob = true

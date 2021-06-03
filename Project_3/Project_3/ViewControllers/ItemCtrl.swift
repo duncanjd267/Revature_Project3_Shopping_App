@@ -21,7 +21,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     
     var contentImg : [String]?
-    
+    //itemcontroller
     var item : Item?
     
     var simBrand : [Item]?
