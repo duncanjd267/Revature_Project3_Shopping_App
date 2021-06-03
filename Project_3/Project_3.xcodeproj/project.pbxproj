@@ -41,8 +41,8 @@
 		840BF203265BED1F006A1DED /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BF202265BED1F006A1DED /* DBHelper.swift */; };
 		840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BF207265BEF9F006A1DED /* CartCtrl.swift */; };
 		840BF20D265BF6FF006A1DED /* ItemCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BF20C265BF6FF006A1DED /* ItemCtrl.swift */; };
-		8444E4A7266916E80039D34F /* WishlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444E4A6266916E80039D34F /* WishlistTableViewController.swift */; };
 		8444E4AC2669173F0039D34F /* WishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444E4AB2669173F0039D34F /* WishlistTableViewCell.swift */; };
+		8464B5C326692951001B08C8 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B5C226692951001B08C8 /* WishlistViewController.swift */; };
 		847A053A2666C051004FF134 /* CartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A05392666C051004FF134 /* CartTableCell.swift */; };
 		847D3B15265D506800338AE7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D3B14265D506800338AE7 /* WelcomeView.swift */; };
 		8480E8A4266155280016B62D /* SignupCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480E8A3266155280016B62D /* SignupCtrl.swift */; };
@@ -97,8 +97,8 @@
 		840BF202265BED1F006A1DED /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		840BF207265BEF9F006A1DED /* CartCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCtrl.swift; sourceTree = "<group>"; };
 		840BF20C265BF6FF006A1DED /* ItemCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrl.swift; sourceTree = "<group>"; };
-		8444E4A6266916E80039D34F /* WishlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewController.swift; sourceTree = "<group>"; };
 		8444E4AB2669173F0039D34F /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
+		8464B5C226692951001B08C8 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		847A05392666C051004FF134 /* CartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableCell.swift; sourceTree = "<group>"; };
 		847D3B14265D506800338AE7 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8480E8A3266155280016B62D /* SignupCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupCtrl.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				5C0096472663F7D500A84A1D /* SideMenuView.swift */,
 				5C77061D26668CE400CCE27F /* BrandPageView.swift */,
 				5C7706402666BA7B00CCE27F /* WelcomeViewNoUser.swift */,
-				8444E4A6266916E80039D34F /* WishlistTableViewController.swift */,
+				8464B5C226692951001B08C8 /* WishlistViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -392,8 +392,8 @@
 				5C77062826668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
 				5CC8A363265FE8420078DAB9 /* ItemCtrlCell.swift in Sources */,
 				5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */,
-				8444E4A7266916E80039D34F /* WishlistTableViewController.swift in Sources */,
 				5CC8A3A4266044E50078DAB9 /* ItemCtrlTableCell.swift in Sources */,
+				8464B5C326692951001B08C8 /* WishlistViewController.swift in Sources */,
 				84DD0D4F265EA3FE00F5CA5D /* LaunchingViewController.swift in Sources */,
 				84DE6B672659663800B7E63D /* Item+CoreDataClass.swift in Sources */,
 				5C7706552666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */,
