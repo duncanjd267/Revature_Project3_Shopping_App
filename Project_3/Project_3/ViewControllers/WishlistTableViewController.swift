@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryTableViewController: UITableViewController{
+class WishlistTableViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()

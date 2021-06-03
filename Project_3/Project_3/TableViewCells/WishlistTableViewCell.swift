@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryTableViewCell: UITableViewCell {
+class WishlistTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var hImage: UIImageView!

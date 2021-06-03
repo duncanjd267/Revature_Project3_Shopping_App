@@ -36,10 +36,15 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         item = cur
         simBrand = DBHelper.inst.getItemsBrand(name: cur.category!)
         var temp = [cur.image!, cur.image2!, cur.image3!]
+        if DBHelper.inst.getCurrentUser() == ""{
+            print("No user present")
+        }
+        else{
         var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
         var history = usern.history as! [Item]
         if(!history.contains(cur) || history.count == 0){
             DBHelper.inst.updateItemViewed(item: cur.name!)
+        }
         }
         contentImg = temp
         super.viewDidLoad()
@@ -52,7 +57,12 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     
     @IBAction func AddCart(_ sender: Any) {
-        DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentUser(), item: item!)
+        if DBHelper.inst.getCurrentUser() == ""{
+            print("No user, please login")
+        }
+         else {
+            DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentUser(), item: item!)
+        }
     }
     
     
@@ -173,6 +183,19 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+    
+    @IBAction func back(_ sender: Any) {
+        if DBHelper.inst.getCurrentUser() == ""{
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
+            present(Bienvenue, animated: true, completion: nil)
+            
+        } else {
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
+            present(Bienvenue, animated: true, completion: nil)
+            
+        }
+    }
+    
     
 }
 
