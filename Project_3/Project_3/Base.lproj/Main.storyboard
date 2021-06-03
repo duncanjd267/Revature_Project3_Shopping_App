@@ -1738,6 +1738,9 @@
                                         <state key="normal" title="Cart">
                                             <color key="titleColor" red="0.73504179719999996" green="0.93055683369999997" blue="0.82338589429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clickOnButton:" destination="UDp-6o-x9t" eventType="touchUpInside" id="1CI-23-N0M"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShoppingCart" translatesAutoresizingMaskIntoConstraints="NO" id="oWs-q6-FpP">
                                         <rect key="frame" x="20" y="159" width="41" height="38"/>
