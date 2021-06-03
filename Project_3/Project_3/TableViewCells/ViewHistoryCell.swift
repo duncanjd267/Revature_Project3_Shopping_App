@@ -1,18 +1,18 @@
 //
-//  HistoryTableViewCell.swift
+//  ViewHistoryCell.swift
 //  Project_3
 //
-//  Created by admin on 6/3/21.
+//  Created by Kangseok Lee on 6/2/21.
 //
 
 import UIKit
 
-class WishlistTableViewCell: UITableViewCell {
+class ViewHistoryCell: UITableViewCell {
+
+    @IBOutlet var ViewHistoryImg: UIImageView!
+    @IBOutlet var ItemName: UILabel!
+    @IBOutlet var ItemPrice: UILabel!
     
-    
-    @IBOutlet weak var hImage: UIImageView!
-    @IBOutlet weak var hName: UILabel!
-    @IBOutlet weak var hPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
