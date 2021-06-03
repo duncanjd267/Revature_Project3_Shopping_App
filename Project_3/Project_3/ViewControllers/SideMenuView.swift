@@ -34,6 +34,12 @@ class SideMenuView: UIViewController {
         
     }
     
+    @IBAction func WishList(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(identifier: "WishList") as! WishListViewController
+        present(vc, animated: true)
+        
+    }
     
     
     

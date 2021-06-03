@@ -20,6 +20,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var pageView: UIPageControl!
     
     
+    
     var contentImg : [String]?
     //itemcontroller
     var item : Item?
@@ -36,6 +37,16 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         item = cur
         simBrand = DBHelper.inst.getItemsBrand(name: cur.category!)
         var temp = [cur.image!, cur.image2!, cur.image3!]
+        if DBHelper.inst.getCurrentUser() == ""{
+            print("No user present")
+        }
+        else{
+            var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
+            var history = usern.history as! [Item]
+            if(!history.contains(cur) || history.count == 0){
+                DBHelper.inst.updateItemViewed(item: cur.name!)
+            }
+        }
         contentImg = temp
         super.viewDidLoad()
         name.text = DBHelper.inst.getCurrentItem()
@@ -47,7 +58,12 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     
     @IBAction func AddCart(_ sender: Any) {
-        DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentUser(), item: item!)
+        if DBHelper.inst.getCurrentUser() == ""{
+            print("No user, please login")
+        }
+        else {
+            DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentUser(), item: item!)
+        }
     }
     
     
@@ -97,7 +113,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -124,7 +140,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-      
+        
         if collectionView == self.ItemPageCell{
             return 0.0
         } else {
@@ -136,7 +152,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         
         pageView.currentPage = indexPath.row
     }
-
+    
     
     //Mark:- Review Tableviews Implementation
     
@@ -167,6 +183,18 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        if DBHelper.inst.getCurrentUser() == ""{
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
+            present(Bienvenue, animated: true, completion: nil)
+            
+        } else {
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
+            present(Bienvenue, animated: true, completion: nil)
+            
+        }
     }
     
 }
