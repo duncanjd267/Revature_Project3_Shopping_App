@@ -11,11 +11,11 @@ import UIKit
 
 class DBHelper
 {
-	static var inst = DBHelper()
+    static var inst = DBHelper()
     var currentUser = ""
     var currentItem = ""
     var currentBrand = ""
-	
+    
     let context = (UIApplication.shared.delegate as? AppDelegate)? .persistentContainer.viewContext
     
     
@@ -44,6 +44,7 @@ class DBHelper
         item.name = object["name"]
         item.price = price
         item.numcom = 0
+        item.purchased = 0
         item.descript = object["description"]
         item.category = object["category"]
         item.image = object["image"]
@@ -146,6 +147,60 @@ class DBHelper
         
     }
     
+    func updateItemPurchased(item : String){
+        
+        var st = Item()
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Item")
+        fetchReq.predicate = NSPredicate(format: "name == %@", item)
+        fetchReq.fetchLimit = 1
+        do{
+            let req = try context?.fetch(fetchReq) as! [Item]
+            
+            if(req.count != 0 ) {
+                st = req.first!
+                st.purchased = st.purchased + 1.0
+                
+                DBHelper.found = 1
+            } else {
+                DBHelper.found = 0
+            }
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
+    
+    func updateItemViewed(item : String){
+        
+        var st = Item()
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Item")
+        fetchReq.predicate = NSPredicate(format: "name == %@", item)
+        fetchReq.fetchLimit = 1
+        var ste = User()
+        var fetchReq2 = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+        fetchReq.predicate = NSPredicate(format: "name == %@", currentUser)
+        fetchReq.fetchLimit = 1
+        do{
+            let req = try context?.fetch(fetchReq) as! [Item]
+            let req2 = try context?.fetch(fetchReq2) as! [User]
+            
+            if(req.count != 0 ) {
+                st = req.first!
+                ste = req2.first!
+                ste.addToHistory(st)
+                try context?.save()
+                DBHelper.found = 1
+            } else {
+                DBHelper.found = 0
+            }
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
+    
     func updateUserPassword(object : [String:String]){
         
         var st = User()
@@ -177,17 +232,17 @@ class DBHelper
         print("Predicated")
         
         do{
-			let stu = try context?.fetch(fetchReq)
-			if stu?.count != 0
-			{
-				st = stu?.first as! User
-				print("It shall try to make relationship")
-				st.recentview = item.name
-				st.balance = st.balance + item.price
-				st.addToToitem(item)
-				try context?.save()
-				print("Updated Questions For Quiz")
-			}
+            let stu = try context?.fetch(fetchReq)
+            if stu?.count != 0
+            {
+                st = stu?.first as! User
+                print("It shall try to make relationship")
+                st.recentview = item.name
+                st.balance = st.balance + item.price
+                st.addToToitem(item)
+                try context?.save()
+                print("Updated Questions For Quiz")
+            }
         }
         catch{
             print("Error")
@@ -272,7 +327,9 @@ class DBHelper
             let stu = try context?.fetch(fetchReq)
             st = stu?.first as! User
             for items in st.toitem!{
+                DBHelper.inst.updateItemPurchased(item: Item(context: items as! NSManagedObjectContext).name!)
                 st.removeFromToitem(Item(context: items as! NSManagedObjectContext))
+                st.addToPurchased(Item(context: items as! NSManagedObjectContext))
             }
             st.cartamount = 0.0
             try context?.save()

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,15 @@
 		5C667F1726683003005F1C2F /* CODpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F1626683003005F1C2F /* CODpage.swift */; };
 		5C667F1826683003005F1C2F /* CODpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F1626683003005F1C2F /* CODpage.swift */; };
 		5C667F1926683003005F1C2F /* CODpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F1626683003005F1C2F /* CODpage.swift */; };
+		5C667FF3266979A5005F1C2F /* Comments+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667FF0266979A4005F1C2F /* Comments+CoreDataProperties.swift */; };
+		5C667FF4266979A5005F1C2F /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667FF2266979A4005F1C2F /* Item+CoreDataProperties.swift */; };
+		5C667FF5266979A5005F1C2F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667FF1266979A4005F1C2F /* User+CoreDataProperties.swift */; };
+		5C66800226697A73005F1C2F /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66800126697A73005F1C2F /* WishListViewController.swift */; };
+		5C66800326697A73005F1C2F /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66800126697A73005F1C2F /* WishListViewController.swift */; };
+		5C66800426697A73005F1C2F /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66800126697A73005F1C2F /* WishListViewController.swift */; };
+		5C66801126697B65005F1C2F /* WishlistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66801026697B65005F1C2F /* WishlistTableCell.swift */; };
+		5C66801226697B65005F1C2F /* WishlistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66801026697B65005F1C2F /* WishlistTableCell.swift */; };
+		5C66801326697B65005F1C2F /* WishlistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66801026697B65005F1C2F /* WishlistTableCell.swift */; };
 		5C77061E26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
 		5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
 		5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
@@ -111,6 +120,11 @@
 		5C667F0826682FD5005F1C2F /* CreditCardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardPage.swift; sourceTree = "<group>"; };
 		5C667F0F26682FED005F1C2F /* NetBankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBankingPage.swift; sourceTree = "<group>"; };
 		5C667F1626683003005F1C2F /* CODpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CODpage.swift; sourceTree = "<group>"; };
+		5C667FF0266979A4005F1C2F /* Comments+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Comments+CoreDataProperties.swift"; path = "/Users/kangseoklee/Documents/Revature_Project3_Shopping_App/Project_3/Comments+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		5C667FF1266979A4005F1C2F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "/Users/kangseoklee/Documents/Revature_Project3_Shopping_App/Project_3/User+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		5C667FF2266979A4005F1C2F /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataProperties.swift"; path = "/Users/kangseoklee/Documents/Revature_Project3_Shopping_App/Project_3/Item+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		5C66800126697A73005F1C2F /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		5C66801026697B65005F1C2F /* WishlistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableCell.swift; sourceTree = "<group>"; };
 		5C77061D26668CE400CCE27F /* BrandPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageView.swift; sourceTree = "<group>"; };
 		5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageTableCell.swift; sourceTree = "<group>"; };
 		5C7706402666BA7B00CCE27F /* WelcomeViewNoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewNoUser.swift; sourceTree = "<group>"; };
@@ -195,7 +209,6 @@
 				C7CE406CF7C6FC5EBAE89487 /* Pods-Project_3Tests.debug.xcconfig */,
 				6BF87EED9B1D337295F7F95D /* Pods-Project_3Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +241,7 @@
 				5C667F0826682FD5005F1C2F /* CreditCardPage.swift */,
 				5C667F0F26682FED005F1C2F /* NetBankingPage.swift */,
 				5C667F1626683003005F1C2F /* CODpage.swift */,
+				5C66800126697A73005F1C2F /* WishListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -242,6 +256,7 @@
 				5C77064D2666BE7000CCE27F /* WelcomeViewNotUserCell.swift */,
 				5C7706542666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift */,
 				5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */,
+				5C66801026697B65005F1C2F /* WishlistTableCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -256,6 +271,9 @@
 		84DE6AFC2658145600B7E63D = {
 			isa = PBXGroup;
 			children = (
+				5C667FF2266979A4005F1C2F /* Item+CoreDataProperties.swift */,
+				5C667FF1266979A4005F1C2F /* User+CoreDataProperties.swift */,
+				5C667FF0266979A4005F1C2F /* Comments+CoreDataProperties.swift */,
 				84DD0D592660C57700F5CA5D /* Comments+CoreDataClass.swift */,
 				84DD0D5A2660C57700F5CA5D /* Comments+CoreDataProperties.swift */,
 				84DE6B632659663800B7E63D /* Item+CoreDataClass.swift */,
@@ -562,6 +580,7 @@
 				5C667EFB266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */,
 				84DE6B682659663800B7E63D /* Item+CoreDataProperties.swift in Sources */,
+				5C667FF4266979A5005F1C2F /* Item+CoreDataProperties.swift in Sources */,
 				5C77062826668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
 				5CC8A363265FE8420078DAB9 /* ItemCtrlCell.swift in Sources */,
 				5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */,
@@ -569,12 +588,15 @@
 				84DD0D4F265EA3FE00F5CA5D /* LaunchingViewController.swift in Sources */,
 				5C667F1026682FED005F1C2F /* NetBankingPage.swift in Sources */,
 				84DE6B672659663800B7E63D /* Item+CoreDataClass.swift in Sources */,
+				5C66800226697A73005F1C2F /* WishListViewController.swift in Sources */,
 				5C7706552666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */,
 				84DE6B6A2659663800B7E63D /* User+CoreDataProperties.swift in Sources */,
 				5C00964F2664AEBA00A84A1D /* TextStyling.swift in Sources */,
+				5C667FF3266979A5005F1C2F /* Comments+CoreDataProperties.swift in Sources */,
 				840BF1FE265BEC99006A1DED /* LoginCtrl.swift in Sources */,
 				5C667EF426682296005F1C2F /* ViewHistoryPage.swift in Sources */,
 				840BF20D265BF6FF006A1DED /* ItemCtrl.swift in Sources */,
+				5C667FF5266979A5005F1C2F /* User+CoreDataProperties.swift in Sources */,
 				5C77064E2666BE7000CCE27F /* WelcomeViewNotUserCell.swift in Sources */,
 				84DE6B0D2658145600B7E63D /* ViewController.swift in Sources */,
 				847D3B15265D506800338AE7 /* WelcomeView.swift in Sources */,
@@ -589,6 +611,7 @@
 				8480E8A4266155280016B62D /* SignupCtrl.swift in Sources */,
 				5C77061E26668CE400CCE27F /* BrandPageView.swift in Sources */,
 				84DD0D5C2660C57700F5CA5D /* Comments+CoreDataProperties.swift in Sources */,
+				5C66801126697B65005F1C2F /* WishlistTableCell.swift in Sources */,
 				84DD0D5B2660C57700F5CA5D /* Comments+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C66801226697B65005F1C2F /* WishlistTableCell.swift in Sources */,
 				5CC8A364265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
 				5C667F1826683003005F1C2F /* CODpage.swift in Sources */,
 				5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */,
@@ -611,6 +635,7 @@
 				5C667EFC266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				5CC8A2B6265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
 				5C77062926668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
+				5C66800326697A73005F1C2F /* WishListViewController.swift in Sources */,
 				5C667F1126682FED005F1C2F /* NetBankingPage.swift in Sources */,
 				5C667F0326682C7B005F1C2F /* PaymentOptionView.swift in Sources */,
 				5C7706422666BA7B00CCE27F /* WelcomeViewNoUser.swift in Sources */,
@@ -621,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C66801326697B65005F1C2F /* WishlistTableCell.swift in Sources */,
 				5CC8A365265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
 				5C667F1926683003005F1C2F /* CODpage.swift in Sources */,
 				5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */,
@@ -635,6 +661,7 @@
 				5C667EFD266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				5CC8A2B7265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
 				5C77062A26668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
+				5C66800426697A73005F1C2F /* WishListViewController.swift in Sources */,
 				5C667F1226682FED005F1C2F /* NetBankingPage.swift in Sources */,
 				5C667F0426682C7B005F1C2F /* PaymentOptionView.swift in Sources */,
 				5C7706432666BA7C00CCE27F /* WelcomeViewNoUser.swift in Sources */,
