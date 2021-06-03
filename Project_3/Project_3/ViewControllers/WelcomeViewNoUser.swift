@@ -8,7 +8,7 @@
 import UIKit
 
 class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UITableViewDelegate, UITableViewDataSource {
-
+//wishlist
     @IBOutlet weak var DealsCell: UICollectionView!
     @IBOutlet weak var pageView: UIPageControl!
     
