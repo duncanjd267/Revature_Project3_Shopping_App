@@ -53,7 +53,7 @@
         <!--Login Ctrl-->
         <scene sceneID="cOr-hC-2H8">
             <objects>
-                <viewController id="gw2-bV-FwY" customClass="LoginCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" id="gw2-bV-FwY" customClass="LoginCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DLZ-PI-DxL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -840,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORQ-MQ-RSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4954" y="457"/>
+            <point key="canvasLocation" x="4946" y="457"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bpf-lm-J9P">
@@ -1739,7 +1739,7 @@
                                             <color key="titleColor" red="0.73504179719999996" green="0.93055683369999997" blue="0.82338589429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="bkp-Gr-5eT" kind="show" id="fku-0i-abe"/>
+                                            <action selector="clickOnButton:" destination="UDp-6o-x9t" eventType="touchUpInside" id="1CI-23-N0M"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShoppingCart" translatesAutoresizingMaskIntoConstraints="NO" id="oWs-q6-FpP">
