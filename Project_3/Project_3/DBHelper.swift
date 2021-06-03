@@ -171,6 +171,36 @@ class DBHelper
         
     }
     
+    func updateItemViewed(item : String){
+        
+        var st = Item()
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Item")
+        fetchReq.predicate = NSPredicate(format: "name == %@", item)
+        fetchReq.fetchLimit = 1
+        var ste = User()
+        var fetchReq2 = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+        fetchReq.predicate = NSPredicate(format: "name == %@", currentUser)
+        fetchReq.fetchLimit = 1
+        do{
+            let req = try context?.fetch(fetchReq) as! [Item]
+            let req2 = try context?.fetch(fetchReq2) as! [User]
+            
+            if(req.count != 0 ) {
+                st = req.first!
+                ste = req2.first!
+                ste.addToHistory(st)
+                try context?.save()
+                DBHelper.found = 1
+            } else {
+                DBHelper.found = 0
+            }
+        }
+        catch{
+            print("Error")
+        }
+        
+    }
+    
     func updateUserPassword(object : [String:String]){
         
         var st = User()

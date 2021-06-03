@@ -24,6 +24,8 @@ extension User {
     @NSManaged public var username: String?
     @NSManaged public var toitem: NSSet?
     @NSManaged public var purchased: NSSet?
+    @NSManaged public var history: NSSet?
+    @NSManaged public var wishlist: NSSet?
 
 }
 
@@ -58,6 +60,40 @@ extension User {
 
     @objc(removePurchased:)
     @NSManaged public func removeFromPurchased(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for history
+extension User {
+
+    @objc(addHistoryObject:)
+    @NSManaged public func addToHistory(_ value: Item)
+
+    @objc(removeHistoryObject:)
+    @NSManaged public func removeFromHistory(_ value: Item)
+
+    @objc(addHistory:)
+    @NSManaged public func addToHistory(_ values: NSSet)
+
+    @objc(removeHistory:)
+    @NSManaged public func removeFromHistory(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for wishlist
+extension User {
+
+    @objc(addWishlistObject:)
+    @NSManaged public func addToWishlist(_ value: Item)
+
+    @objc(removeWishlistObject:)
+    @NSManaged public func removeFromWishlist(_ value: Item)
+
+    @objc(addWishlist:)
+    @NSManaged public func addToWishlist(_ values: NSSet)
+
+    @objc(removeWishlist:)
+    @NSManaged public func removeFromWishlist(_ values: NSSet)
 
 }
 
