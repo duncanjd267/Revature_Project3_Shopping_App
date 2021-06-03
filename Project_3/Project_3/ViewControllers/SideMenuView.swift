@@ -26,13 +26,16 @@ class SideMenuView: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func clickOnButton(_ sender: Any) {
+
+    @IBAction func ViewHistory(_ sender: Any) {
         
-        self.delegate?.hideSideMenu()
+        let vc = storyboard?.instantiateViewController(identifier: "ViewHistory") as! ViewHistoryPage
+        present(vc, animated: true)
         
     }
     
     
-
+    
+    
 
 }

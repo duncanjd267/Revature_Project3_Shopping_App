@@ -66,13 +66,6 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
         pageView.currentPage = indexPath.row
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
-        let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-        present(Bienvenue, animated: true, completion: nil)
-
-    }
-    
     
     //Mark:- Best selling table set up
     
@@ -95,13 +88,6 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
         
         return cell
         
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
-        let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-        present(Bienvenue, animated: true, completion: nil)
-
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

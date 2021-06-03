@@ -7,12 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44A824A55F7D7BA1C4C5369D /* Pods_Project_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922D237B20CF6E282270CFE1 /* Pods_Project_3.framework */; };
 		5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0096472663F7D500A84A1D /* SideMenuView.swift */; };
 		5C0096492663F7D500A84A1D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0096472663F7D500A84A1D /* SideMenuView.swift */; };
 		5C00964A2663F7D500A84A1D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0096472663F7D500A84A1D /* SideMenuView.swift */; };
 		5C00964F2664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
 		5C0096502664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
 		5C0096512664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
+		5C667EF426682296005F1C2F /* ViewHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EF326682296005F1C2F /* ViewHistoryPage.swift */; };
+		5C667EF526682296005F1C2F /* ViewHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EF326682296005F1C2F /* ViewHistoryPage.swift */; };
+		5C667EF626682296005F1C2F /* ViewHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EF326682296005F1C2F /* ViewHistoryPage.swift */; };
+		5C667EFB266822C9005F1C2F /* ViewHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */; };
+		5C667EFC266822C9005F1C2F /* ViewHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */; };
+		5C667EFD266822C9005F1C2F /* ViewHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */; };
+		5C667F0226682C7B005F1C2F /* PaymentOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0126682C7B005F1C2F /* PaymentOptionView.swift */; };
+		5C667F0326682C7B005F1C2F /* PaymentOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0126682C7B005F1C2F /* PaymentOptionView.swift */; };
+		5C667F0426682C7B005F1C2F /* PaymentOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0126682C7B005F1C2F /* PaymentOptionView.swift */; };
+		5C667F0926682FD5005F1C2F /* CreditCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0826682FD5005F1C2F /* CreditCardPage.swift */; };
+		5C667F0A26682FD5005F1C2F /* CreditCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0826682FD5005F1C2F /* CreditCardPage.swift */; };
+		5C667F0B26682FD5005F1C2F /* CreditCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0826682FD5005F1C2F /* CreditCardPage.swift */; };
+		5C667F1026682FED005F1C2F /* NetBankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0F26682FED005F1C2F /* NetBankingPage.swift */; };
+		5C667F1126682FED005F1C2F /* NetBankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0F26682FED005F1C2F /* NetBankingPage.swift */; };
+		5C667F1226682FED005F1C2F /* NetBankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F0F26682FED005F1C2F /* NetBankingPage.swift */; };
+		5C667F1726683003005F1C2F /* CODpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F1626683003005F1C2F /* CODpage.swift */; };
+		5C667F1826683003005F1C2F /* CODpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F1626683003005F1C2F /* CODpage.swift */; };
+		5C667F1926683003005F1C2F /* CODpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667F1626683003005F1C2F /* CODpage.swift */; };
 		5C77061E26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
 		5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
 		5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
@@ -28,6 +47,7 @@
 		5C7706552666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7706542666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift */; };
 		5C7706562666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7706542666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift */; };
 		5C7706572666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7706542666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift */; };
+		5C801737C9CB6DC464E189E0 /* Pods_Project_3_Project_3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A19A4275C14DD742485744A /* Pods_Project_3_Project_3UITests.framework */; };
 		5CC8A2B5265DA7410078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
 		5CC8A2B6265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
 		5CC8A2B7265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */; };
@@ -41,9 +61,6 @@
 		840BF203265BED1F006A1DED /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BF202265BED1F006A1DED /* DBHelper.swift */; };
 		840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BF207265BEF9F006A1DED /* CartCtrl.swift */; };
 		840BF20D265BF6FF006A1DED /* ItemCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BF20C265BF6FF006A1DED /* ItemCtrl.swift */; };
-		8444E4AC2669173F0039D34F /* WishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444E4AB2669173F0039D34F /* WishlistTableViewCell.swift */; };
-		8464B5C326692951001B08C8 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B5C226692951001B08C8 /* WishlistViewController.swift */; };
-		847A053A2666C051004FF134 /* CartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A05392666C051004FF134 /* CartTableCell.swift */; };
 		847D3B15265D506800338AE7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D3B14265D506800338AE7 /* WelcomeView.swift */; };
 		8480E8A4266155280016B62D /* SignupCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480E8A3266155280016B62D /* SignupCtrl.swift */; };
 		84DD0D4F265EA3FE00F5CA5D /* LaunchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD0D4E265EA3FE00F5CA5D /* LaunchingViewController.swift */; };
@@ -63,6 +80,7 @@
 		84DE6B682659663800B7E63D /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE6B642659663800B7E63D /* Item+CoreDataProperties.swift */; };
 		84DE6B692659663800B7E63D /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE6B652659663800B7E63D /* User+CoreDataClass.swift */; };
 		84DE6B6A2659663800B7E63D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE6B662659663800B7E63D /* User+CoreDataProperties.swift */; };
+		8DF6FFC0D303A3FFD1F29652 /* Pods_Project_3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BA0265FAD574106246380E /* Pods_Project_3Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +101,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F5E711CBFC880AC981B8423 /* Pods-Project_3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_3.release.xcconfig"; path = "Target Support Files/Pods-Project_3/Pods-Project_3.release.xcconfig"; sourceTree = "<group>"; };
+		2E3D786E53EF29D649B079D9 /* Pods-Project_3-Project_3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_3-Project_3UITests.release.xcconfig"; path = "Target Support Files/Pods-Project_3-Project_3UITests/Pods-Project_3-Project_3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C0096472663F7D500A84A1D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		5C00964E2664AEB800A84A1D /* TextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyling.swift; sourceTree = "<group>"; };
+		5C667EF326682296005F1C2F /* ViewHistoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHistoryPage.swift; sourceTree = "<group>"; };
+		5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHistoryCell.swift; sourceTree = "<group>"; };
+		5C667F0126682C7B005F1C2F /* PaymentOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionView.swift; sourceTree = "<group>"; };
+		5C667F0826682FD5005F1C2F /* CreditCardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardPage.swift; sourceTree = "<group>"; };
+		5C667F0F26682FED005F1C2F /* NetBankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBankingPage.swift; sourceTree = "<group>"; };
+		5C667F1626683003005F1C2F /* CODpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CODpage.swift; sourceTree = "<group>"; };
 		5C77061D26668CE400CCE27F /* BrandPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageView.swift; sourceTree = "<group>"; };
 		5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageTableCell.swift; sourceTree = "<group>"; };
 		5C7706402666BA7B00CCE27F /* WelcomeViewNoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewNoUser.swift; sourceTree = "<group>"; };
@@ -93,13 +119,11 @@
 		5CC8A2B4265DA7410078DAB9 /* WelcomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCell.swift; sourceTree = "<group>"; };
 		5CC8A362265FE8420078DAB9 /* ItemCtrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrlCell.swift; sourceTree = "<group>"; };
 		5CC8A3A3266044E50078DAB9 /* ItemCtrlTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrlTableCell.swift; sourceTree = "<group>"; };
+		6BF87EED9B1D337295F7F95D /* Pods-Project_3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_3Tests.release.xcconfig"; path = "Target Support Files/Pods-Project_3Tests/Pods-Project_3Tests.release.xcconfig"; sourceTree = "<group>"; };
 		840BF1FD265BEC99006A1DED /* LoginCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCtrl.swift; sourceTree = "<group>"; };
 		840BF202265BED1F006A1DED /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		840BF207265BEF9F006A1DED /* CartCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCtrl.swift; sourceTree = "<group>"; };
 		840BF20C265BF6FF006A1DED /* ItemCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtrl.swift; sourceTree = "<group>"; };
-		8444E4AB2669173F0039D34F /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
-		8464B5C226692951001B08C8 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
-		847A05392666C051004FF134 /* CartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableCell.swift; sourceTree = "<group>"; };
 		847D3B14265D506800338AE7 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8480E8A3266155280016B62D /* SignupCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupCtrl.swift; sourceTree = "<group>"; };
 		84DD0D4E265EA3FE00F5CA5D /* LaunchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +149,12 @@
 		84DE6B642659663800B7E63D /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84DE6B652659663800B7E63D /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84DE6B662659663800B7E63D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8A19A4275C14DD742485744A /* Pods_Project_3_Project_3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3_Project_3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922D237B20CF6E282270CFE1 /* Pods_Project_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A9C1100196453A9A5E5F88 /* Pods-Project_3-Project_3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_3-Project_3UITests.debug.xcconfig"; path = "Target Support Files/Pods-Project_3-Project_3UITests/Pods-Project_3-Project_3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9BA0265FAD574106246380E /* Pods_Project_3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8344CC48AA8A4FBDA08E73B /* Pods-Project_3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_3.debug.xcconfig"; path = "Target Support Files/Pods-Project_3/Pods-Project_3.debug.xcconfig"; sourceTree = "<group>"; };
+		C7CE406CF7C6FC5EBAE89487 /* Pods-Project_3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_3Tests.debug.xcconfig"; path = "Target Support Files/Pods-Project_3Tests/Pods-Project_3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A824A55F7D7BA1C4C5369D /* Pods_Project_3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF6FFC0D303A3FFD1F29652 /* Pods_Project_3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,12 +178,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C801737C9CB6DC464E189E0 /* Pods_Project_3_Project_3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A6BCADD339546A26AA66F5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8344CC48AA8A4FBDA08E73B /* Pods-Project_3.debug.xcconfig */,
+				0F5E711CBFC880AC981B8423 /* Pods-Project_3.release.xcconfig */,
+				A4A9C1100196453A9A5E5F88 /* Pods-Project_3-Project_3UITests.debug.xcconfig */,
+				2E3D786E53EF29D649B079D9 /* Pods-Project_3-Project_3UITests.release.xcconfig */,
+				C7CE406CF7C6FC5EBAE89487 /* Pods-Project_3Tests.debug.xcconfig */,
+				6BF87EED9B1D337295F7F95D /* Pods-Project_3Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5628C558149FE58BC46C2E44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				922D237B20CF6E282270CFE1 /* Pods_Project_3.framework */,
+				8A19A4275C14DD742485744A /* Pods_Project_3_Project_3UITests.framework */,
+				A9BA0265FAD574106246380E /* Pods_Project_3Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C77061B26668C5800CCE27F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +223,11 @@
 				5C0096472663F7D500A84A1D /* SideMenuView.swift */,
 				5C77061D26668CE400CCE27F /* BrandPageView.swift */,
 				5C7706402666BA7B00CCE27F /* WelcomeViewNoUser.swift */,
-				8464B5C226692951001B08C8 /* WishlistViewController.swift */,
+				5C667EF326682296005F1C2F /* ViewHistoryPage.swift */,
+				5C667F0126682C7B005F1C2F /* PaymentOptionView.swift */,
+				5C667F0826682FD5005F1C2F /* CreditCardPage.swift */,
+				5C667F0F26682FED005F1C2F /* NetBankingPage.swift */,
+				5C667F1626683003005F1C2F /* CODpage.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,8 +241,7 @@
 				5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */,
 				5C77064D2666BE7000CCE27F /* WelcomeViewNotUserCell.swift */,
 				5C7706542666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift */,
-				8444E4AB2669173F0039D34F /* WishlistTableViewCell.swift */,
-				847A05392666C051004FF134 /* CartTableCell.swift */,
+				5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -207,6 +267,8 @@
 				84DE6B2C2658145A00B7E63D /* Project_3UITests */,
 				84DE6B062658145600B7E63D /* Products */,
 				8480E89C266153010016B62D /* Recovered References */,
+				1A6BCADD339546A26AA66F5A /* Pods */,
+				5628C558149FE58BC46C2E44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,9 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DE6B322658145A00B7E63D /* Build configuration list for PBXNativeTarget "Project_3" */;
 			buildPhases = (
+				AF55E33CFA9197FC30E7FCF5 /* [CP] Check Pods Manifest.lock */,
 				84DE6B012658145600B7E63D /* Sources */,
 				84DE6B022658145600B7E63D /* Frameworks */,
 				84DE6B032658145600B7E63D /* Resources */,
+				071E855DD34C803BC17551B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DE6B352658145A00B7E63D /* Build configuration list for PBXNativeTarget "Project_3Tests" */;
 			buildPhases = (
+				69CC288C50A3B7893EF07C63 /* [CP] Check Pods Manifest.lock */,
 				84DE6B1A2658145A00B7E63D /* Sources */,
 				84DE6B1B2658145A00B7E63D /* Frameworks */,
 				84DE6B1C2658145A00B7E63D /* Resources */,
@@ -298,9 +363,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DE6B382658145A00B7E63D /* Build configuration list for PBXNativeTarget "Project_3UITests" */;
 			buildPhases = (
+				99E84BC6EEAFE27B6385EF88 /* [CP] Check Pods Manifest.lock */,
 				84DE6B252658145A00B7E63D /* Sources */,
 				84DE6B262658145A00B7E63D /* Frameworks */,
 				84DE6B272658145A00B7E63D /* Resources */,
+				CCDA7EADC4E998754DCA276B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,37 +448,143 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		071E855DD34C803BC17551B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_3/Pods-Project_3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_3/Pods-Project_3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project_3/Pods-Project_3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69CC288C50A3B7893EF07C63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project_3Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99E84BC6EEAFE27B6385EF88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project_3-Project_3UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF55E33CFA9197FC30E7FCF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project_3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDA7EADC4E998754DCA276B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_3-Project_3UITests/Pods-Project_3-Project_3UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_3-Project_3UITests/Pods-Project_3-Project_3UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project_3-Project_3UITests/Pods-Project_3-Project_3UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84DE6B012658145600B7E63D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84DD0D612660C91800F5CA5D /* CommentViewController.swift in Sources */,
+				5C667F1726683003005F1C2F /* CODpage.swift in Sources */,
+				5C667F0926682FD5005F1C2F /* CreditCardPage.swift in Sources */,
+				5C667EFB266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */,
 				84DE6B682659663800B7E63D /* Item+CoreDataProperties.swift in Sources */,
 				5C77062826668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
 				5CC8A363265FE8420078DAB9 /* ItemCtrlCell.swift in Sources */,
 				5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */,
 				5CC8A3A4266044E50078DAB9 /* ItemCtrlTableCell.swift in Sources */,
-				8464B5C326692951001B08C8 /* WishlistViewController.swift in Sources */,
 				84DD0D4F265EA3FE00F5CA5D /* LaunchingViewController.swift in Sources */,
+				5C667F1026682FED005F1C2F /* NetBankingPage.swift in Sources */,
 				84DE6B672659663800B7E63D /* Item+CoreDataClass.swift in Sources */,
 				5C7706552666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */,
 				84DE6B6A2659663800B7E63D /* User+CoreDataProperties.swift in Sources */,
 				5C00964F2664AEBA00A84A1D /* TextStyling.swift in Sources */,
 				840BF1FE265BEC99006A1DED /* LoginCtrl.swift in Sources */,
+				5C667EF426682296005F1C2F /* ViewHistoryPage.swift in Sources */,
 				840BF20D265BF6FF006A1DED /* ItemCtrl.swift in Sources */,
 				5C77064E2666BE7000CCE27F /* WelcomeViewNotUserCell.swift in Sources */,
 				84DE6B0D2658145600B7E63D /* ViewController.swift in Sources */,
 				847D3B15265D506800338AE7 /* WelcomeView.swift in Sources */,
 				5C7706412666BA7B00CCE27F /* WelcomeViewNoUser.swift in Sources */,
 				84DE6B092658145600B7E63D /* AppDelegate.swift in Sources */,
+				5C667F0226682C7B005F1C2F /* PaymentOptionView.swift in Sources */,
 				5CC8A2B5265DA7410078DAB9 /* WelcomeViewCell.swift in Sources */,
 				84DE6B0B2658145600B7E63D /* SceneDelegate.swift in Sources */,
-				847A053A2666C051004FF134 /* CartTableCell.swift in Sources */,
 				840BF203265BED1F006A1DED /* DBHelper.swift in Sources */,
 				84DE6B132658145600B7E63D /* Project_3.xcdatamodeld in Sources */,
-				8444E4AC2669173F0039D34F /* WishlistTableViewCell.swift in Sources */,
 				84DE6B692659663800B7E63D /* User+CoreDataClass.swift in Sources */,
 				8480E8A4266155280016B62D /* SignupCtrl.swift in Sources */,
 				5C77061E26668CE400CCE27F /* BrandPageView.swift in Sources */,
@@ -425,15 +598,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC8A364265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
+				5C667F1826683003005F1C2F /* CODpage.swift in Sources */,
 				5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */,
 				5C77064F2666BE7000CCE27F /* WelcomeViewNotUserCell.swift in Sources */,
+				5C667F0A26682FD5005F1C2F /* CreditCardPage.swift in Sources */,
 				84DE6B232658145A00B7E63D /* Project_3Tests.swift in Sources */,
 				5C0096492663F7D500A84A1D /* SideMenuView.swift in Sources */,
 				5C0096502664AEBA00A84A1D /* TextStyling.swift in Sources */,
+				5C667EF526682296005F1C2F /* ViewHistoryPage.swift in Sources */,
 				5CC8A3A5266044E60078DAB9 /* ItemCtrlTableCell.swift in Sources */,
 				5C7706562666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */,
+				5C667EFC266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				5CC8A2B6265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
 				5C77062926668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
+				5C667F1126682FED005F1C2F /* NetBankingPage.swift in Sources */,
+				5C667F0326682C7B005F1C2F /* PaymentOptionView.swift in Sources */,
 				5C7706422666BA7B00CCE27F /* WelcomeViewNoUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,15 +622,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC8A365265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
+				5C667F1926683003005F1C2F /* CODpage.swift in Sources */,
 				5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */,
 				5C7706502666BE7000CCE27F /* WelcomeViewNotUserCell.swift in Sources */,
+				5C667F0B26682FD5005F1C2F /* CreditCardPage.swift in Sources */,
 				84DE6B2E2658145A00B7E63D /* Project_3UITests.swift in Sources */,
 				5C00964A2663F7D500A84A1D /* SideMenuView.swift in Sources */,
 				5C0096512664AEBA00A84A1D /* TextStyling.swift in Sources */,
+				5C667EF626682296005F1C2F /* ViewHistoryPage.swift in Sources */,
 				5CC8A3A6266044E60078DAB9 /* ItemCtrlTableCell.swift in Sources */,
 				5C7706572666CA0400CCE27F /* WelcomeViewNotUserTableCell.swift in Sources */,
+				5C667EFD266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				5CC8A2B7265DA7420078DAB9 /* WelcomeViewCell.swift in Sources */,
 				5C77062A26668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
+				5C667F1226682FED005F1C2F /* NetBankingPage.swift in Sources */,
+				5C667F0426682C7B005F1C2F /* PaymentOptionView.swift in Sources */,
 				5C7706432666BA7C00CCE27F /* WelcomeViewNoUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +794,7 @@
 		};
 		84DE6B332658145A00B7E63D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8344CC48AA8A4FBDA08E73B /* Pods-Project_3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -628,6 +814,7 @@
 		};
 		84DE6B342658145A00B7E63D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F5E711CBFC880AC981B8423 /* Pods-Project_3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -647,6 +834,7 @@
 		};
 		84DE6B362658145A00B7E63D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7CE406CF7C6FC5EBAE89487 /* Pods-Project_3Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -669,6 +857,7 @@
 		};
 		84DE6B372658145A00B7E63D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BF87EED9B1D337295F7F95D /* Pods-Project_3Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -691,6 +880,7 @@
 		};
 		84DE6B392658145A00B7E63D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A9C1100196453A9A5E5F88 /* Pods-Project_3-Project_3UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -711,6 +901,7 @@
 		};
 		84DE6B3A2658145A00B7E63D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E3D786E53EF29D649B079D9 /* Pods-Project_3-Project_3UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
