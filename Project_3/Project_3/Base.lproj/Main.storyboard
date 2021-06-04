@@ -860,7 +860,7 @@
         <!--Cart-->
         <scene sceneID="KRU-c5-qyC">
             <objects>
-                <viewController id="bkp-Gr-5eT" sceneMemberID="viewController">
+                <viewController id="bkp-Gr-5eT" customClass="CartCtrl" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cKL-XS-grg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -877,7 +877,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="TG2-tZ-uaD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="TG2-tZ-uaD" customClass="CartCell" customModule="Project_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TG2-tZ-uaD" id="dOA-tP-MDY">
