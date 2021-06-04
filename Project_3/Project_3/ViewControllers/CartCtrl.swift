@@ -14,8 +14,19 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 	var total: Double?
 	var Person: User?
 	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+	{
+		return items!.count
+	}
 	
-	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+	{
+		let cell = tableView.dequeueReusableCell(withIdentifier: "thing1") as! CartCell
+		
+		cell.ItemName.text = items![indexPath.row].name
+		cell.ItemPrice.text = String(items![indexPath.row].price)
+		return cell
+	}
 	
     override func viewDidLoad()
 	{
