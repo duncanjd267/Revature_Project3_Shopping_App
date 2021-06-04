@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CartCtrl: UIViewController
+class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 	var items: [Item]?
 	var numberInCart: Double?
@@ -15,19 +15,7 @@ class CartCtrl: UIViewController
 	var Person: User?
 	
 	
-	/*func PurchaseItems()
-	{
-		let Uname = Person!.username!
-		items!.removeAll()
-		numberInCart = 0
-		total = 0
-		DBHelper.inst.updateCartPurchased(name: Uname)
-	}
 	
-	func removeItem()
-	{
-		
-	}*/
 	
     override func viewDidLoad()
 	{
