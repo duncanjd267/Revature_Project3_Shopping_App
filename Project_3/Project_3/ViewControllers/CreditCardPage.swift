@@ -41,4 +41,9 @@ class CreditCardPage: UIViewController, MFCardDelegate {
         myCard.toast = true
     }
     
+    @IBAction func submit(_ sender: Any) {
+        DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+    }
+    
+    
 }
