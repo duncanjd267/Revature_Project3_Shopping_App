@@ -13,9 +13,17 @@ Amazon has become a seemingly unavoidable capital giant and their labor practice
 - UIKit
 
 ## Features
+
+### Active features
 - Shopping cart
 - Item recommendations
 - Account creation
+
+### To do list
+- "My order" page
+- Shipment tracking page
+- Return process
+- Settings page
 
 ## Getting Started
 ### Cloning to XCode
