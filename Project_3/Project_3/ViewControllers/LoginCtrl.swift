@@ -35,6 +35,7 @@ class LoginCtrl: UIViewController
 		
 		if passW == passAct
 		{
+            DBHelper.inst.holdCurrentUser(name: Usr.username!)
 			// Verification succeeds
 			let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
 			present(Bienvenue, animated: true, completion: nil)
