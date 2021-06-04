@@ -877,7 +877,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="TG2-tZ-uaD" customClass="CartCell" customModule="Project_3" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thing1" rowHeight="139" id="TG2-tZ-uaD" customClass="CartCell" customModule="Project_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TG2-tZ-uaD" id="dOA-tP-MDY">
@@ -921,6 +921,10 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ItemName" destination="MQK-A4-6Bj" id="pyg-iU-UYp"/>
+                                            <outlet property="ItemPrice" destination="sCz-nk-aN1" id="8DM-Fk-EV2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
