@@ -13,7 +13,14 @@ class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSou
     var testLabel = ["Adidas Shoes", "iphone", "Gucci Bag"]
     var testPrice = ["0.00", "12.11", "4444.44"]
     
+    var curuser : User?
+    var history : [Item]?
+    
     override func viewDidLoad() {
+        print("I got here please dont break")
+        curuser = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
+        history = curuser!.history?.allObjects as! [Item]
+        
         super.viewDidLoad()
 
     }
@@ -23,24 +30,37 @@ class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testImg.count
+        if(history!.count == 0){
+            return 1
+        } else {
+            return history!.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ViewHistoryCell
-        cell.ItemName.text = testLabel[indexPath.row]
-        cell.ItemPrice.text = String(testPrice[indexPath.row])
-        cell.ViewHistoryImg.image = UIImage(named: testImg[indexPath.row])
+        if(history!.count == 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ViewHistoryCell
+            cell.ItemName.text = "No Item History"
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ViewHistoryCell
+            cell.ItemName.text = history![indexPath.row].name
+            cell.ItemPrice.text = String(history![indexPath.row].price)
+            cell.ViewHistoryImg.image = UIImage(named: history![indexPath.row].image!)
         
         return cell
+        }
         
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-        present(Bienvenue, animated: true, completion: nil)
+        if(history?.count != 0){
+            DBHelper.inst.holdCurrentItem(name: history![indexPath.item].name!)
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
+            present(Bienvenue, animated: true, completion: nil)
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
