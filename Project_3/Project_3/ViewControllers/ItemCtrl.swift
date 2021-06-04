@@ -20,8 +20,9 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var pageView: UIPageControl!
     
     
-    var contentImg : [String]?
     
+    var contentImg : [String]?
+    //itemcontroller
     var item : Item?
     
     var simBrand : [Item]?
@@ -40,11 +41,11 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
             print("No user present")
         }
         else{
-        var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
-        var history = usern.history as! [Item]
-        if(!history.contains(cur) || history.count == 0){
-            DBHelper.inst.updateItemViewed(item: cur.name!)
-        }
+            var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
+            var history = usern.history as! [Item]
+            if(!history.contains(cur) || history.count == 0){
+                DBHelper.inst.updateItemViewed(item: cur.name!)
+            }
         }
         contentImg = temp
         super.viewDidLoad()
@@ -60,7 +61,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         if DBHelper.inst.getCurrentUser() == ""{
             print("No user, please login")
         }
-         else {
+        else {
             DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentUser(), item: item!)
         }
     }
@@ -112,7 +113,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -139,7 +140,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-      
+        
         if collectionView == self.ItemPageCell{
             return 0.0
         } else {
@@ -151,7 +152,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         
         pageView.currentPage = indexPath.row
     }
-
+    
     
     //Mark:- Review Tableviews Implementation
     
@@ -195,7 +196,6 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
             
         }
     }
-    
     
 }
 

@@ -1,8 +1,8 @@
 //
 //  Comments+CoreDataProperties.swift
-//  Project_3
+//  
 //
-//  Created by admin on 5/28/21.
+//  Created by Kangseok Lee on 6/3/21.
 //
 //
 
@@ -21,5 +21,5 @@ extension Comments {
 }
 
 extension Comments : Identifiable {
-
+    
 }

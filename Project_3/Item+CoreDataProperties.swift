@@ -1,8 +1,8 @@
 //
 //  Item+CoreDataProperties.swift
-//  Project_3
+//  
 //
-//  Created by admin on 6/1/21.
+//  Created by Kangseok Lee on 6/3/21.
 //
 //
 
@@ -43,9 +43,5 @@ extension Item {
 
     @objc(removeTocomment:)
     @NSManaged public func removeFromTocomment(_ values: NSSet)
-
-}
-
-extension Item : Identifiable {
 
 }

@@ -10,9 +10,6 @@ import UIKit
 class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    var testImg = ["AdidasLogo", "AppleLogo", "GucciLogo"]
-    var testLabel = ["Adidas Shoes", "iphone", "Gucci Bag"]
-    var testPrice = ["0.00", "12.11", "4444.44"]
     var brand = DBHelper.inst.getItemsBrand(name: DBHelper.inst.getCurrentBrand())
     
     override func viewDidLoad() {

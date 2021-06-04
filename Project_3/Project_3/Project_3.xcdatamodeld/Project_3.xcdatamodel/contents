@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Comments" representedClassName="Comments" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String"/>
     </entity>
@@ -25,11 +25,11 @@
         <relationship name="history" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
         <relationship name="purchased" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
         <relationship name="toitem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
-        <relationship name="wishlist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
+        <relationship name="whishlist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item"/>
     </entity>
     <elements>
         <element name="Comments" positionX="-54" positionY="63" width="128" height="58"/>
-        <element name="Item" positionX="-54" positionY="36" width="128" height="193"/>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Item" positionX="-313.6649475097656" positionY="138.4888000488281" width="128" height="193"/>
+        <element name="User" positionX="-357.1126708984375" positionY="-140.53076171875" width="128" height="193"/>
     </elements>
 </model>

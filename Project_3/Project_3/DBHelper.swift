@@ -11,11 +11,11 @@ import UIKit
 
 class DBHelper
 {
-	static var inst = DBHelper()
+    static var inst = DBHelper()
     var currentUser = ""
     var currentItem = ""
     var currentBrand = ""
-	
+    
     let context = (UIApplication.shared.delegate as? AppDelegate)? .persistentContainer.viewContext
     
     
@@ -60,7 +60,7 @@ class DBHelper
             print("data not saved")
         }
     }
-    
+    //hushhnjh
     func addComment(object: String){
         let item = NSEntityDescription.insertNewObject(forEntityName: "Comments", into: context!) as! Comments
         item.comment = object
@@ -232,17 +232,17 @@ class DBHelper
         print("Predicated")
         
         do{
-			let stu = try context?.fetch(fetchReq)
-			if stu?.count != 0
-			{
-				st = stu?.first as! User
-				print("It shall try to make relationship")
-				st.recentview = item.name
-				st.balance = st.balance + item.price
-				st.addToToitem(item)
-				try context?.save()
-				print("Updated Questions For Quiz")
-			}
+            let stu = try context?.fetch(fetchReq)
+            if stu?.count != 0
+            {
+                st = stu?.first as! User
+                print("It shall try to make relationship")
+                st.recentview = item.name
+                st.balance = st.balance + item.price
+                st.addToToitem(item)
+                try context?.save()
+                print("Updated Questions For Quiz")
+            }
         }
         catch{
             print("Error")

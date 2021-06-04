@@ -1,15 +1,14 @@
 //
-//  HistoryTableViewCell.swift
+//  WishlistTableCell.swift
 //  Project_3
 //
-//  Created by admin on 6/3/21.
+//  Created by Kangseok Lee on 6/3/21.
 //
 
 import UIKit
 
-class WishlistTableViewCell: UITableViewCell {
-    
-    
+class WishlistTableCell: UITableViewCell {
+
     @IBOutlet weak var hImage: UIImageView!
     @IBOutlet weak var hName: UILabel!
     @IBOutlet weak var hPrice: UILabel!

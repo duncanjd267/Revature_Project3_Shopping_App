@@ -1,8 +1,8 @@
 //
 //  User+CoreDataProperties.swift
-//  Project_3
+//  
 //
-//  Created by admin on 6/2/21.
+//  Created by Kangseok Lee on 6/3/21.
 //
 //
 
@@ -23,9 +23,9 @@ extension User {
     @NSManaged public var recentview: String?
     @NSManaged public var username: String?
     @NSManaged public var toitem: NSSet?
-    @NSManaged public var purchased: NSSet?
     @NSManaged public var history: NSSet?
-    @NSManaged public var wishlist: NSSet?
+    @NSManaged public var purchased: NSSet?
+    @NSManaged public var whishlist: NSSet?
 
 }
 
@@ -46,23 +46,6 @@ extension User {
 
 }
 
-// MARK: Generated accessors for purchased
-extension User {
-
-    @objc(addPurchasedObject:)
-    @NSManaged public func addToPurchased(_ value: Item)
-
-    @objc(removePurchasedObject:)
-    @NSManaged public func removeFromPurchased(_ value: Item)
-
-    @objc(addPurchased:)
-    @NSManaged public func addToPurchased(_ values: NSSet)
-
-    @objc(removePurchased:)
-    @NSManaged public func removeFromPurchased(_ values: NSSet)
-
-}
-
 // MARK: Generated accessors for history
 extension User {
 
@@ -80,23 +63,40 @@ extension User {
 
 }
 
-// MARK: Generated accessors for wishlist
+// MARK: Generated accessors for purchased
 extension User {
 
-    @objc(addWishlistObject:)
-    @NSManaged public func addToWishlist(_ value: Item)
+    @objc(addPurchasedObject:)
+    @NSManaged public func addToPurchased(_ value: Item)
 
-    @objc(removeWishlistObject:)
-    @NSManaged public func removeFromWishlist(_ value: Item)
+    @objc(removePurchasedObject:)
+    @NSManaged public func removeFromPurchased(_ value: Item)
 
-    @objc(addWishlist:)
-    @NSManaged public func addToWishlist(_ values: NSSet)
+    @objc(addPurchased:)
+    @NSManaged public func addToPurchased(_ values: NSSet)
 
-    @objc(removeWishlist:)
-    @NSManaged public func removeFromWishlist(_ values: NSSet)
+    @objc(removePurchased:)
+    @NSManaged public func removeFromPurchased(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for whishlist
+extension User {
+
+    @objc(addWhishlistObject:)
+    @NSManaged public func addToWhishlist(_ value: Item)
+
+    @objc(removeWhishlistObject:)
+    @NSManaged public func removeFromWhishlist(_ value: Item)
+
+    @objc(addWhishlist:)
+    @NSManaged public func addToWhishlist(_ values: NSSet)
+
+    @objc(removeWhishlist:)
+    @NSManaged public func removeFromWhishlist(_ values: NSSet)
 
 }
 
 extension User : Identifiable {
-
+    
 }
