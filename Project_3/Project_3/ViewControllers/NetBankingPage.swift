@@ -62,6 +62,12 @@ class NetBankingPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
+    @IBAction func submit(_ sender: Any) {
+        DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+        
+    }
+    
+    
     
 
 }
