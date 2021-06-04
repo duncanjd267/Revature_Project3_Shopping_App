@@ -42,7 +42,8 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         else{
             var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
-            var history = usern.history as! [Item]
+            let history = usern.history?.allObjects as! [Item]
+            print(history.count)
             if(!history.contains(cur) || history.count == 0){
                 DBHelper.inst.updateItemViewed(item: cur.name!)
             }
