@@ -17,7 +17,8 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationController?.isNavigationBarHidden = true
         pageView.numberOfPages = itemList.count
         pageView.currentPage = 0
         
@@ -66,6 +67,14 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
         pageView.currentPage = indexPath.row
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
+        let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
+        navigationController?.pushViewController(vc, animated: true)
+    
+    }
+    
     
     //Mark:- Best selling table set up
     
@@ -90,11 +99,20 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        DBHelper.inst.holdCurrentItem(name: itemList[indexPath.row].name!)
+        let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
+        navigationController?.pushViewController(vc, animated: true)
+   
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 150.0
         
     }
+    
     
 
 }

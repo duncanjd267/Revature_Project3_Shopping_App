@@ -41,6 +41,12 @@ class SideMenuView: UIViewController {
         
     }
     
+    @IBAction func Logout(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(identifier: "LogInPage") as! LoginCtrl
+        present(vc, animated: true)
+        
+    }
     
     
 

@@ -32,7 +32,7 @@ class CartCtrl: UIViewController
     override func viewDidLoad()
 	{
         super.viewDidLoad()
-
+        navigationController?.isNavigationBarHidden = true
 		let username = DBHelper.inst.getCurrentUser()
 		Person = DBHelper.inst.getOneUser(user: username)
 		

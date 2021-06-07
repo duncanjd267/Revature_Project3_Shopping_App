@@ -11,11 +11,16 @@ class NetBankingPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
 
     @IBOutlet weak var BankTxt: UITextField!
+    @IBOutlet weak var BankImg: UIImageView!
+    @IBOutlet weak var BankView: UIView!
+    @IBOutlet weak var BankLB: UILabel!
     
     
-    let paymentOptions = ["Bank Of America", "Chase", "Citi", "Wells Fargo", ""]
+    let paymentOptions = ["--Select A Bank--", "Bank Of America", "Chase Bank", "Citi Bank", "Wells Fargo"]
     
     var pickerView = UIPickerView()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,14 @@ class NetBankingPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         BankTxt.inputView = pickerView
         BankTxt.textAlignment = .center
+        
+        BankLB.isHidden = true
+        BankImg.isHidden = true
+        BankView.isHidden = true
+        BankView.layer.shadowRadius = 10
+        BankView.layer.shadowOpacity = 0.5
+        BankView.layer.shadowOffset = CGSize(width: 5, height: 10)
+        BankView.layer.cornerRadius = BankView.frame.height / 2
     }
     
     
@@ -43,20 +56,58 @@ class NetBankingPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         BankTxt.text = paymentOptions[row]
         BankTxt.resignFirstResponder()
+        
+        if (BankTxt.text == "-- Select Bank --") {
+            
+            BankLB.isHidden = true
+            BankImg.isHidden = true
+            BankView.isHidden = true
+            BankTxt.text = ""
+        }
+        
+        if (BankTxt.text == "Bank Of America"){
+            
+            BankLB.isHidden = false
+            BankImg.isHidden = false
+            BankView.isHidden = false
+            BankImg.image = UIImage(named: "BOAIcon")
+            BankLB.text = "Bank Of America"
+        }
+        else if (BankTxt.text == "Chase Bank"){
+            
+            BankLB.isHidden = false
+            BankImg.isHidden = false
+            BankView.isHidden = false
+            BankImg.image = UIImage(named: "ChaseIcon")
+            BankLB.text = "Chase Bank"
+        }
+        else if (BankTxt.text == "Citi Bank"){
+            
+            BankLB.isHidden = false
+            BankImg.isHidden = false
+            BankView.isHidden = false
+            BankImg.image = UIImage(named: "CitiIcon")
+            BankLB.text = "Citi Bank"
+        }
+        else if (BankTxt.text == "Wells Fargo"){
+            
+            BankLB.isHidden = false
+            BankImg.isHidden = false
+            BankView.isHidden = false
+            BankImg.image = UIImage(named: "WellsFargoIcon")
+            BankLB.text = "Wells Fargo"
+        }
     }
 
     
     @IBAction func SelectBttn(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Bank Selection", message: "You Selected \(String(describing: BankTxt.text))", preferredStyle: UIAlertController.Style.alert)
-        let ContinueAction = UIAlertAction(title: "Continue", style: .default){
-            (action: UIAlertAction!) in
-            print("Button Clicked")}
+        let Selected = UIAlertController(title: "Bank Selection", message: "You Selected \(BankTxt.text!) For Your Payment Option", preferredStyle: UIAlertController.Style.alert)
         
         if (paymentOptions.contains(BankTxt.text!)){
             
-            print("working")
-            alertController.addAction(ContinueAction)
+            Selected.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(Selected, animated: true, completion: nil)
             
         }
         
