@@ -12,6 +12,7 @@ class ViewHistoryCell: UITableViewCell {
     @IBOutlet var ViewHistoryImg: UIImageView!
     @IBOutlet var ItemName: UILabel!
     @IBOutlet var ItemPrice: UILabel!
+    @IBOutlet weak var cellView: UIView!
     
     
     override func awakeFromNib() {
@@ -25,4 +26,14 @@ class ViewHistoryCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        cellView.layer.shadowRadius = 10
+        cellView.layer.shadowOpacity = 0.5
+        cellView.layer.shadowOffset = CGSize(width: 5, height: 10)        
+        self.clipsToBounds = false
+    }
+    
+    
 }
