@@ -19,9 +19,11 @@ class SideMenuView: UIViewController {
     @IBOutlet weak var mainBackgroundView: UIView!
     @IBOutlet weak var profilePictureImage: UIImageView!
     
+    @IBOutlet weak var username: UILabel!
     
     
     override func viewDidLoad() {
+        username.text = DBHelper.inst.getCurrentUser()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
