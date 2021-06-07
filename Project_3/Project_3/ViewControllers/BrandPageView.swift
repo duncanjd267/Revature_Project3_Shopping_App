@@ -14,7 +14,7 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.isNavigationBarHidden = true
         
     }
     
@@ -73,6 +73,14 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return 150.0
     }
     
+    @IBAction func BACK(_ sender: Any) {
+        
+        let tabViewController =
+            storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
     
     
 }

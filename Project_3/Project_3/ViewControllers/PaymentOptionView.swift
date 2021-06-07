@@ -64,4 +64,15 @@ class PaymentOptionView: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
     }
     
+    @IBAction func Select(_ sender: Any) {
+        
+        let Selected = UIAlertController(title: "Bank Selection", message: "You Selected \(PaymentTxt.text!) For Your Payment Option", preferredStyle: UIAlertController.Style.alert)
+        
+        if (paymentOptions.contains(PaymentTxt.text!)){
+            
+            Selected.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(Selected, animated: true, completion: nil)
+        
+        }
+    }
 }
