@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9PW-Al-EkU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -897,7 +897,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="148" id="EPk-EG-wnD" customClass="WishlistTableCell" customModule="Project_3" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Wish" rowHeight="148" id="EPk-EG-wnD" customClass="WishlistTableCell" customModule="Project_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EPk-EG-wnD" id="NKW-32-Pfh">
@@ -1220,6 +1220,9 @@
                                                     <rect key="frame" x="290" y="70" width="73" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Check Out"/>
+                                                    <connections>
+                                                        <segue destination="JvU-hT-h8Q" kind="presentation" id="ZcZ-HZ-lIe"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLE-91-jlZ">
                                                     <rect key="frame" x="290" y="15" width="73" height="39"/>
@@ -1263,7 +1266,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="139" id="jav-BF-drM" customClass="OrderPageCell" customModule="Project_3" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellOr" rowHeight="139" id="jav-BF-drM" customClass="OrderPageCell" customModule="Project_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jav-BF-drM" id="fLd-Id-URl">
@@ -2640,6 +2643,7 @@
                     <connections>
                         <outlet property="mainBackgroundView" destination="wbU-JU-wMd" id="vtx-S1-CU2"/>
                         <outlet property="profilePictureImage" destination="uFF-05-jg4" id="aoV-TN-b4j"/>
+                        <outlet property="username" destination="dG9-2h-ck1" id="BiQ-Ml-aa2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hus-hc-ve5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3031,7 +3035,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hOn-FC-I5e"/>
+        <segue reference="ZcZ-HZ-lIe"/>
         <segue reference="EOF-T9-ugD"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -391,9 +391,10 @@ class DBHelper
             let stu = try context?.fetch(fetchReq)
             st = stu?.first as! User
             for items in st.toitem!{
-                DBHelper.inst.updateItemPurchased(item: Item(context: items as! NSManagedObjectContext).name!)
-                st.removeFromToitem(Item(context: items as! NSManagedObjectContext))
-                st.addToPurchased(Item(context: items as! NSManagedObjectContext))
+                var temp = items as! Item
+                DBHelper.inst.updateItemPurchased(item: temp.name!)
+                st.removeFromToitem(temp)
+                st.addToPurchased(temp)
             }
             st.cartamount = 0.0
             try context?.save()
