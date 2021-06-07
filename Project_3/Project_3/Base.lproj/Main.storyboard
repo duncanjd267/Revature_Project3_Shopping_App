@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9PW-Al-EkU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -1228,6 +1228,9 @@
                                                     <rect key="frame" x="290" y="15" width="73" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Remove"/>
+                                                    <connections>
+                                                        <action selector="remove:" destination="bkp-Gr-5eT" eventType="touchUpInside" id="CMl-H5-hpj"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1302,6 +1305,9 @@
                                                     <rect key="frame" x="290" y="15" width="73" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Refund"/>
+                                                    <connections>
+                                                        <action selector="Refund:" destination="hef-6P-DBY" eventType="touchUpInside" id="3de-Iu-phy"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1312,6 +1318,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hef-6P-DBY" id="5sQ-xQ-gK9"/>
+                                    <outlet property="delegate" destination="hef-6P-DBY" id="gEo-xV-cHE"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr8-HN-eOd">
                                 <rect key="frame" x="98" y="70" width="218" height="57"/>
@@ -1394,6 +1404,7 @@
                     <navigationItem key="navigationItem" id="rlB-ch-bjJ"/>
                     <connections>
                         <outlet property="PaymentTxt" destination="RoW-Ti-zBh" id="MHh-gU-zqA"/>
+                        <outlet property="price" destination="Y8o-30-HZz" id="1fh-pY-vax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbh-2I-i4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
