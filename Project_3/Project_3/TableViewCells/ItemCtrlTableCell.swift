@@ -10,6 +10,7 @@ import UIKit
 class ItemCtrlTableCell: UITableViewCell {
 
     @IBOutlet weak var ReviewLB: UILabel!
+    @IBOutlet weak var cellView: UIView!
     
     
     override func awakeFromNib() {
@@ -22,5 +23,15 @@ class ItemCtrlTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        cellView.layer.shadowRadius = 10
+        cellView.layer.shadowOpacity = 0.5
+        cellView.layer.shadowOffset = CGSize(width: 5, height: 10)
+        
+        self.clipsToBounds = false
+    }
+    
 }

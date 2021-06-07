@@ -9,11 +9,11 @@ import UIKit
 
 class ItemCtrlCell: UICollectionViewCell {
     
+    
     @IBOutlet weak var ItemImg: UIImageView!
     @IBOutlet weak var ItemImg2: UIImageView!
     @IBOutlet weak var ItemName: UILabel!
     @IBOutlet weak var ItemPrice: UILabel!
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         

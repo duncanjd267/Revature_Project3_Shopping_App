@@ -21,11 +21,26 @@ class SignupCtrl: UIViewController
 	
 	@IBAction func Confirm(_ sender: UIButton)
 	{
+        
 		let existing = DBHelper.inst.getUsers()
 		let usrN = UsrField.text!
-		
+        
+        let MovePage = UIAlertController(title: "Success", message: "You Successfully Signed Up", preferredStyle: UIAlertController.Style.alert)
+        let UsernameTaken = UIAlertController(title: "Invalid Information", message: "User name already exist. Please try again", preferredStyle: UIAlertController.Style.alert)
+        let EmptyTxt = UIAlertController(title: "Invalid Information", message: "Please Enter Valid Information", preferredStyle: UIAlertController.Style.alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default){
+            (action: UIAlertAction!) in
+            print("")}
+        
 		if usrN.isEmpty
 		{ // If they didn't enter a username why keep going?
+            
+            EmptyTxt.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(EmptyTxt, animated: true, completion: nil)
+            UsrField.text = ""
+            PassField.text = ""
+            TeleField.text = ""
 			print("Username empty.")
 			return
 		}
@@ -34,6 +49,11 @@ class SignupCtrl: UIViewController
 		{ // Checking if the name is taken
 			if person.username! == usrN
 			{
+                UsernameTaken.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+                self.present(UsernameTaken, animated: true, completion: nil)
+                UsrField.text = ""
+                PassField.text = ""
+                TeleField.text = ""
 				print("Username taken. try again.")
 				return
 			}
@@ -43,6 +63,11 @@ class SignupCtrl: UIViewController
 		
 		if pasW.isEmpty
 		{ // Can't have a nil password
+            EmptyTxt.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(EmptyTxt, animated: true, completion: nil)
+            UsrField.text = ""
+            PassField.text = ""
+            TeleField.text = ""
 			print("Password empty.")
 			return
 		}
@@ -51,22 +76,33 @@ class SignupCtrl: UIViewController
 		
 		if phone.isEmpty
 		{ // Need a phone number
-			phone = " "
+            
+            EmptyTxt.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(EmptyTxt, animated: true, completion: nil)
+            UsrField.text = ""
+            PassField.text = ""
+            TeleField.text = ""
 		}
 		
 		let UsrInfo = ["username": usrN, "password": pasW, "phone": phone]
 		
 		print("Calling addUser.")
 		DBHelper.inst.addUser(object: UsrInfo)
-		
-		let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "LogIn") as! LoginCtrl
-		
-		present(Bienvenue, animated: true, completion: nil)
+
+        MovePage.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        self.present(MovePage, animated: true, completion: nil)
+        UsrField.text = ""
+        PassField.text = ""
+        TeleField.text = ""
+        
+//		let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "LogInPage") as! LoginCtrl
+//
+//		present(Bienvenue, animated: true, completion: nil)
 	}
 	
 	@IBAction func SignIn(_ sender: UIButton)
 	{
-		let back = storyboard?.instantiateViewController(withIdentifier: "LogIn") as! LoginCtrl
+		let back = storyboard?.instantiateViewController(withIdentifier: "LogInPage") as! LoginCtrl
 		
 		present(back, animated: true, completion: nil)
 	}

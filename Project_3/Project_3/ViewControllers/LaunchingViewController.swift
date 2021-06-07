@@ -93,14 +93,21 @@ class LaunchingViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func LogInPage(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "LogInPage") as! LoginCtrl
+        present(vc, animated: true, completion: nil)
+        
     }
-    */
+    
+    @IBAction func GuestLogIn(_ sender: Any) {
+        
+        let tabViewController = storyboard?.instantiateViewController(withIdentifier: "TabViewControllerNonUser")
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
+    
+    
 
 }

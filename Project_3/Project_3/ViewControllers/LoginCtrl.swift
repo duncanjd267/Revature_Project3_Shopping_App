@@ -37,8 +37,12 @@ class LoginCtrl: UIViewController
 		{
             DBHelper.inst.holdCurrentUser(name: Usr.username!)
 			// Verification succeeds
-			let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
-			present(Bienvenue, animated: true, completion: nil)
+            let tabViewController =
+                storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+            view.window?.rootViewController = tabViewController
+            view.window?.makeKeyAndVisible()
+//			let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
+//			present(Bienvenue, animated: true, completion: nil)
 		}
 		else
 		{
@@ -49,7 +53,21 @@ class LoginCtrl: UIViewController
 		}
 	}
 	
-	
+    @IBAction func ForgotPw(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ForgotPW") as! ForgotPwCtrl
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func SignUp(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SignUp") as! SignupCtrl
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
+    
 	override func viewDidLoad()
 	{
         super.viewDidLoad()
@@ -57,5 +75,4 @@ class LoginCtrl: UIViewController
         // Do any additional setup after loading the view.
     }
 
-	
 }

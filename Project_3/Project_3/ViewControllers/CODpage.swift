@@ -26,4 +26,7 @@ class CODpage: UIViewController {
     }
     */
 
+    @IBAction func submit(_ sender: Any) {
+        DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+    }
 }

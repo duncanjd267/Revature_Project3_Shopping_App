@@ -38,6 +38,9 @@
 		5C66801126697B65005F1C2F /* WishlistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66801026697B65005F1C2F /* WishlistTableCell.swift */; };
 		5C66801226697B65005F1C2F /* WishlistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66801026697B65005F1C2F /* WishlistTableCell.swift */; };
 		5C66801326697B65005F1C2F /* WishlistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66801026697B65005F1C2F /* WishlistTableCell.swift */; };
+		5C6680332669B608005F1C2F /* ForgotPwCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6680322669B608005F1C2F /* ForgotPwCtrl.swift */; };
+		5C6680342669B608005F1C2F /* ForgotPwCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6680322669B608005F1C2F /* ForgotPwCtrl.swift */; };
+		5C6680352669B609005F1C2F /* ForgotPwCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6680322669B608005F1C2F /* ForgotPwCtrl.swift */; };
 		5C77061E26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
 		5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
 		5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77061D26668CE400CCE27F /* BrandPageView.swift */; };
@@ -120,6 +123,7 @@
 		5C667F1626683003005F1C2F /* CODpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CODpage.swift; sourceTree = "<group>"; };
 		5C66800126697A73005F1C2F /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		5C66801026697B65005F1C2F /* WishlistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableCell.swift; sourceTree = "<group>"; };
+		5C6680322669B608005F1C2F /* ForgotPwCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPwCtrl.swift; sourceTree = "<group>"; };
 		5C77061D26668CE400CCE27F /* BrandPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageView.swift; sourceTree = "<group>"; };
 		5C77062726668D0D00CCE27F /* BrandPageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPageTableCell.swift; sourceTree = "<group>"; };
 		5C7706402666BA7B00CCE27F /* WelcomeViewNoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewNoUser.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 				5C667F0F26682FED005F1C2F /* NetBankingPage.swift */,
 				5C667F1626683003005F1C2F /* CODpage.swift */,
 				5C66800126697A73005F1C2F /* WishListViewController.swift */,
+				5C6680322669B608005F1C2F /* ForgotPwCtrl.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 			files = (
 				84DD0D612660C91800F5CA5D /* CommentViewController.swift in Sources */,
 				5C667F1726683003005F1C2F /* CODpage.swift in Sources */,
+				5C6680332669B608005F1C2F /* ForgotPwCtrl.swift in Sources */,
 				5C667F0926682FD5005F1C2F /* CreditCardPage.swift in Sources */,
 				5C667EFB266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */,
@@ -614,6 +620,7 @@
 			files = (
 				5C66801226697B65005F1C2F /* WishlistTableCell.swift in Sources */,
 				5CC8A364265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
+				5C6680342669B608005F1C2F /* ForgotPwCtrl.swift in Sources */,
 				5C667F1826683003005F1C2F /* CODpage.swift in Sources */,
 				5C77061F26668CE400CCE27F /* BrandPageView.swift in Sources */,
 				5C77064F2666BE7000CCE27F /* WelcomeViewNotUserCell.swift in Sources */,
@@ -640,6 +647,7 @@
 			files = (
 				5C66801326697B65005F1C2F /* WishlistTableCell.swift in Sources */,
 				5CC8A365265FE8430078DAB9 /* ItemCtrlCell.swift in Sources */,
+				5C6680352669B609005F1C2F /* ForgotPwCtrl.swift in Sources */,
 				5C667F1926683003005F1C2F /* CODpage.swift in Sources */,
 				5C77062026668CE400CCE27F /* BrandPageView.swift in Sources */,
 				5C7706502666BE7000CCE27F /* WelcomeViewNotUserCell.swift in Sources */,
