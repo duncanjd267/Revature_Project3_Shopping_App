@@ -18,6 +18,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var ItemPageCell: UICollectionView!
     @IBOutlet weak var RelatedItem: UICollectionView!
     @IBOutlet weak var pageView: UIPageControl!
+    @IBOutlet weak var ItemPrice: UILabel!
     
     
     
@@ -32,7 +33,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     override func viewDidLoad()
     {
-        
+        navigationController?.isNavigationBarHidden = true
         var cur = DBHelper.inst.getOneItem(item: DBHelper.inst.getCurrentItem())
         item = cur
         simBrand = DBHelper.inst.getItemsBrand(name: cur.category!)
@@ -52,6 +53,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         super.viewDidLoad()
         name.text = DBHelper.inst.getCurrentItem()
         descr.text = cur.descript!
+        ItemPrice.text = "$" + String(cur.price)
         pageView.numberOfPages = contentImg!.count
         pageView.currentPage = 0
         
@@ -91,13 +93,14 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         if collectionView == self.ItemPageCell{
             let ItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCtrlCell
             ItemCell.ItemImg.image = UIImage(named: contentImg![indexPath.row])
+            
             return ItemCell
         }
         else {
             let ItemCell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell2", for: indexPath) as! ItemCtrlCell
             ItemCell2.ItemImg2.image = UIImage(named: simBrand![indexPath.row].image!)
             ItemCell2.ItemName.text = simBrand![indexPath.row].name!
-            ItemCell2.ItemPrice.text = String(simBrand![indexPath.row].price)
+            ItemCell2.ItemPrice.text = "$" + String(simBrand![indexPath.row].price)
             return ItemCell2
         }
         
@@ -105,9 +108,11 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
-        let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-        present(Bienvenue, animated: true, completion: nil)
+        if collectionView == self.RelatedItem {
+            DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
+            let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
+            navigationController?.pushViewController(vc, animated: true)
+        }
         
     }
     
@@ -183,22 +188,22 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 150.0
     }
     
     @IBAction func back(_ sender: Any) {
-        if DBHelper.inst.getCurrentUser() == ""{
-            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
-            present(Bienvenue, animated: true, completion: nil)
-            
-        } else {
-            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
-            present(Bienvenue, animated: true, completion: nil)
-            
-        }
+        //        if DBHelper.inst.getCurrentUser() == ""{
+        //            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
+        //            present(Bienvenue, animated: true, completion: nil)
+        //
+        //        } else {
+        let vc = storyboard?.instantiateViewController(identifier: "WelcomeLI") as! WelcomeView
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
-    
 }
+
+//}
 
 
 

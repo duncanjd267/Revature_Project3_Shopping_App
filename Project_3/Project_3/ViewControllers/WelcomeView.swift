@@ -40,13 +40,13 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         self.ScrollView.delegate = self
         self.SideMenuView.isHidden = true
         self.SideMenuBackView.isHidden = true
-    
+        navigationController?.isNavigationBarHidden = true
     
     }
     
     var sidemenuViewController:SideMenuView?
     var itemList = DBHelper.inst.getItems()
-    
+    //var cur = DBHelper.inst.getOneItem(item: DBHelper.inst.getCurrentItem())
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "sidemenuSegue"){
@@ -116,14 +116,15 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         if collectionView == self.Recommandations{
             DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
-            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-            present(Bienvenue, animated: true, completion: nil)
+            
+            let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         else {
             DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
-            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-            present(Bienvenue, animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
+            navigationController?.pushViewController(vc, animated: true)
             
         }
     }
@@ -135,17 +136,17 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
             let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! WelcomeViewCell
             cell1.ReImage.image = UIImage(named: itemList[indexPath.item].image!)
             cell1.ReText.text = itemList[indexPath.item].name!
-            print("Checking Recommendations")
+            cell1.ItemDes.text = itemList[indexPath.item].descript!
+            cell1.ItemPrice.text = "$" + String(itemList[indexPath.item].price)
             return cell1
             
         }
         else {
-            print("Doing Deals")
+            //print("Doing Deals")
             print(itemList[indexPath.item].image!)
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! WelcomeViewCell
             cell2.DealsImg.image = UIImage(named: itemList[indexPath.item].image!)
             cell2.DealsText.text = itemList[indexPath.item].name!
-            print("Checking Deals")
             return cell2
         }
         

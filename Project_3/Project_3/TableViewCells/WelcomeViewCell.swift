@@ -13,6 +13,8 @@ class WelcomeViewCell: UICollectionViewCell {
     @IBOutlet weak var ReText: UILabel!
     @IBOutlet weak var DealsImg: UIImageView!
     @IBOutlet weak var DealsText: UILabel!
+    @IBOutlet weak var ItemDes: UILabel!
+    @IBOutlet weak var ItemPrice: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()

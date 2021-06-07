@@ -11,7 +11,7 @@ class PaymentOptionView: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
     @IBOutlet var PaymentTxt: UITextField!
     
-    let paymentOptions = ["Credit Card", "Net Banking", "Pay on Delivery"]
+    let paymentOptions = ["--Select A Payment Option--","Credit Card", "Net Banking", "Pay on Delivery"]
     
     var pickerView = UIPickerView()
     
@@ -41,10 +41,15 @@ class PaymentOptionView: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         PaymentTxt.text = paymentOptions[row]
         PaymentTxt.resignFirstResponder()
+        
+        if PaymentTxt.text == "-- Select A Payment Option --"{
+            PaymentTxt.text = ""
+        }
     }
     
     @IBAction func CheckoutBttn(_ sender: Any) {
         
+
         if PaymentTxt.text == "Credit Card"{
             let vc = storyboard?.instantiateViewController(identifier: "CreditVC") as! CreditCardPage
             present(vc, animated: true)
