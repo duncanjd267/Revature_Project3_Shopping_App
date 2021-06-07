@@ -15,8 +15,18 @@ class PaymentOptionView: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     var pickerView = UIPickerView()
     
+    var balance = 0.0
+    
+    @IBOutlet weak var price: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var temp = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
+        balance = temp.cartamount
+        
+        price.text = "Total Price: $" + String(balance)
 
         pickerView.delegate = self
         pickerView.dataSource = self
