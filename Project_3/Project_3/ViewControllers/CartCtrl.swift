@@ -13,6 +13,7 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 	var numberInCart: Double?
 	var total: Double?
 	var Person: User?
+    var cellsel = 0
     
     override func viewDidLoad()
     {
@@ -37,6 +38,10 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 	{
 		return items!.count
 	}
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        cellsel = indexPath.row
+    }
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
@@ -47,6 +52,11 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
         cell.ItemImage.image = UIImage(named: items![indexPath.row].image!)
 		return cell
 	}
+    
+    @IBAction func remove(_ sender: Any) {
+        DBHelper.inst.updateCartRemove(name: (Person?.username)!, item: items![cellsel])
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 150.0
