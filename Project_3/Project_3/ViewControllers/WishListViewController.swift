@@ -45,7 +45,7 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     
 
     override func viewDidLoad() {
-        brand = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist as! [Item]
+        brand = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist?.allObjects as! [Item]
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

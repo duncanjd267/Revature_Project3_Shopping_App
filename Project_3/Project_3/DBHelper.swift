@@ -303,8 +303,9 @@ class DBHelper
                 st.recentview = item.name
                 st.balance = st.balance + item.price
                 st.addToToitem(item)
+                print(String(st.toitem!.count))
                 try context?.save()
-                print("Updated Questions For Quiz")
+                print("Updated items for cart")
             }
         }
         catch{

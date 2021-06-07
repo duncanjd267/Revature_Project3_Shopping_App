@@ -13,7 +13,26 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 	var numberInCart: Double?
 	var total: Double?
 	var Person: User?
-	
+    
+    override func viewDidLoad()
+    {
+        navigationController?.isNavigationBarHidden = true
+        let username = DBHelper.inst.getCurrentUser()
+        Person = DBHelper.inst.getOneUser(user: username)
+    
+        
+        items = Person!.toitem?.allObjects as! [Item]
+        print(String(items!.count))
+        total = Person!.balance
+        numberInCart = Person!.cartamount
+        super.viewDidLoad()
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
 		return items!.count
@@ -22,22 +41,15 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
 		let cell = tableView.dequeueReusableCell(withIdentifier: "thing1") as! CartCell
-		
+		print("I am here")
 		cell.ItemName.text = items![indexPath.row].name
 		cell.ItemPrice.text = String(items![indexPath.row].price)
+        cell.ItemImage.image = UIImage(named: items![indexPath.row].image!)
 		return cell
 	}
-	
-    override func viewDidLoad()
-	{
-        super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
-		let username = DBHelper.inst.getCurrentUser()
-		Person = DBHelper.inst.getOneUser(user: username)
-		
-		items = Person!.toitem!.allObjects as! [Item]
-		total = Person!.balance
-		numberInCart = Person!.cartamount
-    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 150.0
+        }
 
 }
