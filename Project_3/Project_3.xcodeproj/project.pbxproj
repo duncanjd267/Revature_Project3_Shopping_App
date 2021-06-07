@@ -14,6 +14,8 @@
 		5C00964F2664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
 		5C0096502664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
 		5C0096512664AEBA00A84A1D /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00964E2664AEB800A84A1D /* TextStyling.swift */; };
+		5C522209266E701700F4BE0F /* OrderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C522208266E701700F4BE0F /* OrderPageView.swift */; };
+		5C52220E266E703F00F4BE0F /* OrderPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52220D266E703F00F4BE0F /* OrderPageCell.swift */; };
 		5C667EF426682296005F1C2F /* ViewHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EF326682296005F1C2F /* ViewHistoryPage.swift */; };
 		5C667EF526682296005F1C2F /* ViewHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EF326682296005F1C2F /* ViewHistoryPage.swift */; };
 		5C667EF626682296005F1C2F /* ViewHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667EF326682296005F1C2F /* ViewHistoryPage.swift */; };
@@ -115,6 +117,8 @@
 		2E3D786E53EF29D649B079D9 /* Pods-Project_3-Project_3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_3-Project_3UITests.release.xcconfig"; path = "Target Support Files/Pods-Project_3-Project_3UITests/Pods-Project_3-Project_3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C0096472663F7D500A84A1D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		5C00964E2664AEB800A84A1D /* TextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyling.swift; sourceTree = "<group>"; };
+		5C522208266E701700F4BE0F /* OrderPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPageView.swift; sourceTree = "<group>"; };
+		5C52220D266E703F00F4BE0F /* OrderPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPageCell.swift; sourceTree = "<group>"; };
 		5C667EF326682296005F1C2F /* ViewHistoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHistoryPage.swift; sourceTree = "<group>"; };
 		5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHistoryCell.swift; sourceTree = "<group>"; };
 		5C667F0126682C7B005F1C2F /* PaymentOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionView.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				5C667F1626683003005F1C2F /* CODpage.swift */,
 				5C66800126697A73005F1C2F /* WishListViewController.swift */,
 				5C6680322669B608005F1C2F /* ForgotPwCtrl.swift */,
+				5C522208266E701700F4BE0F /* OrderPageView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				5C667EFA266822C9005F1C2F /* ViewHistoryCell.swift */,
 				5C66801026697B65005F1C2F /* WishlistTableCell.swift */,
 				84DB3FFE266A730C00BADF6E /* CartCell.swift */,
+				5C52220D266E703F00F4BE0F /* OrderPageCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				5C667EFB266822C9005F1C2F /* ViewHistoryCell.swift in Sources */,
 				840BF208265BEF9F006A1DED /* CartCtrl.swift in Sources */,
 				84DE6B682659663800B7E63D /* Item+CoreDataProperties.swift in Sources */,
+				5C52220E266E703F00F4BE0F /* OrderPageCell.swift in Sources */,
 				5C77062826668D0D00CCE27F /* BrandPageTableCell.swift in Sources */,
 				5CC8A363265FE8420078DAB9 /* ItemCtrlCell.swift in Sources */,
 				5C0096482663F7D500A84A1D /* SideMenuView.swift in Sources */,
@@ -604,6 +611,7 @@
 				5CC8A2B5265DA7410078DAB9 /* WelcomeViewCell.swift in Sources */,
 				84DE6B0B2658145600B7E63D /* SceneDelegate.swift in Sources */,
 				840BF203265BED1F006A1DED /* DBHelper.swift in Sources */,
+				5C522209266E701700F4BE0F /* OrderPageView.swift in Sources */,
 				84DE6B132658145600B7E63D /* Project_3.xcdatamodeld in Sources */,
 				84DE6B692659663800B7E63D /* User+CoreDataClass.swift in Sources */,
 				8480E8A4266155280016B62D /* SignupCtrl.swift in Sources */,
