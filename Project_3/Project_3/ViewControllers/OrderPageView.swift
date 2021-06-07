@@ -13,7 +13,7 @@ class OrderPageView: UIViewController {
     var items : [Item]?
     var selected = 0
     
-<<<<<<< HEAD
+
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1
 //    }
@@ -25,7 +25,6 @@ class OrderPageView: UIViewController {
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        <#code#>
 //    }
-=======
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -45,7 +44,6 @@ class OrderPageView: UIViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selected = indexPath.row
     }
->>>>>>> main
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.0
