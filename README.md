@@ -1,7 +1,7 @@
 # Revature Project 3 Shopping App
 
 ## Project Description
-Amazon has become a seemingly unavoidable capital giant and their labor practices are highly questionable. Our app is meant to serve as a startup competitor to Amazon for ethically conscious shoppers!
+Amazon has become a seemingly unavoidable capital giant in the online shopping scene. Our app is meant to serve as a startup competitor to Amazon for shoppers who want alternatives!
 
 ### Users are over the moon about us:
 
@@ -52,10 +52,14 @@ Command       |   Effect
 `/D <file path>`| Takes you to the filepath on a different drive
 `dir`           | Shows directories within current folder
 
-#### Linux
+#### Linux and MacOS
 
+Cloning on Unix based machines is a bit simpler. First, open your terminal and navigate to where you want to store the project.
+the `cd` command is a commonality with windows, however the `dir` command is replaced with `ls`.
 
-#### MacOS
+Once you've made it to your chosen directory, enter the same command as the windows section: 
+
+`git clone https://github.com/duncanjd267/Revature_Project3_Shopping_App`
 
 
 ## Usage
