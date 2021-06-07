@@ -7,26 +7,25 @@
 
 import UIKit
 
-class CartCtrl: UIViewController
+class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 	var items: [Item]?
 	var numberInCart: Double?
 	var total: Double?
 	var Person: User?
 	
-	
-	func PurchaseItems()
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
-		let Uname = Person!.username!
-		items!.removeAll()
-		numberInCart = 0
-		total = 0
-		DBHelper.inst.updateCartPurchased(name: Uname)
+		return items!.count
 	}
 	
-	func removeItem()
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
+		let cell = tableView.dequeueReusableCell(withIdentifier: "thing1") as! CartCell
 		
+		cell.ItemName.text = items![indexPath.row].name
+		cell.ItemPrice.text = String(items![indexPath.row].price)
+		return cell
 	}
 	
     override func viewDidLoad()

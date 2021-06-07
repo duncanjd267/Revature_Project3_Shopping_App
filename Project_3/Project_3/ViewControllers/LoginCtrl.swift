@@ -35,6 +35,7 @@ class LoginCtrl: UIViewController
 		
 		if passW == passAct
 		{
+            DBHelper.inst.holdCurrentUser(name: Usr.username!)
 			// Verification succeeds
             let tabViewController =
                 storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
