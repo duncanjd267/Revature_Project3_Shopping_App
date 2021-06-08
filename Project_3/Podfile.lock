@@ -1,16 +1,28 @@
 PODS:
+  - CGMath (1.0.2)
+  - FloatingTabBarController (1.0.0):
+    - CGMath
   - MFCard (1.2.7)
+  - VBRRollingPit (1.0.1)
 
 DEPENDENCIES:
+  - FloatingTabBarController
   - MFCard
+  - VBRRollingPit
 
 SPEC REPOS:
   trunk:
+    - CGMath
+    - FloatingTabBarController
     - MFCard
+    - VBRRollingPit
 
 SPEC CHECKSUMS:
+  CGMath: 41d118f6890c0e1a7aa10bd262f6f199590f72aa
+  FloatingTabBarController: 2e5aeb6a5e28cd907c10f172437e48788a214f31
   MFCard: ab4b84ec3299196135f3c6bf84ffed703be64939
+  VBRRollingPit: 62a79cc663aeea6a196878b3a907056617f96b6a
 
-PODFILE CHECKSUM: 0c5add17a925486b0e8fc02069e328b1d17714be
+PODFILE CHECKSUM: 88f573d1a41cdc38629bdbdd1d10f0ad77bf90fd
 
 COCOAPODS: 1.10.1

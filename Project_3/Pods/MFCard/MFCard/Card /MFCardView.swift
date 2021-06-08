@@ -413,12 +413,21 @@ extension MFCardDelegate{
     }
     
     @IBAction func btnDoneAction(_ sender: AnyObject) {
+        
+        let Confirmed = UIAlertController(title: "Success", message: "Your Information is Now Successfully Saved", preferredStyle: UIAlertController.Style.alert)
+        let Cancel = UIAlertController(title: "Invalid Information", message: "Please Enter Valid Information", preferredStyle: UIAlertController.Style.alert)
+        
         if (btnDone.title(for: .normal) == "Close"){
-            dismissCard()
+           // dismissCard()
+            Cancel.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            UIApplication.shared.keyWindow?.rootViewController?.present(Cancel, animated: true, completion: nil)
             if self.delegate != nil{
                 self.delegate?.cardDidClose()
             }
         }else{
+            
+            Confirmed.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            UIApplication.shared.keyWindow?.rootViewController?.present(Confirmed, animated: true, completion: nil)
             error = nil
             var card :Card?
             let cardNumber :String = getCardNumber()
@@ -433,9 +442,9 @@ extension MFCardDelegate{
             }
             
             
-            if (error == "" || error == nil) {
-                card = Card(holderName: txtCardName.text, number: cardNumber, month: Month(rawValue: viewExpiryMonth!.labelValue.text!)!, year: viewExpiryYear!.labelValue.text!, cvc: txtCvc.text!, paymentType: Card.PaymentType.card, cardType:addedCardType!, userId: 1)
-            }
+           // if (error == "" || error == nil) {
+//                card = Card(holderName: txtCardName.text, number: cardNumber, month: Month(rawValue: viewExpiryMonth!.labelValue.text!)!, year: viewExpiryYear!.labelValue.text!, cvc: txtCvc.text!, paymentType: Card.PaymentType.card, cardType:addedCardType!, userId: 1)
+           // }
             
             if error != nil && toast == true{
                 UIApplication.topViewController()?.view.makeToast(error!)

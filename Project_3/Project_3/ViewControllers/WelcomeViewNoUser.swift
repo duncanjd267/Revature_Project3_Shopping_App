@@ -18,7 +18,7 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = true
+       // navigationController?.isNavigationBarHidden = true
         pageView.numberOfPages = itemList.count
         pageView.currentPage = 0
         
@@ -26,7 +26,7 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return itemList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,13 +78,12 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
     
     //Mark:- Best selling table set up
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return itemList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,7 +91,7 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WelcomeViewNotUserTableCell
         
         cell.BestSellingItem.text = itemList[indexPath.row].name!
-        cell.BestSellingPrice.text = String(itemList[indexPath.row].price)
+        cell.BestSellingItemPrice.text = "$" + String(itemList[indexPath.row].price)
         cell.BestSellingImage.image = UIImage(named: itemList[indexPath.row].image!)
         
         return cell
@@ -112,6 +111,7 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
         return 150.0
         
     }
+    
     
     
 

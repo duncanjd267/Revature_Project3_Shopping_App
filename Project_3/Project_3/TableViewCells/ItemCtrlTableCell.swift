@@ -30,7 +30,7 @@ class ItemCtrlTableCell: UITableViewCell {
         cellView.layer.shadowRadius = 10
         cellView.layer.shadowOpacity = 0.5
         cellView.layer.shadowOffset = CGSize(width: 5, height: 10)
-        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         self.clipsToBounds = false
     }
     

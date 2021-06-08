@@ -34,7 +34,7 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Wish") as! WishlistTableCell
             cell.hName.text = brand![indexPath.row].name
-            cell.hPrice.text = String(brand![indexPath.row].price)
+            cell.hPrice.text = "$" + String(brand![indexPath.row].price)
             cell.hImage.image = UIImage(named: brand![indexPath.row].image!)
             
             return cell

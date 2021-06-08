@@ -1,8 +1,8 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MFCard"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CGMath" "${PODS_CONFIGURATION_BUILD_DIR}/FloatingTabBarController" "${PODS_CONFIGURATION_BUILD_DIR}/MFCard" "${PODS_CONFIGURATION_BUILD_DIR}/VBRRollingPit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MFCard/MFCard.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Foundation" -framework "MFCard" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CGMath/CGMath.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FloatingTabBarController/FloatingTabBarController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MFCard/MFCard.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/VBRRollingPit/VBRRollingPit.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "CGMath" -framework "CoreGraphics" -framework "FloatingTabBarController" -framework "Foundation" -framework "MFCard" -framework "UIKit" -framework "VBRRollingPit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

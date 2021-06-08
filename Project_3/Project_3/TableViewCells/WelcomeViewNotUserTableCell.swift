@@ -11,7 +11,8 @@ class WelcomeViewNotUserTableCell: UITableViewCell {
 
     @IBOutlet weak var BestSellingImage: UIImageView!
     @IBOutlet weak var BestSellingItem: UILabel!
-    @IBOutlet weak var BestSellingPrice: UILabel!
+    @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var BestSellingItemPrice: UILabel!
     
     
     
@@ -24,6 +25,15 @@ class WelcomeViewNotUserTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        cellView.layer.shadowRadius = 10
+        cellView.layer.shadowOpacity = 0.5
+        cellView.layer.shadowOffset = CGSize(width: 5, height: 10)
+        self.clipsToBounds = false
     }
 
 }

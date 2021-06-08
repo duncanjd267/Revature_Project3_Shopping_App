@@ -66,23 +66,13 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DBHelper.inst.holdCurrentItem(name: brand[indexPath.item].name!)
-        let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-        present(Bienvenue, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.0
     }
-    
-    @IBAction func BACK(_ sender: Any) {
-        
-        let tabViewController =
-            storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
-        view.window?.rootViewController = tabViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
-    
     
 }
 

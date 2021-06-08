@@ -9,7 +9,8 @@ import UIKit
 
 class CommentViewController: UIViewController {
 
-
+    @IBOutlet weak var commentTxt: UITextField!
+    
     @IBOutlet weak var comment: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,13 @@ class CommentViewController: UIViewController {
     
     @IBAction func Cancel(_ sender: Any) {
         
-        let tabViewController =
-            storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
-        view.window?.rootViewController = tabViewController
-        view.window?.makeKeyAndVisible()
+        let CancelComments = UIAlertController(title: "Cancel Review", message: "You Cancelled Your Review", preferredStyle: UIAlertController.Style.alert)
+        
+        CancelComments.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(CancelComments, animated: true, completion: nil)
+        
+        commentTxt.text = ""
         
     }
-    
 
 }

@@ -192,18 +192,23 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     @IBAction func back(_ sender: Any) {
-        //        if DBHelper.inst.getCurrentUser() == ""{
-        //            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
-        //            present(Bienvenue, animated: true, completion: nil)
-        //
-        //        } else {
-        let vc = storyboard?.instantiateViewController(identifier: "WelcomeLI") as! WelcomeView
-        navigationController?.pushViewController(vc, animated: true)
         
-    }
-}
+        if DBHelper.inst.getCurrentUser() == ""{
+            
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
+            present(Bienvenue, animated: true, completion: nil)
+            
+        } else {
 
-//}
+            let tabViewController =
+                storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+            view.window?.rootViewController = tabViewController
+            view.window?.makeKeyAndVisible()
+            
+        }
+    }
+    
+}
 
 
 

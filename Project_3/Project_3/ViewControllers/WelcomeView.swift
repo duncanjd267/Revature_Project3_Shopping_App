@@ -7,10 +7,10 @@
 
 import UIKit
 
-class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SideMenuViewDelegate
+class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, SideMenuViewDelegate
 {
     
-    
+    //UICollectionViewDelegateFlowLayout
     
     @IBOutlet weak var Recommandations: UICollectionView!
     @IBOutlet weak var Deals: UICollectionView!
@@ -132,7 +132,7 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == self.Recommandations{
-            print("Doing Recommendations")
+            //print("Doing Recommendations")
             let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! WelcomeViewCell
             cell1.ReImage.image = UIImage(named: itemList[indexPath.item].image!)
             cell1.ReText.text = itemList[indexPath.item].name!
@@ -152,15 +152,15 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if collectionView == self.Deals {
-            return CGSize(width: 120, height: 120)
-        }
-        else {
-            return CGSize()
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        
+//        if collectionView == self.Deals {
+//            return CGSize(width: 120, height: 120)
+//        }
+//        else {
+//            return CGSize()
+//        }
+//    }
     
     @IBAction func nike(_ sender: Any) {
         DBHelper.inst.holdCurrentBrand(name: "Nike")

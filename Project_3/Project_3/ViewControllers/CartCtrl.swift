@@ -58,8 +58,20 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     
+    @IBAction func Checkout(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(identifier: "PaymentOption") as! PaymentOptionView
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 150.0
         }
-
+    
+    
+    
 }
