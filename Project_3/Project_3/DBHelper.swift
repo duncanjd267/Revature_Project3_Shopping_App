@@ -377,6 +377,28 @@ class DBHelper
         return stu
     }
     
+	func PwordRecover(Pnum: String) -> String
+	{
+		var st = User()
+		var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+		fetchReq.predicate = NSPredicate(format: "phone == %@", Pnum)
+		
+		do
+		{
+			let stu = try context?.fetch(fetchReq)
+			
+			if stu?.count != 0
+			{
+				st = stu?.first as! User
+				return st.password!
+			}
+		}
+		catch
+		{
+			print("Error: \(error)")
+		}
+		return "No User found"
+	}
     
     func updateCartPurchased(name : String){
         
