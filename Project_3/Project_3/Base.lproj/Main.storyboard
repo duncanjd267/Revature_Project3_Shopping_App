@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9PW-Al-EkU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Qy-0T-cFl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -31,7 +31,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="GuestLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQ8-Mv-o6y"/>
+                                    <segue destination="9PW-Al-EkU" kind="presentation" id="tC4-Qr-o3q"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IJL-Hi-FCj">
@@ -156,7 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="d8R-I8-eeC"/>
                     <connections>
-                        <outlet property="GuestBttn" destination="gZr-3P-mEd" id="cIk-I3-4jY"/>
+                        <outlet property="GuestBttn" destination="gZr-3P-mEd" id="rgl-xj-0xo"/>
                         <outlet property="LogInBttn" destination="cOU-ZV-cwQ" id="794-t2-qGj"/>
                         <outlet property="pageView" destination="YEd-9Z-cfw" id="4di-ma-acv"/>
                         <outlet property="sliderCollectionView" destination="IJL-Hi-FCj" id="FH5-gq-Hfy"/>
@@ -3455,8 +3455,9 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="tC4-Qr-o3q"/>
         <segue reference="F8n-DP-kyU"/>
-        <segue reference="xal-JM-YMI"/>
+        <segue reference="nW4-ds-cMz"/>
         <segue reference="TdP-P2-dFx"/>
 
     </inferredMetricsTieBreakers>
