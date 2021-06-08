@@ -145,13 +145,7 @@ class LaunchingViewController: UIViewController {
         
     }
     
-    @IBAction func GuestLogIn(_ sender: Any) {
-        
-        let tabViewController = storyboard?.instantiateViewController(withIdentifier: "TabViewControllerNonUser")
-        view.window?.rootViewController = tabViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
+
     
     
 }
