@@ -1145,6 +1145,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Recover:" destination="M9Z-vU-nq9" eventType="touchUpInside" id="oj0-AA-Hnp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1183,6 +1186,9 @@
                         <viewLayoutGuide key="safeArea" id="R6C-vo-aMS"/>
                         <color key="backgroundColor" red="1" green="0.67450980390000004" blue="0.71764705880000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="EmailField" destination="IB0-Ww-oza" id="7dH-A7-e6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qF8-kz-x0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1653,7 +1659,7 @@
             <objects>
                 <viewController storyboardIdentifier="WelcomeLI" modalPresentationStyle="fullScreen" id="pNm-A8-VqI" customClass="WelcomeView" customModule="Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IcM-Gu-qD4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxP-ab-WYK">
@@ -3216,7 +3222,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="LA8-LW-rmJ"/>
         <segue reference="F8n-DP-kyU"/>
-
         <segue reference="EOF-T9-ugD"/>
     </inferredMetricsTieBreakers>
     <resources>
