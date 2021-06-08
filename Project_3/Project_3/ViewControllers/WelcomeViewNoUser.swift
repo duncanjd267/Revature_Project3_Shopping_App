@@ -71,7 +71,7 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
         
         DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
         let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
-        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true)
     
     }
     
@@ -102,7 +102,7 @@ class WelcomeViewNoUser: UIViewController, UICollectionViewDelegate, UICollectio
        
         DBHelper.inst.holdCurrentItem(name: itemList[indexPath.row].name!)
         let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
-        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true)
    
     }
     
