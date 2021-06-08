@@ -14,7 +14,7 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.isNavigationBarHidden = true
         
     }
     
@@ -28,7 +28,7 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 7
+        return brand.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,6 +36,7 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! BrandPageTableCell
         
         cell.cellView.layer.cornerRadius = cell.cellView.frame.height / 2
+        print(String(indexPath.row))
         cell.BrandName.text = brand[indexPath.row].name
         cell.BrandDP.text = brand[indexPath.row].descript
         cell.BrandImg.image = UIImage(named: brand[indexPath.row].image!)
@@ -73,6 +74,14 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return 150.0
     }
     
+    @IBAction func BACK(_ sender: Any) {
+        
+        let tabViewController =
+            storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
     
     
 }

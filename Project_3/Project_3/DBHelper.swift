@@ -301,10 +301,11 @@ class DBHelper
                 st = stu?.first as! User
                 print("It shall try to make relationship")
                 st.recentview = item.name
-                st.balance = st.balance + item.price
+                st.cartamount = st.cartamount + item.price
                 st.addToToitem(item)
+                print(String(st.toitem!.count))
                 try context?.save()
-                print("Updated Questions For Quiz")
+                print("Updated items for cart")
             }
         }
         catch{
@@ -390,9 +391,10 @@ class DBHelper
             let stu = try context?.fetch(fetchReq)
             st = stu?.first as! User
             for items in st.toitem!{
-                DBHelper.inst.updateItemPurchased(item: Item(context: items as! NSManagedObjectContext).name!)
-                st.removeFromToitem(Item(context: items as! NSManagedObjectContext))
-                st.addToPurchased(Item(context: items as! NSManagedObjectContext))
+                var temp = items as! Item
+                DBHelper.inst.updateItemPurchased(item: temp.name!)
+                st.removeFromToitem(temp)
+                st.addToPurchased(temp)
             }
             st.cartamount = 0.0
             try context?.save()
@@ -427,6 +429,41 @@ class DBHelper
         
     }
     
+    var newData : NSMutableSet?
+    
+    func Refund(name : String, item: Item){
+        
+        var st = User()
+        print("st made")
+        var fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+        print("Fetched")
+        fetchReq.predicate = NSPredicate(format: "username == %@", name)
+        print("Predicated")
+        
+        do{
+            let stu = try context?.fetch(fetchReq)
+            st = stu?.first as! User
+            print(st.username)
+            print(item.name)
+            print(String(st.purchased!.count))
+            print(st.purchased)
+            st.removeFromPurchased(item)
+            newData = st.purchased! as! NSMutableSet
+            newData?.remove(item)
+            newData?.remove(item)
+            st.purchased? = newData as! NSSet
+            print(st.purchased)
+            print(String(st.purchased!.count))
+            st.balance = st.balance + item.price
+            try context?.save()
+            
+        }
+        catch{
+            print("Error")
+        }
+ 
+        
+    }
     func holdCurrentUser(name : String){
         currentUser = name
     }

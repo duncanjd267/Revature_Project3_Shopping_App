@@ -28,11 +28,11 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if  prob == true{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Wcell") as! WishlistTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Wish") as! WishlistTableCell
             cell.hName.text = "Either login or add to wishlist"
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Wcell") as! WishlistTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Wish") as! WishlistTableCell
             cell.hName.text = brand![indexPath.row].name
             cell.hPrice.text = String(brand![indexPath.row].price)
             cell.hImage.image = UIImage(named: brand![indexPath.row].image!)
@@ -45,7 +45,7 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     
 
     override func viewDidLoad() {
-        brand = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist as! [Item]
+        brand = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist?.allObjects as! [Item]
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

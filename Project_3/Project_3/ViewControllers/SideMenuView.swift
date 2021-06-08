@@ -19,9 +19,11 @@ class SideMenuView: UIViewController {
     @IBOutlet weak var mainBackgroundView: UIView!
     @IBOutlet weak var profilePictureImage: UIImageView!
     
+    @IBOutlet weak var username: UILabel!
     
     
     override func viewDidLoad() {
+        username.text = DBHelper.inst.getCurrentUser()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -44,6 +46,12 @@ class SideMenuView: UIViewController {
     @IBAction func Logout(_ sender: Any) {
         
         let vc = storyboard?.instantiateViewController(identifier: "LogInPage") as! LoginCtrl
+        present(vc, animated: true)
+        
+    }
+    @IBAction func Refund(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(identifier: "OrderPage") as! OrderPageView
         present(vc, animated: true)
         
     }
