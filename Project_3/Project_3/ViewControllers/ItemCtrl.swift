@@ -13,6 +13,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     
     
+    @IBOutlet weak var BackBttn: UIButton!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descr: UILabel!
     @IBOutlet weak var ItemPageCell: UICollectionView!
@@ -40,6 +41,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         var temp = [cur.image!, cur.image2!, cur.image3!]
         if DBHelper.inst.getCurrentUser() == ""{
             print("No user present")
+            BackBttn.isHidden = false
         }
         else{
             var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
@@ -191,22 +193,22 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         return 150.0
     }
     
-    @IBAction func back(_ sender: Any) {
-        
-        if DBHelper.inst.getCurrentUser() == ""{
-            
-            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
-            present(Bienvenue, animated: true, completion: nil)
-            
-        } else {
-
-            let tabViewController =
-                storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
-            view.window?.rootViewController = tabViewController
-            view.window?.makeKeyAndVisible()
-            
-        }
-    }
+//    @IBAction func back(_ sender: Any) {
+//
+//        if DBHelper.inst.getCurrentUser() == ""{
+//
+//            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
+//            present(Bienvenue, animated: true, completion: nil)
+//
+//        } else {
+//
+//            let tabViewController =
+//                storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+//            view.window?.rootViewController = tabViewController
+//            view.window?.makeKeyAndVisible()
+//
+//        }
+//    }
     
 }
 

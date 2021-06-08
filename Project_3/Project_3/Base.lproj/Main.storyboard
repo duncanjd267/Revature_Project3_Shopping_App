@@ -693,6 +693,17 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mId-lL-5JG">
+                                                        <rect key="frame" x="0.0" y="30" width="80" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                                                        <state key="normal" title="&lt; Back">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="9PW-Al-EkU" kind="presentation" id="7UQ-BP-eAe"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.67450980390000004" blue="0.71764705880000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -773,6 +784,7 @@
                     <navigationItem key="navigationItem" id="c6a-R3-aq9"/>
                     <size key="freeformSize" width="414" height="1800"/>
                     <connections>
+                        <outlet property="BackBttn" destination="mId-lL-5JG" id="4U0-aV-jTj"/>
                         <outlet property="ItemPageCell" destination="r5w-lS-H2s" id="7I2-aQ-AwF"/>
                         <outlet property="ItemPrice" destination="wAP-Ir-5hK" id="1Sn-ud-UoV"/>
                         <outlet property="RelatedItem" destination="JrL-HH-s8I" id="1jJ-Xq-tdj"/>
@@ -783,7 +795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynB-XD-MA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5278" y="109"/>
+            <point key="canvasLocation" x="5276.811594202899" y="108.48214285714285"/>
         </scene>
         <!--Brand Page View-->
         <scene sceneID="pWm-aA-Npb">
@@ -3455,11 +3467,10 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="tC4-Qr-o3q"/>
+        <segue reference="7UQ-BP-eAe"/>
         <segue reference="F8n-DP-kyU"/>
         <segue reference="nW4-ds-cMz"/>
         <segue reference="TdP-P2-dFx"/>
-
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AdidasLogo" width="3840" height="2160"/>
