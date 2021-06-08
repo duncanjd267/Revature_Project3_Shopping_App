@@ -1,2 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Project_3/Pods-Project_3-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CGMath/CGMath.framework
+${BUILT_PRODUCTS_DIR}/FloatingTabBarController/FloatingTabBarController.framework
 ${BUILT_PRODUCTS_DIR}/MFCard/MFCard.framework
+${BUILT_PRODUCTS_DIR}/VBRRollingPit/VBRRollingPit.framework

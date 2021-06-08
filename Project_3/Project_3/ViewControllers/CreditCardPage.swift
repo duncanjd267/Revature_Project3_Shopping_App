@@ -10,8 +10,6 @@ import MFCard
 
 class CreditCardPage: UIViewController, MFCardDelegate {
    
-    @IBOutlet weak var CardView: MFCardView!
-    
     
     func cardDoneButtonClicked(_ card: Card?, error: String?) {
         if error == nil{
@@ -23,7 +21,9 @@ class CreditCardPage: UIViewController, MFCardDelegate {
     
     func cardTypeDidIdentify(_ cardType: String) {
         
+        
     }
+    
     
     func cardDidClose() {
         
@@ -33,12 +33,13 @@ class CreditCardPage: UIViewController, MFCardDelegate {
     
     override func viewDidLoad() {
         
-        CardView.isHidden = false
+        //CardView.isHidden = false
         var myCard : MFCardView
         myCard  = MFCardView(withViewController: self)
         myCard.delegate = self
         myCard.autoDismiss = true
         myCard.toast = true
+        //myCard.showCard()
     }
     
     @IBAction func submit(_ sender: Any) {

@@ -9,13 +9,58 @@ import UIKit
 
 class LaunchingViewController: UIViewController {
     
+    @IBOutlet weak var sliderCollectionView: UICollectionView!
+    @IBOutlet weak var pageView: UIPageControl!
+    @IBOutlet weak var GuestBttn: UIButton!
+    @IBOutlet weak var LogInBttn: UIButton!
+    
     var dic : [String:String] = [:]
-
+    
+    var imgArr = [ UIImage(named: "LaunchingImg1"),
+                   UIImage(named: "LaunchingImg2"),
+                   UIImage(named: "LaunchingImg3"),
+                   UIImage(named: "LaunchingImg4")
+                   
+    ]
+    
+    var timer = Timer()
+    var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.isNavigationBarHidden = true
+        
+        pageView.numberOfPages = imgArr.count
+        pageView.currentPage = 0
+        DispatchQueue.main.async {
+            self.timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+        }
+        GuestBttn.BttnDesign()
+        LogInBttn.BttnDesign()
     }
+    
+    @objc func changeImage(){
+        
+        if counter < imgArr.count {
+            let index = IndexPath.init(item: counter, section: 0)
+            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            pageView.currentPage = counter
+            counter += 1
+            
+        }else {
+            
+            counter = 0
+            let index = IndexPath.init(item: counter, section: 0)
+            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            pageView.currentPage = counter
+        }
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     
     @IBAction func populate(_ sender: Any) {
         //addidas
@@ -109,5 +154,22 @@ class LaunchingViewController: UIViewController {
     }
     
     
+}
 
+
+extension LaunchingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imgArr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? LaunchingViewCell
+        
+        cell?.LaunchingImg.image = imgArr[indexPath.row]
+        
+        return cell!
+    }
 }

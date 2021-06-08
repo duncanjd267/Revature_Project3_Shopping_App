@@ -20,7 +20,6 @@ class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSou
         print("I got here please dont break")
         curuser = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
         history = curuser!.history?.allObjects as! [Item]
-        
         super.viewDidLoad()
         
     }
@@ -79,8 +78,8 @@ class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         if(history?.count != 0){
             DBHelper.inst.holdCurrentItem(name: history![indexPath.item].name!)
-            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "ItemBoard") as! ItemCtrl
-            present(Bienvenue, animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
+            navigationController?.pushViewController(vc, animated: true)
             
         }
     }
@@ -89,14 +88,14 @@ class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSou
         return 150.0
     }
     
-    @IBAction func back(_ sender: Any) {
-        
-        let tabViewController =
-        storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
-        view.window?.rootViewController = tabViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
+//    @IBAction func back(_ sender: Any) {
+//
+//        let tabViewController =
+//        storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+//        view.window?.rootViewController = tabViewController
+//        view.window?.makeKeyAndVisible()
+//
+//    }
     
     
     

@@ -11,4 +11,6 @@ class WelcomeViewNotUserCell: UICollectionViewCell {
     
     @IBOutlet weak var DealsImg: UIImageView!
     
+    
+    
 }

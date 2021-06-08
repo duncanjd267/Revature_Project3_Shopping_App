@@ -3,8 +3,11 @@
 
 target 'Project_3' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  pod 'FloatingTabBarController'
   pod 'MFCard'
+  pod 'VBRRollingPit'
+  use_frameworks!
+
   # Pods for Project_3
 
   target 'Project_3Tests' do
