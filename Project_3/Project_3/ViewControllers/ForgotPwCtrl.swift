@@ -9,7 +9,7 @@ import UIKit
 
 class ForgotPwCtrl: UIViewController
 {
-	@IBOutlet weak var EmailField: UITextField!
+	@IBOutlet weak var PhoneField: UITextField!
 	
     override func viewDidLoad()
 	{
@@ -28,17 +28,15 @@ class ForgotPwCtrl: UIViewController
     
 	@IBAction func Recover(_ sender: UIButton)
 	{
-		var address: String?
+		var phoneN: String?
 		
-		if let thing = EmailField!.text, thing.isEmpty
+		if let thing = PhoneField!.text, thing.isEmpty
 		{
 			return // Can't do anything with an empty field
 		}
-		else
-		{
-			address = EmailField!.text
-		}
 		
+		phoneN = PhoneField!.text
+		let result = DBHelper.inst.PwordRecover(Pnum: phoneN!)
 		
 	}
 	
