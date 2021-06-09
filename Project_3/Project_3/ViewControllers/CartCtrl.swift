@@ -27,7 +27,10 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
         Person = DBHelper.inst.getOneUser(user: username)
         
         
-        items = Person!.toitem?.allObjects as! [Item]
+        //items = Person!.toitem?.allObjects as! [Item]
+        
+        items = Array(Person!.toitem!)
+
         print(String(items!.count))
         total = Person!.balance
         numberInCart = Person!.cartamount

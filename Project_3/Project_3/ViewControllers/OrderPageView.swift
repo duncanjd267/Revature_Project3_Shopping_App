@@ -16,7 +16,8 @@ class OrderPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         
         print("Here inside viewDidLoad")
-        items = DBHelper.inst.getOneUser(user: (DBHelper.inst.getCurrentUser())).purchased?.allObjects as! [Item]
+        //items = DBHelper.inst.getOneUser(user: (DBHelper.inst.getCurrentUser())).purchased?.allObjects as! [Item]
+        items = Array(DBHelper.inst.getOneUser(user: (DBHelper.inst.getCurrentUser())).purchased!)
         NoItemView.isHidden = true
         print(String(items!.count))
         navigationController?.isNavigationBarHidden = true
