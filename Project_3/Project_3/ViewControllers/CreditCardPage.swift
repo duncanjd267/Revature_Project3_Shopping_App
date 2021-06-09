@@ -10,6 +10,12 @@ import MFCard
 
 class CreditCardPage: UIViewController, MFCardDelegate {
    
+    @IBOutlet weak var nameTxt: UITextField!
+    @IBOutlet weak var nameTxt2: UITextField!
+    @IBOutlet weak var addressTxt: UITextField!
+    @IBOutlet weak var addressTxt2: UITextField!
+    @IBOutlet weak var cityTxt: UITextField!
+    @IBOutlet weak var postcodeTxt: UITextField!
     
     func cardDoneButtonClicked(_ card: Card?, error: String?) {
         if error == nil{
@@ -33,17 +39,30 @@ class CreditCardPage: UIViewController, MFCardDelegate {
     
     override func viewDidLoad() {
         
-        //CardView.isHidden = false
         var myCard : MFCardView
         myCard  = MFCardView(withViewController: self)
         myCard.delegate = self
         myCard.autoDismiss = true
         myCard.toast = true
-        //myCard.showCard()
     }
     
     @IBAction func submit(_ sender: Any) {
-        DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+        
+        if (nameTxt.text == "" || nameTxt2.text == "" || addressTxt.text == "" || addressTxt2.text == "" || cityTxt.text == "" || postcodeTxt.text == "") {
+            
+            let Invalid = UIAlertController(title: "Invalid Information", message: "Please Enter Valid Information To Proceed", preferredStyle: UIAlertController.Style.alert)
+            Invalid.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(Invalid, animated: true, completion: nil)
+            
+        }
+        
+        else {
+            DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+            let SubmitComments = UIAlertController(title: "Submit Confirmation", message: "Your Payment is Successfully Processed", preferredStyle: UIAlertController.Style.alert)
+            SubmitComments.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(SubmitComments, animated: true, completion: nil)
+        }
+
     }
     
     

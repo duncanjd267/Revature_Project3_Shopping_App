@@ -12,10 +12,12 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     var brand = DBHelper.inst.getItemsBrand(name: DBHelper.inst.getCurrentBrand())
     
+    @IBOutlet weak var NoItemView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-        
+        NoItemView.isHidden = true
     }
     
     
@@ -28,7 +30,14 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return brand.count
+        if (brand.count == 0){
+            NoItemView.isHidden = false
+            return 0
+        }else {
+            NoItemView.isHidden = true
+            return brand.count
+        }
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,6 +82,16 @@ class BrandPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.0
     }
+    
+    @IBAction func back(_ sender: Any) {
+        
+        let tabViewController =
+            storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
+    
     
 }
 

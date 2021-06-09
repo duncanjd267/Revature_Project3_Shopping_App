@@ -8,16 +8,15 @@
 import UIKit
 
 class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    //    var testImg = ["AdidasLogo", "AppleLogo", "GucciLogo"]
-    //    var testLabel = ["Adidas Shoes", "iphone", "Gucci Bag"]
-    //    var testPrice = ["0.00", "12.11", "4444.44"]
-    
+        
     var curuser : User?
     var history : [Item]?
     
+    @IBOutlet weak var NoItemView: UIView!
+    
     override func viewDidLoad() {
         print("I got here please dont break")
+        NoItemView.isHidden = true
         curuser = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
         history = curuser!.history?.allObjects as! [Item]
         super.viewDidLoad()
@@ -30,8 +29,10 @@ class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(history!.count == 0){
-            return 1
+            NoItemView.isHidden = false
+            return 0
         } else {
+            NoItemView.isHidden = true
             return history!.count
         }
     }
@@ -88,14 +89,14 @@ class ViewHistoryPage: UIViewController, UITableViewDelegate, UITableViewDataSou
         return 150.0
     }
     
-//    @IBAction func back(_ sender: Any) {
-//
-//        let tabViewController =
-//        storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
-//        view.window?.rootViewController = tabViewController
-//        view.window?.makeKeyAndVisible()
-//
-//    }
+    @IBAction func back(_ sender: Any) {
+
+        let tabViewController =
+        storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+
+    }
     
     
     

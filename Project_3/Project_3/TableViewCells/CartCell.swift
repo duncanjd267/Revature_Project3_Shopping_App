@@ -7,12 +7,18 @@
 
 import UIKit
 
-class CartCell: UITableViewCell
-{
+protocol DataCollectionProtocol{
+    func deleteData(indx: Int)
+}
+
+class CartCell: UITableViewCell {
 
 	@IBOutlet weak var ItemName: UILabel!
 	@IBOutlet weak var ItemPrice: UILabel!
     @IBOutlet weak var ItemImage: UIImageView!
+    
+    var delegate: DataCollectionProtocol?
+    var index: IndexPath?
     
 	override func awakeFromNib()
 	{
@@ -26,5 +32,8 @@ class CartCell: UITableViewCell
 
         // Configure the view for the selected state
     }
-
+    @IBAction func removeBttn(_ sender: Any) {
+        delegate?.deleteData(indx: (index?.row)!)
+    }
+    
 }
