@@ -440,7 +440,11 @@ class DBHelper
         do{
             let stu = try context?.fetch(fetchReq)
             st = stu?.first as! User
-            st.removeFromToitem(item)
+            var ind = st.toitem?.firstIndex(of: item)
+                    
+            st.managedObjectContext?.delete((st.toitem?[ind!])!)
+
+            //st.removeFromToitem(item)
             st.cartamount = st.cartamount - item.price
             try context?.save()
             
@@ -465,6 +469,7 @@ class DBHelper
         do{
             let stu = try context?.fetch(fetchReq)
             st = stu?.first as! User
+            /*
             print(st.username)
             print(item.name)
             print(String(st.purchased!.count))
@@ -476,6 +481,10 @@ class DBHelper
             st.purchased? = newData as! NSSet
             print(st.purchased)
             print(String(st.purchased!.count))
+            */
+            var ind = st.purchased?.firstIndex(of: item)
+                        
+            st.managedObjectContext?.delete((st.purchased?[ind!])!)
             st.balance = st.balance + item.price
             try context?.save()
             

@@ -22,9 +22,9 @@ extension User {
     @NSManaged public var phone: String?
     @NSManaged public var recentview: String?
     @NSManaged public var username: String?
-    @NSManaged public var toitem: NSSet?
+    @NSManaged public var toitem: Set<Item>?
     @NSManaged public var history: NSSet?
-    @NSManaged public var purchased: NSSet?
+    @NSManaged public var purchased: Set<Item>?
     @NSManaged public var whishlist: NSSet?
 
 }
