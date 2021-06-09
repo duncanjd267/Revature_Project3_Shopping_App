@@ -20,6 +20,7 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var RelatedItem: UICollectionView!
     @IBOutlet weak var pageView: UIPageControl!
     @IBOutlet weak var ItemPrice: UILabel!
+    @IBOutlet weak var NoReviewView: UIView!
     
     
     
@@ -35,13 +36,13 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     override func viewDidLoad()
     {
         navigationController?.isNavigationBarHidden = true
+        NoReviewView.isHidden = true
         var cur = DBHelper.inst.getOneItem(item: DBHelper.inst.getCurrentItem())
         item = cur
         simBrand = DBHelper.inst.getItemsBrand(name: cur.category!)
         var temp = [cur.image!, cur.image2!, cur.image3!]
         if DBHelper.inst.getCurrentUser() == ""{
             print("No user present")
-            BackBttn.isHidden = false
         }
         else{
             var usern = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
@@ -65,9 +66,15 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBAction func AddCart(_ sender: Any) {
         if DBHelper.inst.getCurrentUser() == ""{
             print("No user, please login")
+            let NoUser = UIAlertController(title: "Invalid Information", message: "Please Log In To Add An Item", preferredStyle: UIAlertController.Style.alert)
+            NoUser.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(NoUser, animated: true, completion: nil)
         }
         else {
             DBHelper.inst.updateCart(name: DBHelper.inst.getCurrentUser(), item: item!)
+            let UserCart = UIAlertController(title: "Item Added", message: "This Item is Being Added To Your Bag!", preferredStyle: UIAlertController.Style.alert)
+            UserCart.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(UserCart, animated: true, completion: nil)
         }
     }
     
@@ -173,8 +180,10 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if item?.numcom == 0{
+            NoReviewView.isHidden = false
             return 0
         } else {
+            NoReviewView.isHidden = true
             reviewsEx = item?.tocomment?.allObjects as! [Comments]
             return reviewsEx!.count
             
@@ -193,22 +202,22 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         return 150.0
     }
     
-//    @IBAction func back(_ sender: Any) {
-//
-//        if DBHelper.inst.getCurrentUser() == ""{
-//
-//            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
-//            present(Bienvenue, animated: true, completion: nil)
-//
-//        } else {
-//
-//            let tabViewController =
-//                storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
-//            view.window?.rootViewController = tabViewController
-//            view.window?.makeKeyAndVisible()
-//
-//        }
-//    }
+    @IBAction func back(_ sender: Any) {
+
+        if DBHelper.inst.getCurrentUser() == ""{
+
+            let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "NoUser") as! WelcomeViewNoUser
+            present(Bienvenue, animated: true, completion: nil)
+
+        } else {
+
+            let tabViewController =
+                storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+            view.window?.rootViewController = tabViewController
+            view.window?.makeKeyAndVisible()
+
+        }
+    }
     
 }
 

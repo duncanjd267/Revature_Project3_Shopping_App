@@ -62,14 +62,14 @@ class PaymentOptionView: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
         if PaymentTxt.text == "Credit Card"{
             let vc = storyboard?.instantiateViewController(identifier: "CreditVC") as! CreditCardPage
-            present(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
         else if PaymentTxt.text == "Net Banking"{
             let vc = storyboard?.instantiateViewController(identifier: "NetVC") as! NetBankingPage
-            present(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }else{
             let vc = storyboard?.instantiateViewController(identifier: "CODVC") as! CODpage
-            present(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
         
     }
@@ -85,5 +85,16 @@ class PaymentOptionView: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         }
     }
+    
+    @IBAction func back(_ sender: Any) {
+        
+        let tabViewController =
+            storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
+    
+    
     
 }

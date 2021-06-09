@@ -12,6 +12,32 @@ class LoginCtrl: UIViewController
 
 	@IBOutlet weak var UserField: UITextField!
 	@IBOutlet weak var PassField: UITextField!
+    @IBOutlet weak var LogInBttn: UIButton!
+    @IBOutlet weak var ForgotBttn: UIButton!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+
+        let UserImage = UIImage(named: "UserIcon_txt")
+        addLeftImageTo(txtField: UserField, andImage: UserImage!)
+        let PasswordImage = UIImage(named: "Password_txt")
+        addLeftImageTo(txtField: PassField, andImage: PasswordImage!)
+        UserField.TextBoxDesign()
+        PassField.TextBoxDesign()
+        LogInBttn.BttnDesign()
+        ForgotBttn.BttnDesign()
+    }
+    
+    func addLeftImageTo(txtField: UITextField, andImage img:UIImage){
+        
+        let leftImageView = UIImageView(frame: CGRect(x:0.0, y:0.0, width: img.size.width, height: img.size.height))
+        leftImageView.image = img
+        txtField.leftView = leftImageView
+        txtField.leftViewMode = .always
+        
+        
+    }
 	
 	@IBAction func LogButton(_ sender: UIButton)
 	{
@@ -41,12 +67,12 @@ class LoginCtrl: UIViewController
                 storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
             view.window?.rootViewController = tabViewController
             view.window?.makeKeyAndVisible()
-//			let Bienvenue = storyboard?.instantiateViewController(withIdentifier: "WelcomeLI") as! WelcomeView
-//			present(Bienvenue, animated: true, completion: nil)
 		}
 		else
 		{
-			// Failure
+            let Invalid = UIAlertController(title: "Invalid Information", message: "Please Enter Valid Information To Proceed", preferredStyle: UIAlertController.Style.alert)
+            Invalid.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(Invalid, animated: true, completion: nil)
 			print("User verification failed")
 			print("password entered: ",String(passW!))
 			return
@@ -68,11 +94,5 @@ class LoginCtrl: UIViewController
     }
     
     
-	override func viewDidLoad()
-	{
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
 
 }

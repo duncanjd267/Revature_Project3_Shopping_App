@@ -14,6 +14,8 @@ class NetBankingPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var BankImg: UIImageView!
     @IBOutlet weak var BankView: UIView!
     @IBOutlet weak var BankLB: UILabel!
+    @IBOutlet weak var accountingTxt: UITextField!
+    @IBOutlet weak var routingTxt: UITextField!
     
     
     let paymentOptions = ["--Select A Bank--", "Bank Of America", "Chase Bank", "Citi Bank", "Wells Fargo"]
@@ -114,11 +116,24 @@ class NetBankingPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func submit(_ sender: Any) {
-        DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
         
+        if (accountingTxt.text == "" || routingTxt.text == ""){
+            
+            let Invalid = UIAlertController(title: "Invalid Information", message: "Please Enter Valid Information To Proceed", preferredStyle: UIAlertController.Style.alert)
+            Invalid.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(Invalid, animated: true, completion: nil)
+            
+        }
+        else {
+            
+            DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+            let SubmitComments = UIAlertController(title: "Submit Confirmation", message: "Your Payment is Successfully Processed", preferredStyle: UIAlertController.Style.alert)
+            SubmitComments.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(SubmitComments, animated: true, completion: nil)
+            
+        }
+
     }
-    
-    
-    
+
 
 }

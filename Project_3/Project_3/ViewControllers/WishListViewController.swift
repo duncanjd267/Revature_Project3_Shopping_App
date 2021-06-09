@@ -13,15 +13,26 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     var prob:Bool?
     var brand:[Item]?
     
+    @IBOutlet weak var NoItemView: UIView!
+    
+    override func viewDidLoad() {
+        brand = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist?.allObjects as! [Item]
+        super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+        NoItemView.isHidden = true
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if DBHelper.inst.getCurrentUser() == "" {
             prob = true
             return 1
         } else if (DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist!.count == 0){
+            NoItemView.isHidden = false
             prob = true
             return 1
         } else {
             prob = false
+            NoItemView.isHidden = true
             return DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist!.count
         }
     }
@@ -38,21 +49,11 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
             cell.hImage.image = UIImage(named: brand![indexPath.row].image!)
             
             return cell
-            
-        }
         
     }
     
+  
 
-    override func viewDidLoad() {
-        brand = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).whishlist?.allObjects as! [Item]
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-
-
 
 }

@@ -9,6 +9,15 @@ import UIKit
 
 class CODpage: UIViewController {
 
+    
+    @IBOutlet weak var nameTxt: UITextField!
+    @IBOutlet weak var nameTxt2: UITextField!
+    @IBOutlet weak var addressTxt: UITextField!
+    @IBOutlet weak var addressTxt2: UITextField!
+    @IBOutlet weak var cityTxt: UITextField!
+    @IBOutlet weak var postcodeTxt: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,17 +25,22 @@ class CODpage: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func submit(_ sender: Any) {
-        DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+        
+        if (nameTxt.text == "" || nameTxt2.text == "" || addressTxt.text == "" || addressTxt2.text == "" || cityTxt.text == "" || postcodeTxt.text == "") {
+            
+            let Invalid = UIAlertController(title: "Invalid Information", message: "Please Enter Valid Information To Proceed", preferredStyle: UIAlertController.Style.alert)
+            Invalid.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(Invalid, animated: true, completion: nil)
+            
+        }
+        else {
+            DBHelper.inst.updateCartPurchased(name: DBHelper.inst.getCurrentUser())
+            let SubmitComments = UIAlertController(title: "Submit Confirmation", message: "Your Payment is Successfully Processed", preferredStyle: UIAlertController.Style.alert)
+            SubmitComments.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(SubmitComments, animated: true, completion: nil)
+        }
+
     }
 }

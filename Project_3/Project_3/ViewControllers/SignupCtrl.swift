@@ -12,12 +12,34 @@ class SignupCtrl: UIViewController
 	@IBOutlet weak var UsrField: UITextField!
 	@IBOutlet weak var PassField: UITextField!
 	@IBOutlet weak var TeleField: UITextField!
-	
+    @IBOutlet weak var SignUp: UIButton!
+    
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
+        
+        let UserImage = UIImage(named: "UserIcon_txt")
+        addLeftImageTo(txtField: UsrField, andImage: UserImage!)
+        let PasswordImage = UIImage(named: "Password_txt")
+        addLeftImageTo(txtField: PassField, andImage: PasswordImage!)
+        let PhoneImage = UIImage(named: "PhoneIcon_txt")
+        addLeftImageTo(txtField: TeleField, andImage: PasswordImage!)
+        UsrField.TextBoxDesign()
+        PassField.TextBoxDesign()
+        TeleField.TextBoxDesign()
+        SignUp.BttnDesign()
 
 	}
+    
+    func addLeftImageTo(txtField: UITextField, andImage img:UIImage){
+        
+        let leftImageView = UIImageView(frame: CGRect(x:0.0, y:0.0, width: img.size.width, height: img.size.height))
+        leftImageView.image = img
+        txtField.leftView = leftImageView
+        txtField.leftViewMode = .always
+        
+        
+    }
 	
 	@IBAction func Confirm(_ sender: UIButton)
 	{
