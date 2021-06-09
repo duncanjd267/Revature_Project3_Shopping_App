@@ -62,6 +62,15 @@ class ItemCtrl: UIViewController, UICollectionViewDelegate, UICollectionViewData
         
     }
     
+    @IBAction func Wish(_ sender: Any) {
+        
+        DBHelper.inst.updateWishlist(item: DBHelper.inst.currentItem)
+        let UserCart = UIAlertController(title: "Item Added", message: "This Item is Being Added To Your Wish List!", preferredStyle: UIAlertController.Style.alert)
+        UserCart.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        self.present(UserCart, animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func AddCart(_ sender: Any) {
         if DBHelper.inst.getCurrentUser() == ""{

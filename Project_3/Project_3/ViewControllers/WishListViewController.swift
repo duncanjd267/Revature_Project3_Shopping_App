@@ -8,7 +8,7 @@
 import UIKit
 
 class WishListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     
     var prob:Bool?
     var brand:[Item]?
@@ -49,11 +49,14 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
             cell.hImage.image = UIImage(named: brand![indexPath.row].image!)
             
             return cell
+            
+        }
+        
         
     }
     
-  
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.0
     }
-
+    
 }
