@@ -1,7 +1,7 @@
 # Revature Project 3 Shopping App
 
 ## Project Description
-Amazon has become a seemingly unavoidable capital giant in the online shopping scene. Our app is meant to serve as a startup competitor to Amazon for shoppers who want alternatives!
+This project is our take on an online shopping application. We’ve based our styles around existing programs such as Amazon, Ebay, and Walmart.
 
 ### Users are over the moon about us:
 
