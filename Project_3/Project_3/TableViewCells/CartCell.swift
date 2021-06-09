@@ -16,6 +16,7 @@ class CartCell: UITableViewCell {
 	@IBOutlet weak var ItemName: UILabel!
 	@IBOutlet weak var ItemPrice: UILabel!
     @IBOutlet weak var ItemImage: UIImageView!
+    @IBOutlet weak var cellView: UIView!
     
     var delegate: DataCollectionProtocol?
     var index: IndexPath?
@@ -34,6 +35,16 @@ class CartCell: UITableViewCell {
     }
     @IBAction func removeBttn(_ sender: Any) {
         delegate?.deleteData(indx: (index?.row)!)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        cellView.layer.shadowRadius = 10
+        cellView.layer.shadowOpacity = 0.5
+        cellView.layer.shadowOffset = CGSize(width: 5, height: 10)
+
+        self.clipsToBounds = false
     }
     
 }

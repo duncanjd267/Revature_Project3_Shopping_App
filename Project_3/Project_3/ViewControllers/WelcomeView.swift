@@ -116,7 +116,6 @@ class WelcomeView: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         if collectionView == self.Recommandations{
             DBHelper.inst.holdCurrentItem(name: itemList[indexPath.item].name!)
-            
             let vc = storyboard?.instantiateViewController(identifier: "ItemBoard") as! ItemCtrl
             navigationController?.pushViewController(vc, animated: true)
             
