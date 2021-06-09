@@ -22,6 +22,18 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
         NoItemView.isHidden = true
     }
     
+    @IBAction func Back(_ sender: Any) {
+        
+        let tabViewController =
+            storyboard?.instantiateViewController(withIdentifier: "TabViewControllerUser")
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if DBHelper.inst.getCurrentUser() == "" {
             prob = true
