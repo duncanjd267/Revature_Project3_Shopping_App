@@ -61,11 +61,14 @@ class OrderPageView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBAction func Refund(_ sender: Any) {
         
+        if items!.count != 0{
+        
         var item = DBHelper.inst.getOneItem(item: items![selected].name!)
         print(item.name!)
         print(String(DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).balance))
         DBHelper.inst.Refund(name: DBHelper.inst.getCurrentUser(), item: item)
         print(String(DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser()).balance))
+        }
    
     }
     @IBAction func back(_ sender: Any) {
