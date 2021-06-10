@@ -26,7 +26,14 @@ class PaymentOptionView: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         var temp = DBHelper.inst.getOneUser(user: DBHelper.inst.getCurrentUser())
         balance = temp.cartamount
         
-        price.text = "Total Price: $" + String(balance - temp.balance)
+        if balance - temp.balance > 0 {
+            price.text = "Total Price: $" + String(balance - temp.balance)
+            
+        }
+        else {
+            price.text = "Total Price: $0.00"
+        }
+        //price.text = "Total Price: $" + String(balance - temp.balance)
 
         pickerView.delegate = self
         pickerView.dataSource = self

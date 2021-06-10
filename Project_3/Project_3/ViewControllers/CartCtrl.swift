@@ -30,6 +30,7 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
         //items = Person!.toitem?.allObjects as! [Item]
         
         items = Array(Person!.toitem!)
+        items!.filter({ $0 != nil })
 
         print(String(items!.count))
         total = Person!.balance
@@ -61,13 +62,18 @@ class CartCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        print(items!.count)
+        if (items!.count != 0 && items![indexPath.row].image! != nil){
         let cell = tableView.dequeueReusableCell(withIdentifier: "thing1") as! CartCell
         print("I am here")
         cell.ItemName.text = items![indexPath.row].name
         cell.ItemPrice.text = "$" + String(items![indexPath.row].price)
-        cell.ItemImage.image = UIImage(named: items![indexPath.row].image!)
+       try cell.ItemImage.image = UIImage(named: items![indexPath.row].image!)
         cell.index = indexPath
         cell.delegate = self
+        return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "thing1") as! CartCell
         return cell
     }
     
