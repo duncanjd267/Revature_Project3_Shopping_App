@@ -3655,7 +3655,6 @@
                     <tabBarItem key="tabBarItem" title="" image="ShopIcon" id="Rlo-7k-c3M"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Yt-9p-9V7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
