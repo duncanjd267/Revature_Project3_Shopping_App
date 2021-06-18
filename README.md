@@ -3,10 +3,6 @@
 ## Project Description
 This project is our take on an online shopping application. We’ve based our styles around existing programs such as Amazon, Ebay, and Walmart.
 
-### Users are over the moon about us:
-
-![User review](/images/CommanderShepard.PNG)
-
 ## Technologies Used
 - CoreData
 - User Default
@@ -61,6 +57,11 @@ Once you've made it to your chosen directory, enter the same command as the wind
 
 `git clone https://github.com/duncanjd267/Revature_Project3_Shopping_App`
 
+## Screenshots
+<img width="1450" alt="Screen Shot 2021-06-17 at 21.25.19" src="https://user-images.githubusercontent.com/58051320/122491947-e949fa80-cfb2-11eb-84c8-2d79a7b48abe.png">
+<img width="1450" alt="Screen Shot 2021-06-17 at 21.25.31" src="https://user-images.githubusercontent.com/58051320/122491978-f830ad00-cfb2-11eb-994c-c27c44f2bed4.png">
+<img width="1450" alt="Screen Shot 2021-06-17 at 21.25.48" src="https://user-images.githubusercontent.com/58051320/122492006-041c6f00-cfb3-11eb-86f0-78e09ebb3d77.png">
+<img width="1450" alt="Screen Shot 2021-06-17 at 21.25.58" src="https://user-images.githubusercontent.com/58051320/122492032-0d0d4080-cfb3-11eb-9873-078a726d8f7f.png">
 
 ## Usage
 
